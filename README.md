@@ -107,6 +107,13 @@ newTrial(
 
 
 
-
-
+//Message d'encouragement
+newTrial(
+    newText("Courage, vous \u00eates presque à la fin du questionnaire !")
+        .print()
+    ,
+    newButton("Poursuivre")
+        .print()
+        .wait()
+)
 
