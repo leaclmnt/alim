@@ -5,7 +5,7 @@
 //Intro
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
-PennController(
+newTrial(
     newText("Bonjour,")
         .print()
     ,
@@ -24,7 +24,7 @@ PennController(
 )
 
 
-PennController(
+newTrial(
     newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
         .print()
     ,
