@@ -1,4 +1,3 @@
-# alim
 //Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
 //Script
@@ -57,6 +56,8 @@ newTrial(
         .wait()
 )
 
+
+//Session 1 bloc 2
 newTrial(
     newText("Vous allez composer votre second menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi les suivants :")
         .print()
