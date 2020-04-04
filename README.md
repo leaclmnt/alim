@@ -103,6 +103,9 @@ newTrial(
 )
 
 
+//Session 2
+
+
 //Message d'encouragement
 newTrial(
     newText("Courage, vous \u00eates presque \u00e0 la fin du questionnaire !")
@@ -115,3 +118,4 @@ newTrial(
 
 
 
+//Session 3
