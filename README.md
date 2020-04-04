@@ -3,10 +3,15 @@
 
 //Script
 
-newText('Vous allez maintenant composer votre premier menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi les suivants :')
-    .print()
-    
-    
+PennController.ResetPrefix(null);
+
+newTrial(
+    newText("Vous allez composer votre premier menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi les suivants ")
+        .print()
+    ,
+    newKey(" ")
+        .wait()
+)
     
 newText("Pour l'entr\u00e9e, veuillez choisir une option parmi les quatre propos\u00e9es :")
     .print()
