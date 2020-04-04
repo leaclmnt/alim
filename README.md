@@ -1,11 +1,9 @@
 //Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
 //Script
-//Session 1 Bloc 1
-//Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
-//Script
 //Session 1 Bloc 1
+
 PennController.ResetPrefix(null);
 
 newTrial(
@@ -105,36 +103,6 @@ newTrial(
         .print()
         .wait()
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
