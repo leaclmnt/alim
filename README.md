@@ -1,7 +1,7 @@
 # alim
-Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
+//Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
+//Script
 
-Coucou est ce que vous pouvez lire ce que j'écris ? 
-blablabla
-c'est complexe ce système
+newText('Vous allez maintenant composer votre premier menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi ceux proposés:')
+    .print()
