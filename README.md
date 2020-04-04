@@ -1,6 +1,44 @@
 //Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
 //Script
+
+//Intro
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+PennController(
+    newText("Bonjour,")
+        .print()
+    ,
+    newText("Dans le cadre d’un projet de recherche à AgroParisTech, nous souhaiterions que vous répondiez à un questionnaire, qui vous prendra environ 10 minutes. ")
+        .print()
+    ,
+    newText("Cela nous aidera beaucoup pour nos recherches. Le questionnaire est anonyme, et les données collectées sont stockées dans une base de données sécurisées.")
+        .print()
+    ,
+    newText("Pour toute question ou commentaire, vous pouvez nous contacter à l’adresse suivante : ??.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+PennController(
+    newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
+        .print()
+    ,
+    newText("Pour chaque catégorie (plat principal, entrée, fromage, dessert, boisson), vous allez pouvoir choisir un ou plusieurs aliments.")
+        .print()
+    ,
+    newText("Dans tous les cas, il y a à disposition de l’eau plate, du pain, des condiments, des épices.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
 //Session 1 Bloc 1
 PennController.ResetPrefix(null);
 
