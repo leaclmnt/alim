@@ -157,3 +157,79 @@ newTrial(
 
 
 //Session 3
+
+//Questions complémentaires
+<table>
+<tr>
+<td colspan="2" style="padding-bottom: 1em;"><input type="checkbox" class="obligatory" name="consent" id="consentcx" /><label for="consentcx"> Je consens à remplir ce questionnaire </label></td>
+</tr>
+<tr>
+<td colspan="2">
+<label class="error" for="consent"></label>
+</td>
+</tr>
+<tr>
+  <td>Nom:</td><td><input name="name" type="text" size="30" class="obligatory" /></td>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="name"></label></td>
+</tr>
+<tr>
+  <td>Âge:</td><td><input name="age" type="text" size="30" class="obligatory" /></td>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="age"></label></td>
+</tr>
+<tr>
+  <td>Sexe:</td><td><input name="sex" type="radio" value="male" class="obligatory" id="csexmale" /><label for="csexmale">Homme </label>
+                   <input name="sex" type="radio" value="female" id="csexfemale"/><label for="csexfemale"> Femme</label>
+                   <input name="sex" type="radio" value="autre" id="csexautre"/><label for="csexautre"> Autre</label>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="sex"></label></td>
+</tr>
+<tr>
+<tr>
+<td colspan="2"><label class="error" for="religion"></label></td>
+</tr>
+<tr>
+<tr>
+<td>Régime:</td><td><input name="regime" type="radio" value="Omnivore" class="obligatory" id="cregimeomnivore" /><label for="cregimeomnivore">Omnivore </label>
+                   <input name="regime" type="radio" value="Vegetarien" id="cregimevegetarien"/><label for="cregimevegetarien"> Végétarien</label>
+                   <input name="regime" type="radio" value="Vegetalien" id="cregimevegetalien"/><label for="cregimevegetalien"> Végétalien</label>
+</tr>
+<tr>
+<td colspan="2"><label class="error" for="regime"></label></td>
+</tr>
+<tr>
+  <td colspan="2">Quelle est votre catégorie socio-professionnelle ? </td>
+</tr>
+<tr>
+  <td colspan="2">
+    <textarea name="Categoriesocio-pro" rows="1" cols="30"></textarea>
+  </td>
+</tr>
+<tr>
+  <td colspan="2"> Pratiquez-vous une activité sportive régulière ? (si oui, à quelle fréquence) </td>
+</tr>
+<tr>
+  <td colspan="2">
+    <textarea name="sport" rows="1" cols="30"></textarea>
+  </td>
+</tr>
+<tr>
+  <td colspan="2"> Êtes-vous satisfait de votre poids ? (répondez par oui ou par non)</td>
+</tr>
+<tr>
+  <td colspan="2">
+    <textarea name="satisfait" rows="1" cols="30"></textarea>
+  </td>
+</tr>
+<tr>
+<td colspan="2"> Êtes-vous issu d’un milieu rural ou urbain ? (répondez par oui ou par non)</td>
+</tr>
+<tr>
+  <td colspan="2">
+    <textarea name="satisfait" rows="1" cols="30"></textarea>
+  </td>
+</tr>
