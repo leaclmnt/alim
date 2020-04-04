@@ -10,7 +10,7 @@ newTrial(
     ,
     newText("Vous allez composer votre premier menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi les suivants :")
     ,
-    newButton("Suivant")
+    newButton("Passer à l'entr\u00e9e")
         .print()
         .wait()
     ,
@@ -20,7 +20,7 @@ newTrial(
     newText("Pour l'entr\u00e9e, veuillez choisir une option parmi les quatre propos\u00e9es :")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer au fromage")
         .print()
         .wait()
 )
@@ -29,7 +29,7 @@ newTrial(
     newText("Souhaitez-vous un assortiment de fromage ?")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer au dessert")
         .print()
         .wait()
 )
@@ -38,7 +38,7 @@ newTrial(
     newText("Vous pouvez maintenant choisir jusqu'\u00e0 deux desserts parmi les suivants :")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer à la boisson")
         .print()
         .wait()
 )
@@ -58,7 +58,7 @@ newTrial(
     newText("Vous allez composer votre second menu. Pour le plat principal, veuillez choisir un ou plusieurs aliments parmi les suivants :")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer à l'entr\u00e9e")
         .print()
         .wait()
     ,
@@ -68,7 +68,7 @@ newTrial(
     newText("Pour l'entr\u00e9e, veuillez choisir une option parmi les quatre propos\u00e9es :")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer au fromage")
         .print()
         .wait()
 )
@@ -77,7 +77,7 @@ newTrial(
     newText("Souhaitez-vous un assortiment de fromage ?")
         .print()
     ,
-    newButton("Suivant")
+    newButton("Passer au dessert")
         .print()
         .wait()
 )
@@ -88,7 +88,7 @@ newTrial(
     ,
     newText("Vous pouvez maintenant choisir jusqu'\u00e0 deux desserts parmi les suivants :")
     ,
-    newButton("Suivant")
+    newButton("Passer à la boisson")
         .print()
         .wait()
 )
