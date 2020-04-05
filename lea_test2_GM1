@@ -1,5 +1,9 @@
 // marche avec un doc csv spécifique
 
+// This is a simple demo script, feel free to edit or delete it
+// Find a tutorial and the list of availalbe elements at:
+// https://www.pcibex.net/documentation/
+
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 // Show the 'intro' trial first, then all the 'experiment' trials in a random order
@@ -20,7 +24,7 @@ Template( "TableBloc1.csv" ,
     newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
         .print()
     , 
-    newCanvas("GM1", 450, 50)
+    newCanvas("GM1", 450, 190)
         .center()
         .add( 187, 10, newText ("Oui"))
         .add ( 231, 10, newText("Non") )
@@ -29,14 +33,58 @@ Template( "TableBloc1.csv" ,
             .settings.callback( getScale("prot1_non").unselect() ))
         .settings.add( 230, 30, newScale("prot1_non", 1)
             .settings.callback( getScale("prot1_oui").unselect() ))
+        .add( 0, 50, newText( row.prot2) )
+        .settings.add( 185, 50, newScale("prot2_oui", 1)
+            .settings.callback( getScale("prot2_non").unselect() ))
+        .settings.add( 230, 50, newScale("prot2_non", 1)
+            .settings.callback( getScale("prot2_oui").unselect() ))
+        .add( 0, 70, newText( row.prot3) )
+        .settings.add( 185, 70, newScale("prot3_oui", 1)
+            .settings.callback( getScale("prot3_non").unselect() ))
+        .settings.add( 230, 70, newScale("prot3_non", 1)
+            .settings.callback( getScale("prot3_oui").unselect() ))
+        .add( 0, 90, newText( row.legumineuse) )
+        .add( 185, 90, newScale("legumineuse_oui", 1)
+            .settings.callback( getScale("legumineuse_non").unselect() ))
+        .add( 230, 90, newScale("legumineuse_non", 1)
+            .settings.callback( getScale("legumineuse_oui").unselect() ))
+        .add( 0, 110, newText( row.legume1) )
+        .settings.add( 185, 110, newScale("legume1_oui", 1)
+            .settings.callback( getScale("legume1_non").unselect() ))
+        .settings.add( 230, 110, newScale("legume1_non", 1)
+            .settings.callback( getScale("legume1_oui").unselect() ))
+        .add( 0, 130, newText( row.legume2) )
+        .settings.add( 185, 130, newScale("legume2_oui", 1)
+            .settings.callback( getScale("legume2_non").unselect() ))
+        .settings.add( 230, 130, newScale("legume2_non", 1)
+            .settings.callback( getScale("legume2_oui").unselect() ))
+        .add( 0, 150, newText( row.feculent) )
+        .settings.add( 185, 150, newScale("feculent_oui", 1)
+            .settings.callback( getScale("feculent_non").unselect() ))
+        .settings.add( 230, 150, newScale("feculent_non", 1)
+            .settings.callback( getScale("feculent_oui").unselect() ))        
+        .add( 0, 170, newText( row.feculentgras) )
+        .settings.add( 185, 170, newScale("feculentgras_oui", 1)
+            .settings.callback( getScale("feculentgras_non").unselect() ))
+        .settings.add( 230, 170, newScale("feculentgras_non", 1)
+            .settings.callback( getScale("feculentgras_oui").unselect() ))
         .print()
     , 
     newSelector()
         .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
+        .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
+        .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
+        .settings.add( getScale("legumineuse_oui"), getScale("legumineuse_non") )
+        .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
+        .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
+        .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
+        .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
         .settings.log()
-        .wait()
     ,
     newButton("Suivant")
         .print()
         .wait()
 ))
+
+
+// Le bouton Suivant apparait trop tot... 
