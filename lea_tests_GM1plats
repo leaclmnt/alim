@@ -60,3 +60,126 @@ newTrial("plat1" ,
             .settings.callback( getScale("feculentgras_oui").unselect() ))
         .print()
 )
+
+
+
+
+
+Test avec plus de trucs autour 
+
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence("enregistrement_participant" , "intro", "plat1", SendResults() , "bye")
+//Sequence( "intro", randomize("experiment") , SendResults() , "bye" )
+
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+
+newTrial( "enregistrement_participant" ,
+    //newImage("pcibex-logo.png")
+    //    .size( 150 , 200 )      // Resize the image to 150x250px
+    //    .print()
+    //,
+    newText("<p>Welcome to the PCIbex demo experiment.</p><p>Please enter your name below and press Enter:</p>")
+        .print()
+    ,
+    newTextInput()
+        .print()
+        .wait()                 // The next command won't be executed until Enter is pressed
+        .setVar( "ParticipantName" )
+        // This setVar command stores the value from the TextInput element into the Var element
+)
+
+newTrial( "intro" ,
+    newText("Bonjour,")
+        .print()
+    ,
+    newText("Dans le cadre d’un projet de recherche à AgroParisTech, nous souhaiterions que vous répondiez à un questionnaire, qui vous prendra environ 10 minutes. ")
+        .print()
+    ,
+    newText("Cela nous aidera beaucoup pour nos recherches. Le questionnaire est anonyme, et les données collectées sont stockées dans une base de données sécurisées.")
+        .print()
+    ,
+    newText("Pour toute question ou commentaire, vous pouvez nous contacter à l’adresse suivante : ??.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial("plat1" ,
+    newText("Vous allez composer votre plat principal.")
+        .print()
+    ,
+    newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
+        .print()
+    , 
+    newCanvas("GM1", 450, 450)
+        .center()
+        .add( 187, 10, newText ("Oui"))
+        .add ( 231, 10, newText("Non") )
+        .add( 0, 30, newText("Entrecote de Boeuf") )
+        .add( 185, 30, newScale("prot1_oui", 1)
+            .settings.callback( getScale("prot1_non").unselect() ))
+        .add( 230, 30, newScale("prot1_non", 1)
+            .settings.callback( getScale("prot1_oui").unselect() ))
+        .add( 0, 50, newText("Escalope de dinde") )
+        .add( 185, 50, newScale("prot2_oui", 1)
+            .settings.callback( getScale("prot2_non").unselect() ))
+        .add( 230, 50, newScale("prot2_non", 1)
+            .settings.callback( getScale("prot2_oui").unselect() ))
+        .add( 0, 70, newText("Steak de Soja") )
+        .add( 185, 70, newScale("prot3_oui", 1)
+            .settings.callback( getScale("prot3_non").unselect() ))
+        .add( 230, 70, newScale("prot3_non", 1)
+            .settings.callback( getScale("prot3_oui").unselect() ))
+        .add( 0, 90, newText("Petits pois") )
+        .add( 185, 90, newScale("legumineuse_oui", 1)
+            .settings.callback( getScale("legumineuse_non").unselect() ))
+        .add( 230, 90, newScale("legumineuse_non", 1)
+            .settings.callback( getScale("legumineuse_oui").unselect() ))
+        .add( 0, 110, newText("Blettes") )
+        .add( 185, 110, newScale("legume1_oui", 1)
+            .settings.callback( getScale("legume1_non").unselect() ))
+        .add( 230, 110, newScale("legume1_non", 1)
+            .settings.callback( getScale("legume1_oui").unselect() ))
+        .add( 0, 130, newText("Poireaux") )
+        .add( 185, 130, newScale("legume2_oui", 1)
+            .settings.callback( getScale("legume2_non").unselect() ))
+        .add( 230, 130, newScale("legume2_non", 1)
+            .settings.callback( getScale("legume2_oui").unselect() ))
+        .add( 0, 150, newText("Pates") )
+        .add( 185, 150, newScale("feculent_oui", 1)
+            .settings.callback( getScale("feculent_non").unselect() ))
+        .add( 230, 150, newScale("feculent_non", 1)
+            .settings.callback( getScale("feculent_oui").unselect() ))        
+        .add( 0, 170, newText("Pommes de terre noisettes") )
+        .add( 185, 170, newScale("feculentgras_oui", 1)
+            .settings.callback( getScale("feculentgras_non").unselect() ))
+        .add( 230, 170, newScale("feculentgras_non", 1)
+            .settings.callback( getScale("feculentgras_oui").unselect() ))
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial( "bye" ,
+    newText("Merci beaucoup d’avoir répondu à notre questionnaire !").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
