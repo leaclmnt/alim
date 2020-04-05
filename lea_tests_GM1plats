@@ -14,7 +14,7 @@ newTrial("plat1" ,
     newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
         .print()
     , 
-    newCanvas("GM1", 450, 450)
+    newCanvas("GM1", 450, 200)
         .center()
         .add( 187, 10, newText ("Oui"))
         .add ( 231, 10, newText("Non") )
