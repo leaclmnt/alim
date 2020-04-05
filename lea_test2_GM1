@@ -1,0 +1,42 @@
+// marche avec un doc csv spécifique
+
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence("plat1")
+
+
+Template( "TableBloc1.csv" ,
+    row => newTrial( "plat1" ,
+    
+    newText("<b> Plat principal n1 </b>")
+    .center()
+    .print()
+    ,
+    newText("Vous allez composer un plat principal.")
+        .print()
+    ,
+    newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
+        .print()
+    , 
+    newCanvas("GM1", 450, 50)
+        .center()
+        .add( 187, 10, newText ("Oui"))
+        .add ( 231, 10, newText("Non") )
+        .add( 0, 30, newText( row.prot1) )
+        .settings.add( 185, 30, newScale("prot1_oui", 1)
+            .settings.callback( getScale("prot1_non").unselect() ))
+        .settings.add( 230, 30, newScale("prot1_non", 1)
+            .settings.callback( getScale("prot1_oui").unselect() ))
+        .print()
+    , 
+    newSelector()
+        .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
+        .settings.log()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+))
