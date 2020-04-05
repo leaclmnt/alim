@@ -59,8 +59,4 @@ newTrial("plat1" ,
         .add( 230, 170, newScale("feculentgras_non", 1)
             .settings.callback( getScale("feculentgras_oui").unselect() ))
         .print()
-    ,
-    newButton("Suivant")
-        .print()
-        .wait()
 )
