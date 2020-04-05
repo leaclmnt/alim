@@ -1,0 +1,326 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "enregistrement_participant" , "intro" , "introbis" , "experiment" , "encouragement" , SendResults() , "bye" )
+//Sequence( "intro", randomize("experiment") , SendResults() , "bye" )
+
+
+// What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+// This log command adds a column reporting the participant's name to every line saved to the results
+
+
+newTrial( "enregistrement_participant" ,
+    //newImage("pcibex-logo.png")
+    //    .size( 150 , 200 )      // Resize the image to 150x250px
+    //    .print()
+    //,
+    newText("<p>Welcome to the PCIbex demo experiment.</p><p>Please enter your name below and press Enter:</p>")
+        .print()
+    ,
+    newTextInput()
+        .print()
+        .wait()                 // The next command won't be executed until Enter is pressed
+        .setVar( "ParticipantName" )
+        // This setVar command stores the value from the TextInput element into the Var element
+)
+
+newTrial( "intro" ,
+    newText("Bonjour,")
+        .print()
+    ,
+    newText("Dans le cadre d’un projet de recherche à AgroParisTech, nous souhaiterions que vous répondiez à un questionnaire, qui vous prendra environ 10 minutes. ")
+        .print()
+    ,
+    newText("Cela nous aidera beaucoup pour nos recherches. Le questionnaire est anonyme, et les données collectées sont stockées dans une base de données sécurisées.")
+        .print()
+    ,
+    newText("Pour toute question ou commentaire, vous pouvez nous contacter à l’adresse suivante : ??.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial( "introbis" ,
+    newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
+        .print()
+    ,
+    newText("Pour chaque catégorie (plat principal, entrée, fromage, dessert, boisson), vous allez pouvoir choisir un ou plusieurs aliments.")
+        .print()
+    ,
+    newText("Dans tous les cas, il y a à disposition de l’eau plate, du pain, des condiments, des épices.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+
+
+// This Template command generates as many trials as there are rows in bloc_1.csv
+//Template( "bloc_1.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+//    row => newTrial( "experiment" ,
+// The trials are minimal: choose a pronoun from a DropDown list
+//        newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+//            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+//            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+//            .add( row.choix_2 )
+//            .add( row.choix_3 )
+//            .add( row.choix_4 )
+//            .add( row.choix_5 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+//            .add( row.choix_6 )
+//            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+//            //.once()                             // Disable the list after the first selection
+//            .print()
+//            .wait()
+//            .log()                              // Make sure to log the participant's selection
+//        ,
+//        newButton("Suivant")
+//            .print()
+//            .wait()
+//    )
+//    .log( "texte_a_choisir" , row.texte_a_choisir )
+//    .log( "choix_1" , row.choix_1 )
+//    .log( "choix_2" , row.choix_2 )
+//    .log( "choix_3" , row.choix_3 )
+//    .log( "choix_4" , row.choix_4 )
+//    .log( "choix_5" , row.choix_5 )
+//    .log( "choix_6" , row.choix_6 )
+//    // Add these six columns to the results lines of these Template-based trials
+//)
+
+
+
+Template( "bloc_1_plats.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+    row => newTrial( "experiment" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_bloc_1_plat", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .add( row.choix_6 )
+            .add( row.choix_7 )
+            .add( row.choix_8 )
+            .add( row.choix_9 )
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    .log( "choix_3" , row.choix_3 )
+    .log( "choix_4" , row.choix_4 )
+    .log( "choix_5" , row.choix_5 )
+    .log( "choix_6" , row.choix_6 )
+    .log( "choix_6" , row.choix_7 )
+    .log( "choix_6" , row.choix_8 )
+    .log( "choix_6" , row.choix_9 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+
+
+
+
+Template( "bloc_1_entrees.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+    row => newTrial( "experiment" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_bloc_1_entree", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .shuffle()                          // Randomly order the options in the list A ENLEVER ???
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    .log( "choix_3" , row.choix_3 )
+    .log( "choix_4" , row.choix_4 )
+    .log( "choix_5" , row.choix_5 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+Template( "bloc_1_fromage.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+    row => newTrial( "experiment" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_bloc_1_fromage", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            //.shuffle()                          // Randomly order the options in the list A ENLEVER ???
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+
+
+Template( "bloc_1_desserts.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+    row => newTrial( "experiment" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_bloc_1_dessert", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .add( row.choix_6 )
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    .log( "choix_3" , row.choix_3 )
+    .log( "choix_4" , row.choix_4 )
+    .log( "choix_5" , row.choix_5 )
+    .log( "choix_6" , row.choix_6 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+Template( "bloc_1_boissons.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv  --> A UTILISER POUR FAIRE UN TABLEAU DANS UN TABLEAU = LES DIFFERENTS BLOCS DE LA SESSION ???
+    row => newTrial( "experiment" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_bloc_1_boisson", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .add( row.choix_6 )
+            .add( row.choix_7 )
+            .add( row.choix_8 )
+            .add( row.choix_9 )
+            .add( row.choix_10 )
+            .add( row.choix_11 )
+            // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            //.shuffle()                          // Randomly order the options in the list A ENLEVER ???
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    .log( "choix_3" , row.choix_3 )
+    .log( "choix_4" , row.choix_4 )
+    .log( "choix_5" , row.choix_5 )
+    .log( "choix_6" , row.choix_6 )
+    .log( "choix_7" , row.choix_7 )
+    .log( "choix_8" , row.choix_8 )
+    .log( "choix_9" , row.choix_9 )
+    .log( "choix_10" , row.choix_10 )
+    .log( "choix_11" , row.choix_11 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+
+
+newTrial( "encouragement" ,
+    newText("Courage, vous êtes presque à la fin du questionnaire !")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Merci beaucoup d’avoir répondu à notre questionnaire !").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
