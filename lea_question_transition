@@ -1,0 +1,31 @@
+// Question de transition avec récupération des infos. 
+
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+Sequence( "question_transition" )
+
+newTrial("question_transition",
+    newText("<b>Habitudes face aux prot&eacuteines carn&eacutees :</b>") // Titre en gras et centré
+        .center()
+        .print()
+    , 
+    newCanvas("viande", 450, 190)
+        .center()
+        .add( 187, 10, newText ("Oui"))
+        .add ( 231, 10, newText("Non") )
+        .add( 0, 30, newText("Mangez-vous de la viande ?") )
+        .settings.add( 185, 30, newScale("oui", 1)
+            .settings.callback( getScale("non").unselect() ))
+        .settings.add( 230, 30, newScale("non", 1)
+            .settings.callback( getScale("oui").unselect() ))   // Les gens ne peuvent pas choisir oui et non en même temps
+        .print()
+    , 
+    newSelector()                                             // Permet de récupérer les infos, les gens peuvent changer d'avis 
+        .settings.add( getScale("oui"), getScale("non") )
+        .settings.log()
+        .wait()                                             // Tant que les gens n'ont pas fait leur choix, suivant ne s'affiche pas
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+    )
