@@ -4,13 +4,13 @@
 
 // doc scv : TableSession1
 
-plat,prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras,entree1,entree2,entree3,entree4,pasentree,fruit1,fruit2,laitage,gourmand1,gourmand2,pasdessert
-Plat 1,Entrecote de Boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pates,Pommes de terre noisettes,Soupe de legumes,Taboule au poulet,Salade crudites,Part de quiche lorraine,Aucune entree,Compote,Banane,Yaourt nature,Part de gateau au chocolat,Crepe maison confiture,Aucun dessert
-Plat 2,Magret de canard,Faux filet de Boeuf,Oeufs au plat,Feves,Courgettes,Oignons,Quinoa,Gratin dauphinois,Tomates,Feuillete a la viande,Salade de choux,Part de tarte epinards chevre,Aucune entree,Peche,Orange,Yaourt aux fruits,Creme brulee,Crumble aux pommes,Aucun dessert
-Plat 3,Rosbif de Boeuf,Filet de poulet,Galette de pois chiches,Lentilles vertes,Poelee de champignons,Carottes,Gnocchis pomme de terre,Flammenkueche,Betteraves,Salade Cesar au poulet,Soupe a l oignon,Part de tarte a la tomate,Aucune entree,Compote,Kiwis,Yaourt aux fruits,Eclair au chocolat,Mousse creme de marron,Aucun dessert
-Plat 4,Steak de pois chiches,Tofu poele,Oeufs brouilles,Lentilles vertes,Epinards,Aubergines,Riz,Pates farcies au fromage,Champignons a la grecque,Nems au poulet,Salade piemontaise,Crepe bechamel jambon fromage,Aucune entree,Salade de fruits,Framboises,Yaourt sucre nature,Glace,Part de tarte aux fruits rouges,Aucun dessert
-Plat 5,Tofu poele,Oeuf au plat,Galette de cereales,Haricots rouges,Oignons,Poivrons rouges,Riz,Pommes de terres rissolees,Asperges,Salade de pates avec lardons,Celeri remoulade,Tranche de pate en croute,Aucune entree,Orange,Poire,Fromage blanc,Creme dessert a la vanille,Chausson aux pommes,Aucun dessert
-Plat 6,Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Brocolis,Potiron,Boulgour,Frites,Soupe de legumes,Salade Cesar au poulet,Champignons a la grecque,Croissant au jambon fromage,Aucune entree,Salade de fruits,Pomme,Yaourt nature sucre,Part de brownie au chocolat,Panna Cotta,Aucun dessert
+GM,prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras,entree1,entree2,entree3,entree4,pasentree,fruit1,fruit2,laitage,gourmand1,gourmand2,pasdessert
+GM1_session1,Entrecote de Boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pates,Pommes de terre noisettes,Soupe de legumes,Taboule au poulet,Salade crudites,Part de quiche lorraine,Aucune entree,Compote,Banane,Yaourt nature,Part de gateau au chocolat,Crepe maison confiture,Aucun dessert
+GM2_session1,Magret de canard,Faux filet de Boeuf,Oeufs au plat,Feves,Courgettes,Oignons,Quinoa,Gratin dauphinois,Tomates,Feuillete a la viande,Salade de choux,Part de tarte epinards chevre,Aucune entree,Peche,Orange,Yaourt aux fruits,Creme brulee,Crumble aux pommes,Aucun dessert
+GM3_session1,Rosbif de Boeuf,Filet de poulet,Galette de pois chiches,Lentilles vertes,Poelee de champignons,Carottes,Gnocchis pomme de terre,Flammenkueche,Betteraves,Salade Cesar au poulet,Soupe a l oignon,Part de tarte a la tomate,Aucune entree,Compote,Kiwis,Yaourt aux fruits,Eclair au chocolat,Mousse creme de marron,Aucun dessert
+GM4_session1,Steak de pois chiches,Tofu poele,Oeufs brouilles,Lentilles vertes,Epinards,Aubergines,Riz,Pates farcies au fromage,Champignons a la grecque,Nems au poulet,Salade piemontaise,Crepe bechamel jambon fromage,Aucune entree,Salade de fruits,Framboises,Yaourt sucre nature,Glace,Part de tarte aux fruits rouges,Aucun dessert
+GM5_session1,Tofu poele,Oeuf au plat,Galette de cereales,Haricots rouges,Oignons,Poivrons rouges,Riz,Pommes de terres rissolees,Asperges,Salade de pates avec lardons,Celeri remoulade,Tranche de pate en croute,Aucune entree,Orange,Poire,Fromage blanc,Creme dessert a la vanille,Chausson aux pommes,Aucun dessert
+GM6_session1,Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Brocolis,Potiron,Boulgour,Frites,Soupe de legumes,Salade Cesar au poulet,Champignons a la grecque,Croissant au jambon fromage,Aucune entree,Salade de fruits,Pomme,Yaourt nature sucre,Part de brownie au chocolat,Panna Cotta,Aucun dessert
 
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
