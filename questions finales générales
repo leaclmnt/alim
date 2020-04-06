@@ -1,0 +1,163 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "intro", "question_age", "question_sexe","categorie_socio-professionnelle","question_modedevie", "question_satisfactionpoids", "question_sport","bye" )
+
+
+//What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("age_participant")
+        .global()
+    ,
+    //Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Age" , getVar("age_participant") )
+// This log command adds a column reporting the participant's age to every line saved to the results
+
+newTrial( "intro" ,
+    newText("Bonjour,")
+        .print()
+)
+
+newTrial( "question_age" ,
+    newText("<p>Veuillez renseigner votre age: </p>")
+        .print()
+    ,
+    newTextInput()
+        .print()
+        .wait()
+        //.setVar("age_participant")
+        // This setVar command stores the value from the TextInput element into the Var element
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial("question_sexe",
+    // Don't print it yet, we'll now add it to the left of the scale
+    newText("sexe", "Veuillez renseigner votre sexe: ")
+        //.print()
+    ,
+    // Give as many labels as there are buttons
+    newScale("choix ","Femme","Homme","Autre")
+        .settings.labelsPosition("top")  // Position the labels
+        .settings.before( getText("sexe") )
+        .print()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+// This Template command generates as many trials as there are rows in bloc_1.csv
+Template( "catsociopro.csv" ,
+    // Row will iteratively point to every row in catsociopro.csv
+    row => newTrial( "categorie_socio-professionnelle" ,
+        // The trials are minimal: choose a socioprofessional category from a DropDown list
+        newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )
+            .add( row.choix_6 )
+            .add( row.choix_7 )
+            .add( row.choix_8 )
+            .add( row.choix_9 )
+            .add( row.choix_10 )
+            .add( row.choix_11 )// pb : enlever la ligne blanche pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir" , row.texte_a_choisir )
+    .log( "choix_1" , row.choix_1 )
+    .log( "choix_2" , row.choix_2 )
+    .log( "choix_3" , row.choix_3 )
+    .log( "choix_4" , row.choix_4 )
+    .log( "choix_5" , row.choix_5 )
+    .log( "choix_6" , row.choix_6 )
+    .log( "choix_7" , row.choix_7 )
+    .log( "choix_8" , row.choix_8 )
+    .log( "choix_9" , row.choix_9 )
+    .log( "choix_10" , row.choix_10 )
+    .log( "choix_11" , row.choix_11 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+newTrial("question_modedevie",
+    // Don't print it yet, we'll now add it to the left of the scale
+    newText("modedevie", "Vous vous sentez plutot rattaches a un mode de vie : ")
+        //.print()
+    ,
+    // Give as many labels as there are buttons
+    newScale("choix ","Rural","Urbain")
+        .settings.labelsPosition("top")  // Position the labels
+        .settings.before( getText("modedevie") )
+        .print()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial("question_sport",
+    // Don't print it yet, we'll now add it to the left of the scale
+    newText("sport", "A quelle frequence faites vous du sport: ")
+        //.print()
+    ,
+    // Give as many labels as there are buttons
+    newScale("frequence","Jamais","Plusieurs fois par mois","Une fois par semaine","Plusieurs fois par semaine","Tous les jours")
+        .settings.labelsPosition("top")  // Position the labels
+        .settings.before( getText("sport") )
+        .print()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial("question_satisfactionpoids",
+    newCanvas("poids", 450, 190)
+        .center()
+        .add( 187, 10, newText ("Oui"))
+        .add ( 231, 10, newText("Non") )
+        .add( 0, 30, newText("Etes vous satisfaits de votre poids?") )
+        .settings.add( 185, 30, newScale("oui", 1)
+            .settings.callback( getScale("non").unselect() ))
+        .settings.add( 230, 30, newScale("non", 1)
+            .settings.callback( getScale("oui").unselect() ))   // Les gens ne peuvent pas choisir oui et non en m�me temps
+        .print()
+    , 
+    newSelector()                                             // Permet de r�cup�rer les infos, les gens peuvent changer d'avis 
+        .settings.add( getScale("oui"), getScale("non") )
+        .settings.log()
+        .wait()                                             // Tant que les gens n'ont pas fait leur choix, suivant ne s'affiche pas
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Merci beaucoup pour votre participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
