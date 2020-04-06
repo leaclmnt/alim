@@ -1,11 +1,32 @@
 //Projet alim. Stratégies d'adaptation du repas sans protéines animales ?
 
+// csv à copier : 
+
+TableSession1.csv
+
+GM,prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras,entree1,entree2,entree3,entree4,pasentree,fruit1,fruit2,laitage,gourmand1,gourmand2,pasdessert
+GM1_session1,Entrecote de Boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pates,Pommes de terre noisettes,Soupe de legumes,Taboule au poulet,Salade crudites,Part de quiche lorraine,Aucune entree,Compote,Banane,Yaourt nature,Part de gateau au chocolat,Crepe maison confiture,Aucun dessert
+GM2_session1,Magret de canard,Faux filet de Boeuf,Oeufs au plat,Feves,Courgettes,Oignons,Quinoa,Gratin dauphinois,Tomates,Feuillete a la viande,Salade de choux,Part de tarte epinards chevre,Aucune entree,Peche,Orange,Yaourt aux fruits,Creme brulee,Crumble aux pommes,Aucun dessert
+GM3_session1,Rosbif de Boeuf,Filet de poulet,Galette de pois chiches,Lentilles vertes,Poelee de champignons,Carottes,Gnocchis pomme de terre,Flammenkueche,Betteraves,Salade Cesar au poulet,Soupe a l oignon,Part de tarte a la tomate,Aucune entree,Compote,Kiwis,Yaourt aux fruits,Eclair au chocolat,Mousse creme de marron,Aucun dessert
+GM4_session1,Steak de pois chiches,Tofu poele,Oeufs brouilles,Lentilles vertes,Epinards,Aubergines,Riz,Pates farcies au fromage,Champignons a la grecque,Nems au poulet,Salade piemontaise,Crepe bechamel jambon fromage,Aucune entree,Salade de fruits,Framboises,Yaourt sucre nature,Glace,Part de tarte aux fruits rouges,Aucun dessert
+GM5_session1,Tofu poele,Oeuf au plat,Galette de cereales,Haricots rouges,Oignons,Poivrons rouges,Riz,Pommes de terres rissolees,Asperges,Salade de pates avec lardons,Celeri remoulade,Tranche de pate en croute,Aucune entree,Orange,Poire,Fromage blanc,Creme dessert a la vanille,Chausson aux pommes,Aucun dessert
+GM6_session1,Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Brocolis,Potiron,Boulgour,Frites,Soupe de legumes,Salade Cesar au poulet,Champignons a la grecque,Croissant au jambon fromage,Aucune entree,Salade de fruits,Pomme,Yaourt nature sucre,Part de brownie au chocolat,Panna Cotta,Aucun dessert
+
+session_2
+
+texte_a_choisir_plat_1,choix_1,choix_2,choix_3,choix_4,choix_5,choix_6,choix_7,choix_8,choix_9,texte_a_choisir_plat_2,choix_10,choix_11,choix_12,choix_13,choix_14,choix_15,choix_16,choix_17,choix_18,texte_a_choisir_plat_3,choix_19,choix_20,choix_21,choix_22,choix_23,choix_24,choix_25,choix_26,choix_27,texte_a_choisir_entree,choix_28,choix_29,choix_30,choix_31,choix_32,texte_a_choisir_fromage,choix_33,choix_34,texte_a_choisir_dessert_1,choix_35,choix_36,choix_37,choix_38,choix_39,choix_40,texte_a_choisir_dessert_2,choix_41,choix_42,choix_43,choix_44,choix_45,choix_46,texte_a_choisir_boisson,choix_47,choix_48,choix_49,choix_50,choix_51,choix_52,choix_53,choix_54,choix_55,choix_56,choix_57,raison_1,raison_2,raison_3,raison_4
+session_2_bloc1Choisissez un plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Aucun plat,session_2_bloc1Choisissez un deuxième plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Pas de deuxième plat,session_2_bloc1Choisissez un troisième plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Pas de troisième plat,session_2_bloc1Choisissez une entrée dans la liste suivante,Soupe de légumes,Taboulé avec poulet,Salade crudités,Part de quiche lorraine,Aucune entrée,session_2_bloc1Voulez-vous un assortiment de fromages ? ,Oui,Non,session_2_bloc1Choisissez un dessert dans la liste suivante,Compote,Banane,Yaourt nature (référence : aliment moyen),Part de Gâteau au chocolat,Crêpe maison (Fourrée au confiture),Aucun dessert,session_2_bloc1Choisissez un deuxième dessert dans la liste suivante,Compote,Banane,Yaourt nature (référence : aliment moyen),Part de Gâteau au chocolat,Crêpe maison (Fourrée au confiture),Pas de deuxième dessert,session_2_bloc1Choisissez une boisson dans la liste suivante (vous avez dans tous les cas de l’eau plate à disposition),Aucune boisson,Eau gazeuse,Soda pétillant,Soda non pétillant,Bière,Cidre,Vin blanc,Vin rouge,Vin rosé,Jus de fruit,Sirop à l'eau,bloc1Pour des raisons économiques,bloc1Pour le plaisir,bloc1Pour des raisons environnementales,bloc1Pour leur impact bénéfique sur ma santé
+session_2_bloc2Choisissez un plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Aucun plat,session_2_bloc2Choisissez un deuxième plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Pas de deuxième plat,session_2_bloc2Choisissez un troisième plat dans la liste suivante,Entrecôte de boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pâtes,Pommes de terre noisettes,Pas de troisième plat,session_2_bloc2Choisissez une entrée dans la liste suivante,Soupe de légumes,Taboulé avec poulet,Salade crudités,Part de quiche lorraine,Aucune entrée,session_2_bloc2Voulez-vous un assortiment de fromages ? ,Oui,Non,session_2_bloc2Choisissez un dessert dans la liste suivante,Compote,Banane,Yaourt nature (référence : aliment moyen),Part de Gâteau au chocolat,Crêpe maison (Fourrée au confiture),Aucun dessert,session_2_bloc2Choisissez un deuxième dessert dans la liste suivante,Compote,Banane,Yaourt nature (référence : aliment moyen),Part de Gâteau au chocolat,Crêpe maison (Fourrée au confiture),Pas de deuxième dessert,session_2_bloc2Choisissez une boisson dans la liste suivante (vous avez dans tous les cas de l’eau plate à disposition),Aucune boisson,Eau gazeuse,Soda pétillant,Soda non pétillant,Bière,Cidre,Vin blanc,Vin rouge,Vin rosé,Jus de fruit,Sirop à l'eau,bloc2Pour des raisons économiques,bloc2Pour le plaisir,bloc2Pour des raisons environnementales,bloc2Pour leur impact bénéfique sur ma santé
+
+
 //Script
 
 //Intro
 PennController.ResetPrefix(null) 
 
-newTrial(
+Sequence( "intro", "introbis", randomize("session1"), SendResults(), randomize("experiment_2"), "bye",  "encouragement")
+
+newTrial("intro",
     newText("Bonjour,")
         .print()
     ,
@@ -24,7 +45,7 @@ newTrial(
 )
 
 
-newTrial(
+newTrial("introbis",
     newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
         .print()
     ,
