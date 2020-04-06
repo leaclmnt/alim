@@ -2,7 +2,7 @@
 
 // Il manque la récupération de données 
 
-// doc scv : TableBloc1
+// doc scv : TableSession1
 
 plat,prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras,entree1,entree2,entree3,entree4,pasentree,fruit1,fruit2,laitage,gourmand1,gourmand2,pasdessert
 Plat 1,Entrecote de Boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pates,Pommes de terre noisettes,Soupe de legumes,Taboule au poulet,Salade crudites,Part de quiche lorraine,Aucune entree,Compote,Banane,Yaourt nature,Part de gateau au chocolat,Crepe maison confiture,Aucun dessert
@@ -43,7 +43,7 @@ newTrial( "intro" ,
 )
 
 
-Template("TableBloc1.csv" , 
+Template("TableSession1.csv" , 
     row => newTrial( "session1" ,
         newText("<b> Session 1 </b>")
             .center()
@@ -99,35 +99,35 @@ Template("TableBloc1.csv" ,
                 .settings.callback( getScale("feculentgras_oui").unselect() ))
             .print()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("legumineuse_oui"), getScale("legumineuse_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
             .log()
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
-            .log()
+            .log(row.GM)
         , 
-        newSelector()
+        newSelector(row.GM)
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
             .log()
             .wait()
@@ -146,12 +146,35 @@ Template("TableBloc1.csv" ,
                 .add( row.entree4 )
                 .add( row.pasentree ))
             .print()
+        , 
+        getDropDown("entree").log(row.GM)
         ,
         newButton("Suivant")
             .print()
             .wait()
+        ,
+        newCanvas("fromage", 450,90)
+            .center()
+            .add(0, 10, newText("Souhaitez vous une assiette de fromage ?"))
+            .add( 187, 30, newText ("Oui"))
+            .add ( 231, 30, newText("Non"))
+            .add( 0, 50, newText("Assiette de fromage") )
+            .settings.add( 185, 50, newScale("fromage_oui", 1)
+                .settings.callback( getScale("fromage_non").unselect() ))
+            .settings.add( 230, 50, newScale("fromage_non", 1)
+                .settings.callback( getScale("fromage_oui").unselect() ))
+            .print()
         , 
-        newCanvas("entree", 450, 95)
+        newSelector(row.GM)
+            .settings.add( getScale("fromage_oui"), getScale("fromage_non") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newCanvas("dessert", 450, 95)
             .center()
             .add(0, 10, newText("Choisissez a present jusqu'a deux desserts dans les listes ci-dessous :"))
             .add(20, 40, newDropDown("dessert1", "...")
@@ -169,8 +192,36 @@ Template("TableBloc1.csv" ,
                 .add( row.gourmand2 )
                 .add( row.pasdessert ))
             .print()
+        , 
+        getDropDown("dessert1").log(row.GM)
+        , 
+        getDropDown("dessert2").log(row.GM)
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        , 
+        newCanvas("boissons", 450, 90)
+            .center()
+            .add(0, 10, newText("L'eau est disponible a volonte. Souhaitez vous accompagner votre plat d'une boisson ?"))
+            .add(20, 60, newDropDown("boisson", "...")
+                .add("Eau gazeuse")
+                .add("Soda petillant")
+                .add("Soda non petillant")
+                .add("Biere")
+                .add("Cidre")
+                .add("Vin blanc")
+                .add("Vin rouge")
+                .add("Vin rose")
+                .add("Jus de fruit")
+                .add("Sirop a l'eau"))
+            .print()
+        , 
+        getDropDown("boisson").log(row.GM)
         ,
         newButton("Suivant")
             .print()
             .wait()
 ))
+
+
