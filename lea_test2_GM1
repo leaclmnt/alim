@@ -1,5 +1,17 @@
 // marche avec un doc csv spécifique
 
+// version éditée à 14h. Moins de pbs
+
+// document csv : TableBloc1.csv
+
+prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras
+Entrecote de Boeuf,Escalope de dinde,Steak de soja,Petits pois,Blettes,Poireaux,Pates,Pommes de terre noisettes
+Magret de canard,Faux filet de Boeuf,Oeufs au plat,Feves,Courgettes,Oignons,Quinoa,Gratin dauphinois
+Rosbif de Boeuf,Filet de poulet,Galette de pois chiches,Lentilles vertes,Poelee de champignons,Carottes,Gnocchis pomme de terre,Flammenkueche
+Steak de pois chiches,Tofu poele,Oeufs brouilles,Lentilles vertes,Epinards,Aubergines,Riz,Pates fraiches farcies au fromage
+Tofu poele,Oeuf au plat,Galette de cereales,Haricots rouges,Oignons,Poivrons rouges,Riz,Pommes de terres rissolees
+Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Brocolis,Potiron,Boulgour,Frites 
+
 // This is a simple demo script, feel free to edit or delete it
 // Find a tutorial and the list of availalbe elements at:
 // https://www.pcibex.net/documentation/
@@ -8,83 +20,141 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 // Show the 'intro' trial first, then all the 'experiment' trials in a random order
 // then send the results and finally show the trial labeled 'bye'
-Sequence("plat1")
+Sequence( "intro", randomize("plat1"), SendResults(), "bye" )
 
+// What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+// This log command adds a column reporting the participant's name to every line saved to the results
+
+
+newTrial( "intro" ,
+    newImage("pcibex-logo.png")
+        .size( 150 , 200 )      // Resize the image to 150x250px
+        .print()
+    ,
+    newText("<p>Welcome to the PCIbex demo experiment.</p><p>Please enter your name below and press Enter:</p>")
+        .print()
+    ,
+    newTextInput()
+        .print()
+        .wait()                 // The next command won't be executed until Enter is pressed
+        .setVar( "ParticipantName" )
+        // This setVar command stores the value from the TextInput element into the Var element
+)
 
 Template( "TableBloc1.csv" ,
     row => newTrial( "plat1" ,
-    
-    newText("<b> Plat principal n1 </b>")
-    .center()
-    .print()
-    ,
-    newText("Vous allez composer un plat principal.")
-        .print()
-    ,
-    newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
-        .print()
-    , 
-    newCanvas("GM1", 450, 190)
-        .center()
-        .add( 187, 10, newText ("Oui"))
-        .add ( 231, 10, newText("Non") )
-        .add( 0, 30, newText( row.prot1) )
-        .settings.add( 185, 30, newScale("prot1_oui", 1)
-            .settings.callback( getScale("prot1_non").unselect() ))
-        .settings.add( 230, 30, newScale("prot1_non", 1)
-            .settings.callback( getScale("prot1_oui").unselect() ))
-        .add( 0, 50, newText( row.prot2) )
-        .settings.add( 185, 50, newScale("prot2_oui", 1)
-            .settings.callback( getScale("prot2_non").unselect() ))
-        .settings.add( 230, 50, newScale("prot2_non", 1)
-            .settings.callback( getScale("prot2_oui").unselect() ))
-        .add( 0, 70, newText( row.prot3) )
-        .settings.add( 185, 70, newScale("prot3_oui", 1)
-            .settings.callback( getScale("prot3_non").unselect() ))
-        .settings.add( 230, 70, newScale("prot3_non", 1)
-            .settings.callback( getScale("prot3_oui").unselect() ))
-        .add( 0, 90, newText( row.legumineuse) )
-        .add( 185, 90, newScale("legumineuse_oui", 1)
-            .settings.callback( getScale("legumineuse_non").unselect() ))
-        .add( 230, 90, newScale("legumineuse_non", 1)
-            .settings.callback( getScale("legumineuse_oui").unselect() ))
-        .add( 0, 110, newText( row.legume1) )
-        .settings.add( 185, 110, newScale("legume1_oui", 1)
-            .settings.callback( getScale("legume1_non").unselect() ))
-        .settings.add( 230, 110, newScale("legume1_non", 1)
-            .settings.callback( getScale("legume1_oui").unselect() ))
-        .add( 0, 130, newText( row.legume2) )
-        .settings.add( 185, 130, newScale("legume2_oui", 1)
-            .settings.callback( getScale("legume2_non").unselect() ))
-        .settings.add( 230, 130, newScale("legume2_non", 1)
-            .settings.callback( getScale("legume2_oui").unselect() ))
-        .add( 0, 150, newText( row.feculent) )
-        .settings.add( 185, 150, newScale("feculent_oui", 1)
-            .settings.callback( getScale("feculent_non").unselect() ))
-        .settings.add( 230, 150, newScale("feculent_non", 1)
-            .settings.callback( getScale("feculent_oui").unselect() ))        
-        .add( 0, 170, newText( row.feculentgras) )
-        .settings.add( 185, 170, newScale("feculentgras_oui", 1)
-            .settings.callback( getScale("feculentgras_non").unselect() ))
-        .settings.add( 230, 170, newScale("feculentgras_non", 1)
-            .settings.callback( getScale("feculentgras_oui").unselect() ))
-        .print()
-    , 
-    newSelector()
-        .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
-        .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
-        .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
-        .settings.add( getScale("legumineuse_oui"), getScale("legumineuse_non") )
-        .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
-        .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
-        .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
-        .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
-        .settings.log()
-    ,
-    newButton("Suivant")
-        .print()
-        .wait()
+        newText("<b> Plat principal n1 </b>")
+            .center()
+            .print()
+        ,
+        newText("Vous allez composer un plat principal.")
+            .print()
+        ,
+        newText("Choisissez les aliments qui vous font envie dans la liste suivante.")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 187, 10, newText ("Oui"))
+            .add ( 231, 10, newText("Non"))
+            .add( 0, 30, newText( row.prot1) )
+            .settings.add( 185, 30, newScale("prot1_oui", 1)
+                .settings.callback( getScale("prot1_non").unselect() ))
+            .settings.add( 230, 30, newScale("prot1_non", 1)
+                .settings.callback( getScale("prot1_oui").unselect() ))
+            .add( 0, 50, newText( row.prot2) )
+            .settings.add( 185, 50, newScale("prot2_oui", 1)
+                .settings.callback( getScale("prot2_non").unselect() ))
+            .settings.add( 230, 50, newScale("prot2_non", 1)
+                .settings.callback( getScale("prot2_oui").unselect() ))
+            .add( 0, 70, newText( row.prot3) )
+            .settings.add( 185, 70, newScale("prot3_oui", 1)
+                .settings.callback( getScale("prot3_non").unselect() ))
+            .settings.add( 230, 70, newScale("prot3_non", 1)
+                .settings.callback( getScale("prot3_oui").unselect() ))
+            .add( 0, 90, newText( row.legumineuse) )
+            .add( 185, 90, newScale("legumineuse_oui", 1)
+                .settings.callback( getScale("legumineuse_non").unselect() ))
+            .add( 230, 90, newScale("legumineuse_non", 1)
+                .settings.callback( getScale("legumineuse_oui").unselect() ))
+            .add( 0, 110, newText( row.legume1) )
+            .settings.add( 185, 110, newScale("legume1_oui", 1)
+                .settings.callback( getScale("legume1_non").unselect() ))
+            .settings.add( 230, 110, newScale("legume1_non", 1)
+                .settings.callback( getScale("legume1_oui").unselect() ))
+            .add( 0, 130, newText( row.legume2) )
+            .settings.add( 185, 130, newScale("legume2_oui", 1)
+                .settings.callback( getScale("legume2_non").unselect() ))
+            .settings.add( 230, 130, newScale("legume2_non", 1)
+                .settings.callback( getScale("legume2_oui").unselect() ))
+            .add( 0, 150, newText( row.feculent) )
+            .settings.add( 185, 150, newScale("feculent_oui", 1)
+                .settings.callback( getScale("feculent_non").unselect() ))
+            .settings.add( 230, 150, newScale("feculent_non", 1)
+                .settings.callback( getScale("feculent_oui").unselect() ))        
+            .add( 0, 170, newText( row.feculentgras) )
+            .settings.add( 185, 170, newScale("feculentgras_oui", 1)
+                .settings.callback( getScale("feculentgras_non").unselect() ))
+            .settings.add( 230, 170, newScale("feculentgras_non", 1)
+                .settings.callback( getScale("feculentgras_oui").unselect() ))
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("legumineuse_oui"), getScale("legumineuse_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
 ))
 
 
-// Le bouton Suivant apparait trop tot... 
+
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Thank you for your participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
