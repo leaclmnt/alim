@@ -1,0 +1,53 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "intro", "habitudes_omnivore" , SendResults() , "bye" )
+
+
+// What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+// This log command adds a column reporting the participant's name to every line saved to the results
+
+
+newTrial( "intro" ,
+    newText("hello")
+        .print()
+)
+
+
+newTrial("habitudes_omnivore",
+    // Don't print it yet, we'll now add it to the left of the scale
+    newText("habitude", "A quelle frequence mangez vous de la viande? ")
+        //.print()
+    ,
+    // Give as many labels as there are buttons
+    newScale("frequence","Moins d'une fois par mois","Moins d'une fois par semaine","1 a 3 fois par semaine","3 a 6 fois par semaine","Une fois par jour", "Plusieurs fois par jour")
+        .settings.labelsPosition("top")  // Position the labels
+        .settings.before( getText("habitude") )
+        .print()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Thank you for your participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
