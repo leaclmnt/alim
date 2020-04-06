@@ -1,0 +1,1392 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "enregistrement_participant" , "intro" , "introbis" , randomize("experiment_1") , randomize("experiment_2") , "encouragement" , SendResults() , "bye" )
+//Sequence( "intro", randomize("experiment") , SendResults() , "bye" )
+
+
+// What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+// This log command adds a column reporting the participant's name to every line saved to the results
+
+
+newTrial( "enregistrement_participant" ,
+    //newImage("pcibex-logo.png")
+    //    .size( 150 , 200 )      // Resize the image to 150x250px
+    //    .print()
+    //,
+    newText("<p>Welcome to the PCIbex demo experiment.</p><p>Please enter your name below and press Enter:</p>")
+        .print()
+    ,
+    newTextInput()
+        .print()
+        .wait()                 // The next command won't be executed until Enter is pressed
+        .setVar( "ParticipantName" )
+        // This setVar command stores the value from the TextInput element into the Var element
+)
+
+newTrial( "intro" ,
+    newText("Bonjour,")
+        .print()
+    ,
+    newText("Dans le cadre d’un projet de recherche à AgroParisTech, nous souhaiterions que vous répondiez à un questionnaire, qui vous prendra environ 10 minutes. ")
+        .print()
+    ,
+    newText("Cela nous aidera beaucoup pour nos recherches. Le questionnaire est anonyme, et les données collectées sont stockées dans une base de données sécurisées.")
+        .print()
+    ,
+    newText("Pour toute question ou commentaire, vous pouvez nous contacter à l’adresse suivante : ??.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+newTrial( "introbis" ,
+    newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
+        .print()
+    ,
+    newText("Pour chaque catégorie (plat principal, entrée, fromage, dessert, boisson), vous allez pouvoir choisir un ou plusieurs aliments.")
+        .print()
+    ,
+    newText("Dans tous les cas, il y a à disposition de l’eau plate, du pain, des condiments, des épices.")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+
+
+
+Template( "session_1.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv 
+    row => newTrial( "experiment_1" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_plat_1_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_1) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )          
+            .add( row.choix_6 )
+            .add( row.choix_7 )
+            .add( row.choix_8 )
+            .add( row.choix_9 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+//            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_plat_2_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_2) )    // Print the sentence to the left of the list
+            .add( row.choix_10 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_11 )
+            .add( row.choix_12 )
+            .add( row.choix_13 )
+            .add( row.choix_14 )       
+            .add( row.choix_15 )
+            .add( row.choix_16 )
+            .add( row.choix_17 )
+            .add( row.choix_18 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+//            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_plat_3_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_3) )    // Print the sentence to the left of the list
+            .add( row.choix_19 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_20 )
+            .add( row.choix_21 )
+            .add( row.choix_22 )
+            .add( row.choix_23 )             
+            .add( row.choix_24 )
+            .add( row.choix_25 )
+            .add( row.choix_26 )
+            .add( row.choix_27 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_entree_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_entree) )    // Print the sentence to the left of the list
+            .add( row.choix_28 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_29 )
+            .add( row.choix_30 )
+            .add( row.choix_31 )
+            .add( row.choix_32 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_fromage_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_fromage) )    // Print the sentence to the left of the list
+            .add( row.choix_33 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_34 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_dessert_1_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_dessert_1) )    // Print the sentence to the left of the list
+            .add( row.choix_35 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_36 )
+            .add( row.choix_37 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_38 )
+            .add( row.choix_39 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_40 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            //.wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_dessert_2_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_dessert_2) )    // Print the sentence to the left of the list
+            .add( row.choix_41 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_42 )
+            .add( row.choix_43 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_44 )
+            .add( row.choix_45 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_46 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_boisson_session_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_boisson) )    // Print the sentence to the left of the list
+            .add( row.choix_47 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_48 )
+            .add( row.choix_49 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_50 )
+            .add( row.choix_51 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_52 )
+            .add( row.choix_53 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_54 )
+            .add( row.choix_55 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_56 )
+            .add( row.choix_57 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+    )
+    .log( "texte_a_choisir_plat_1_session_1" , row.texte_a_choisir_plat_1 )
+    .log( "choix_1_session_1" , row.choix_1 )
+    .log( "choix_2_session_1" , row.choix_2 )
+    .log( "choix_3_session_1" , row.choix_3 )
+    .log( "choix_4_session_1" , row.choix_4 )
+    .log( "choix_5_session_1" , row.choix_5 )
+    .log( "choix_6_session_1" , row.choix_6 )
+    .log( "choix_7_session_1" , row.choix_7 )
+    .log( "choix_8_session_1" , row.choix_8 )
+    .log( "choix_9_session_1" , row.choix_9 )
+    .log( "texte_a_choisir_plat_2_session_1" , row.texte_a_choisir_plat_2 )
+    .log( "choix_10_session_1" , row.choix_10 )
+    .log( "choix_11_session_1" , row.choix_11 )
+    .log( "choix_12_session_1" , row.choix_12 )
+    .log( "choix_13_session_1" , row.choix_13 )
+    .log( "choix_14_session_1" , row.choix_14 )
+    .log( "choix_15_session_1" , row.choix_15 )
+    .log( "choix_16_session_1" , row.choix_16 )
+    .log( "choix_17_session_1" , row.choix_17 )
+    .log( "choix_18_session_1" , row.choix_18 )
+    .log( "texte_a_choisir_plat_3_session_1" , row.texte_a_choisir_plat_3 )
+    .log( "choix_19_session_1" , row.choix_19 )
+    .log( "choix_20_session_1" , row.choix_20 )
+    .log( "choix_21_session_1" , row.choix_21 )
+    .log( "choix_22_session_1" , row.choix_22 )
+    .log( "choix_23_session_1" , row.choix_23 )
+    .log( "choix_24_session_1" , row.choix_24 )
+    .log( "choix_25_session_1" , row.choix_25 )
+    .log( "choix_26_session_1" , row.choix_26 )
+    .log( "choix_27_session_1" , row.choix_27 )
+    .log( "texte_a_choisir_entree_session_1" , row.texte_a_choisir_entree )
+    .log( "choix_28_session_1" , row.choix_28 )
+    .log( "choix_29_session_1" , row.choix_29 )
+    .log( "choix_30_session_1" , row.choix_30 )
+    .log( "choix_31_session_1" , row.choix_31 )
+    .log( "choix_32_session_1" , row.choix_32 )
+    .log( "texte_a_choisir_fromage_session_1" , row.texte_a_choisir_fromage )
+    .log( "choix_33_session_1" , row.choix_33 )
+    .log( "choix_34_session_1" , row.choix_34 )
+    .log( "texte_a_choisir_dessert_1_session_1" , row.texte_a_choisir_dessert_1 )
+    .log( "choix_35_session_1" , row.choix_35 )
+    .log( "choix_36_session_1" , row.choix_36 )
+    .log( "choix_37_session_1" , row.choix_37 )
+    .log( "choix_38_session_1" , row.choix_38 )
+    .log( "choix_39_session_1" , row.choix_39 )
+    .log( "choix_40_session_1" , row.choix_40 )
+    .log( "texte_a_choisir_dessert_2_session_1" , row.texte_a_choisir_dessert_2 )
+    .log( "choix_41_session_1" , row.choix_41 )
+    .log( "choix_42_session_1" , row.choix_42 )
+    .log( "choix_43_session_1" , row.choix_43 )
+    .log( "choix_44_session_1" , row.choix_44 )
+    .log( "choix_45_session_1" , row.choix_45 )
+    .log( "choix_46_session_1" , row.choix_46 )
+    .log( "texte_a_choisir_boisson_session_1" , row.texte_a_choisir_boisson )
+    .log( "choix_47_session_1" , row.choix_47 )
+    .log( "choix_48_session_1" , row.choix_48 )
+    .log( "choix_49_session_1" , row.choix_49 )
+    .log( "choix_50_session_1" , row.choix_50 )
+    .log( "choix_51_session_1" , row.choix_51 )
+    .log( "choix_52_session_1" , row.choix_52 )
+    .log( "choix_53_session_1" , row.choix_53 )
+    .log( "choix_54_session_1" , row.choix_54 )
+    .log( "choix_55_session_1" , row.choix_55 )
+    .log( "choix_56_session_1" , row.choix_56 )
+    .log( "choix_57_session_1" , row.choix_57 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+
+
+
+
+Template( "session_2.csv" ,
+    // Row will iteratively point to every row in bloc_1.csv 
+    row => newTrial( "experiment_2" ,
+        // The trials are minimal: choose a pronoun from a DropDown list
+        newDropDown("choix_plat_1_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_1) )    // Print the sentence to the left of the list
+            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_2 )
+            .add( row.choix_3 )
+            .add( row.choix_4 )
+            .add( row.choix_5 )          
+            .add( row.choix_6 )
+            .add( row.choix_7 )
+            .add( row.choix_8 )
+            .add( row.choix_9 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+//            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_plat_2_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_2) )    // Print the sentence to the left of the list
+            .add( row.choix_10 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_11 )
+            .add( row.choix_12 )
+            .add( row.choix_13 )
+            .add( row.choix_14 )       
+            .add( row.choix_15 )
+            .add( row.choix_16 )
+            .add( row.choix_17 )
+            .add( row.choix_18 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+//            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_plat_3_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_plat_3) )    // Print the sentence to the left of the list
+            .add( row.choix_19 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_20 )
+            .add( row.choix_21 )
+            .add( row.choix_22 )
+            .add( row.choix_23 )             
+            .add( row.choix_24 )
+            .add( row.choix_25 )
+            .add( row.choix_26 )
+            .add( row.choix_27 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_entree_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_entree) )    // Print the sentence to the left of the list
+            .add( row.choix_28 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_29 )
+            .add( row.choix_30 )
+            .add( row.choix_31 )
+            .add( row.choix_32 )             // pb : enlever la ligne blanche/undefined pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_fromage_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_fromage) )    // Print the sentence to the left of the list
+            .add( row.choix_33 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_34 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_dessert_1_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_dessert_1) )    // Print the sentence to the left of the list
+            .add( row.choix_35 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_36 )
+            .add( row.choix_37 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_38 )
+            .add( row.choix_39 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_40 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            //.wait()
+            .log()                              // Make sure to log the participant's selection
+        ,
+        newDropDown("choix_dessert_2_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_dessert_2) )    // Print the sentence to the left of the list
+            .add( row.choix_41 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_42 )
+            .add( row.choix_43 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_44 )
+            .add( row.choix_45 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_46 )
+            //.shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newDropDown("choix_boisson_session_2", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+            .before( newText(row.texte_a_choisir_boisson) )    // Print the sentence to the left of the list
+            .add( row.choix_47 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_48 )
+            .add( row.choix_49 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_50 )
+            .add( row.choix_51 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_52 )
+            .add( row.choix_53 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_54 )
+            .add( row.choix_55 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .add( row.choix_56 )
+            .add( row.choix_57 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+            .shuffle()                          // Randomly order the options in the list (Pronoun1 and Pronoun2)
+            //.once()                             // Disable the list after the first selection
+            .print()
+            .wait()
+            .log()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        ,
+        newText("Pour le premier plat de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_plat_1", 1)
+                .settings.callback( getScale("raison_1_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_1").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_plat_1", 1)
+                .settings.callback( getScale("raison_1_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_1").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_plat_1", 1)
+                .settings.callback( getScale("raison_1_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_1").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_plat_1", 1)
+                .settings.callback( getScale("raison_1_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_1").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_plat_1", 1)
+                .settings.callback( getScale("raison_2_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_1").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_plat_1", 1)
+                .settings.callback( getScale("raison_2_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_1").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_plat_1", 1)
+                .settings.callback( getScale("raison_2_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_1").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_plat_1", 1)
+                .settings.callback( getScale("raison_2_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_1").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_plat_1", 1)
+                .settings.callback( getScale("raison_3_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_1").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_plat_1", 1)
+                .settings.callback( getScale("raison_3_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_1").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_plat_1", 1)
+                .settings.callback( getScale("raison_3_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_1").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_plat_1", 1)
+                .settings.callback( getScale("raison_3_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_1").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_plat_1", 1)
+                .settings.callback( getScale("raison_4_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_1").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_plat_1", 1)
+                .settings.callback( getScale("raison_4_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_1").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_plat_1", 1)
+                .settings.callback( getScale("raison_4_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_1").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_plat_1", 1)
+                .settings.callback( getScale("raison_4_num1_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_1").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_plat_1"), getScale("raison_1_num2_plat_1"), getScale("raison_1_num3_plat_1"), getScale("raison_1_num4_plat_1") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_plat_1"), getScale("raison_2_num2_plat_1"), getScale("raison_2_num3_plat_1"), getScale("raison_2_num4_plat_1") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_plat_1"), getScale("raison_3_num2_plat_1"), getScale("raison_3_num3_plat_1"), getScale("raison_3_num4_plat_1") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_plat_1"), getScale("raison_4_num2_plat_1"), getScale("raison_4_num3_plat_1"), getScale("raison_4_num4_plat_1") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+            
+        ,
+        newText("Pour le deuxième plat de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_plat_2", 1)
+                .settings.callback( getScale("raison_1_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_2").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_plat_2", 1)
+                .settings.callback( getScale("raison_1_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_2").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_plat_2", 1)
+                .settings.callback( getScale("raison_1_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_2").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_plat_2", 1)
+                .settings.callback( getScale("raison_1_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_2").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_plat_2", 1)
+                .settings.callback( getScale("raison_2_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_2").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_plat_2", 1)
+                .settings.callback( getScale("raison_2_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_2").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_plat_2", 1)
+                .settings.callback( getScale("raison_2_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_2").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_plat_2", 1)
+                .settings.callback( getScale("raison_2_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_2").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_plat_2", 1)
+                .settings.callback( getScale("raison_3_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_2").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_plat_2", 1)
+                .settings.callback( getScale("raison_3_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_2").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_plat_2", 1)
+                .settings.callback( getScale("raison_3_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_2").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_plat_2", 1)
+                .settings.callback( getScale("raison_3_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_2").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_plat_2", 1)
+                .settings.callback( getScale("raison_4_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_2").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_plat_2", 1)
+                .settings.callback( getScale("raison_4_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_2").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_plat_2", 1)
+                .settings.callback( getScale("raison_4_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_2").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_plat_2", 1)
+                .settings.callback( getScale("raison_4_num1_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_2").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_plat_2"), getScale("raison_1_num2_plat_2"), getScale("raison_1_num3_plat_2"), getScale("raison_1_num4_plat_2") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_plat_2"), getScale("raison_2_num2_plat_2"), getScale("raison_2_num3_plat_2"), getScale("raison_2_num4_plat_2") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_plat_2"), getScale("raison_3_num2_plat_2"), getScale("raison_3_num3_plat_2"), getScale("raison_3_num4_plat_2") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_plat_2"), getScale("raison_4_num2_plat_2"), getScale("raison_4_num3_plat_2"), getScale("raison_4_num4_plat_2") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+        
+        ,
+        newText("Pour le troisième plat de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_plat_3", 1)
+                .settings.callback( getScale("raison_1_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_3").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_plat_3", 1)
+                .settings.callback( getScale("raison_1_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_3").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_plat_3", 1)
+                .settings.callback( getScale("raison_1_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num4_plat_3").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_plat_3", 1)
+                .settings.callback( getScale("raison_1_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_1_num3_plat_3").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_plat_3", 1)
+                .settings.callback( getScale("raison_2_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_3").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_plat_3", 1)
+                .settings.callback( getScale("raison_2_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_3").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_plat_3", 1)
+                .settings.callback( getScale("raison_2_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num4_plat_3").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_plat_3", 1)
+                .settings.callback( getScale("raison_2_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_2_num3_plat_3").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_plat_3", 1)
+                .settings.callback( getScale("raison_3_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_3").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_plat_3", 1)
+                .settings.callback( getScale("raison_3_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_3").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_plat_3", 1)
+                .settings.callback( getScale("raison_3_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num4_plat_3").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_plat_3", 1)
+                .settings.callback( getScale("raison_3_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_3_num3_plat_3").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_plat_3", 1)
+                .settings.callback( getScale("raison_4_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_3").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_plat_3", 1)
+                .settings.callback( getScale("raison_4_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_3").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_plat_3", 1)
+                .settings.callback( getScale("raison_4_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num4_plat_3").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_plat_3", 1)
+                .settings.callback( getScale("raison_4_num1_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num2_plat_3").unselect() )
+                .settings.callback( getScale("raison_4_num3_plat_3").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_plat_3"), getScale("raison_1_num2_plat_3"), getScale("raison_1_num3_plat_3"), getScale("raison_1_num4_plat_3") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_plat_3"), getScale("raison_2_num2_plat_3"), getScale("raison_2_num3_plat_3"), getScale("raison_2_num4_plat_3") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_plat_3"), getScale("raison_3_num2_plat_3"), getScale("raison_3_num3_plat_3"), getScale("raison_3_num4_plat_3") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_plat_3"), getScale("raison_4_num2_plat_3"), getScale("raison_4_num3_plat_3"), getScale("raison_4_num4_plat_3") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+
+        ,
+        newText("Pour l’entrée de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_entree", 1)
+                .settings.callback( getScale("raison_1_num2_entree").unselect() )
+                .settings.callback( getScale("raison_1_num3_entree").unselect() )
+                .settings.callback( getScale("raison_1_num4_entree").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_entree", 1)
+                .settings.callback( getScale("raison_1_num1_entree").unselect() )
+                .settings.callback( getScale("raison_1_num3_entree").unselect() )
+                .settings.callback( getScale("raison_1_num4_entree").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_entree", 1)
+                .settings.callback( getScale("raison_1_num1_entree").unselect() )
+                .settings.callback( getScale("raison_1_num2_entree").unselect() )
+                .settings.callback( getScale("raison_1_num4_entree").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_entree", 1)
+                .settings.callback( getScale("raison_1_num1_entree").unselect() )
+                .settings.callback( getScale("raison_1_num2_entree").unselect() )
+                .settings.callback( getScale("raison_1_num3_entree").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_entree", 1)
+                .settings.callback( getScale("raison_2_num2_entree").unselect() )
+                .settings.callback( getScale("raison_2_num3_entree").unselect() )
+                .settings.callback( getScale("raison_2_num4_entree").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_entree", 1)
+                .settings.callback( getScale("raison_2_num1_entree").unselect() )
+                .settings.callback( getScale("raison_2_num3_entree").unselect() )
+                .settings.callback( getScale("raison_2_num4_entree").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_entree", 1)
+                .settings.callback( getScale("raison_2_num1_entree").unselect() )
+                .settings.callback( getScale("raison_2_num2_entree").unselect() )
+                .settings.callback( getScale("raison_2_num4_entree").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_entree", 1)
+                .settings.callback( getScale("raison_2_num1_entree").unselect() )
+                .settings.callback( getScale("raison_2_num2_entree").unselect() )
+                .settings.callback( getScale("raison_2_num3_entree").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_entree", 1)
+                .settings.callback( getScale("raison_3_num2_entree").unselect() )
+                .settings.callback( getScale("raison_3_num3_entree").unselect() )
+                .settings.callback( getScale("raison_3_num4_entree").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_entree", 1)
+                .settings.callback( getScale("raison_3_num1_entree").unselect() )
+                .settings.callback( getScale("raison_3_num3_entree").unselect() )
+                .settings.callback( getScale("raison_3_num4_entree").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_entree", 1)
+                .settings.callback( getScale("raison_3_num1_entree").unselect() )
+                .settings.callback( getScale("raison_3_num2_entree").unselect() )
+                .settings.callback( getScale("raison_3_num4_entree").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_entree", 1)
+                .settings.callback( getScale("raison_3_num1_entree").unselect() )
+                .settings.callback( getScale("raison_3_num2_entree").unselect() )
+                .settings.callback( getScale("raison_3_num3_entree").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_entree", 1)
+                .settings.callback( getScale("raison_4_num2_entree").unselect() )
+                .settings.callback( getScale("raison_4_num3_entree").unselect() )
+                .settings.callback( getScale("raison_4_num4_entree").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_entree", 1)
+                .settings.callback( getScale("raison_4_num1_entree").unselect() )
+                .settings.callback( getScale("raison_4_num3_entree").unselect() )
+                .settings.callback( getScale("raison_4_num4_entree").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_entree", 1)
+                .settings.callback( getScale("raison_4_num1_entree").unselect() )
+                .settings.callback( getScale("raison_4_num2_entree").unselect() )
+                .settings.callback( getScale("raison_4_num4_entree").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_entree", 1)
+                .settings.callback( getScale("raison_4_num1_entree").unselect() )
+                .settings.callback( getScale("raison_4_num2_entree").unselect() )
+                .settings.callback( getScale("raison_4_num3_entree").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_entree"), getScale("raison_1_num2_entree"), getScale("raison_1_num3_entree"), getScale("raison_1_num4_entree") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_entree"), getScale("raison_2_num2_entree"), getScale("raison_2_num3_entree"), getScale("raison_2_num4_entree") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_entree"), getScale("raison_3_num2_entree"), getScale("raison_3_num3_entree"), getScale("raison_3_num4_entree") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_entree"), getScale("raison_4_num2_entree"), getScale("raison_4_num3_entree"), getScale("raison_4_num4_entree") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+
+        ,
+        newText("Pour le fromage de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_fromage", 1)
+                .settings.callback( getScale("raison_1_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num4_fromage").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_fromage", 1)
+                .settings.callback( getScale("raison_1_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num4_fromage").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_fromage", 1)
+                .settings.callback( getScale("raison_1_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num4_fromage").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_fromage", 1)
+                .settings.callback( getScale("raison_1_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_1_num3_fromage").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_fromage", 1)
+                .settings.callback( getScale("raison_2_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num4_fromage").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_fromage", 1)
+                .settings.callback( getScale("raison_2_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num4_fromage").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_fromage", 1)
+                .settings.callback( getScale("raison_2_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num4_fromage").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_fromage", 1)
+                .settings.callback( getScale("raison_2_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_2_num3_fromage").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_fromage", 1)
+                .settings.callback( getScale("raison_3_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num4_fromage").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_fromage", 1)
+                .settings.callback( getScale("raison_3_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num4_fromage").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_fromage", 1)
+                .settings.callback( getScale("raison_3_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num4_fromage").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_fromage", 1)
+                .settings.callback( getScale("raison_3_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_3_num3_fromage").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_fromage", 1)
+                .settings.callback( getScale("raison_4_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num4_fromage").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_fromage", 1)
+                .settings.callback( getScale("raison_4_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num3_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num4_fromage").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_fromage", 1)
+                .settings.callback( getScale("raison_4_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num4_fromage").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_fromage", 1)
+                .settings.callback( getScale("raison_4_num1_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num2_fromage").unselect() )
+                .settings.callback( getScale("raison_4_num3_fromage").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_fromage"), getScale("raison_1_num2_fromage"), getScale("raison_1_num3_fromage"), getScale("raison_1_num4_fromage") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_fromage"), getScale("raison_2_num2_fromage"), getScale("raison_2_num3_fromage"), getScale("raison_2_num4_fromage") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_fromage"), getScale("raison_3_num2_fromage"), getScale("raison_3_num3_fromage"), getScale("raison_3_num4_fromage") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_fromage"), getScale("raison_4_num2_fromage"), getScale("raison_4_num3_fromage"), getScale("raison_4_num4_fromage") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+        ,
+        newText("Pour le premier dessert de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_dessert_1", 1)
+                .settings.callback( getScale("raison_1_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_1").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_dessert_1", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_1").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_dessert_1", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_1").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_dessert_1", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_1").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_dessert_1", 1)
+                .settings.callback( getScale("raison_2_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_1").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_dessert_1", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_1").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_dessert_1", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_1").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_dessert_1", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_1").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_dessert_1", 1)
+                .settings.callback( getScale("raison_3_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_1").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_dessert_1", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_1").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_dessert_1", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_1").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_dessert_1", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_1").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_dessert_1", 1)
+                .settings.callback( getScale("raison_4_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_1").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_dessert_1", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_1").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_dessert_1", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_1").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_dessert_1", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num2_dessert_1").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_1").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_dessert_1"), getScale("raison_1_num2_dessert_1"), getScale("raison_1_num3_dessert_1"), getScale("raison_1_num4_dessert_1") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_dessert_1"), getScale("raison_2_num2_dessert_1"), getScale("raison_2_num3_dessert_1"), getScale("raison_2_num4_dessert_1") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_dessert_1"), getScale("raison_3_num2_dessert_1"), getScale("raison_3_num3_dessert_1"), getScale("raison_3_num4_dessert_1") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_dessert_1"), getScale("raison_4_num2_dessert_1"), getScale("raison_4_num3_dessert_1"), getScale("raison_4_num4_dessert_1") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+        ,
+        newText("Pour le deuxième dessert de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_dessert_2", 1)
+                .settings.callback( getScale("raison_1_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_2").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_dessert_2", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_2").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_dessert_2", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num4_dessert_2").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_dessert_2", 1)
+                .settings.callback( getScale("raison_1_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_1_num3_dessert_2").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_dessert_2", 1)
+                .settings.callback( getScale("raison_2_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_2").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_dessert_2", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_2").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_dessert_2", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num4_dessert_2").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_dessert_2", 1)
+                .settings.callback( getScale("raison_2_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_2_num3_dessert_2").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_dessert_2", 1)
+                .settings.callback( getScale("raison_3_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_2").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_dessert_2", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_2").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_dessert_2", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num4_dessert_2").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_dessert_2", 1)
+                .settings.callback( getScale("raison_3_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_3_num3_dessert_2").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_dessert_2", 1)
+                .settings.callback( getScale("raison_4_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_2").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_dessert_2", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_2").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_dessert_2", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num4_dessert_2").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_dessert_2", 1)
+                .settings.callback( getScale("raison_4_num1_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num2_dessert_2").unselect() )
+                .settings.callback( getScale("raison_4_num3_dessert_2").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_dessert_2"), getScale("raison_1_num2_dessert_2"), getScale("raison_1_num3_dessert_2"), getScale("raison_1_num4_dessert_2") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_dessert_2"), getScale("raison_2_num2_dessert_2"), getScale("raison_2_num3_dessert_2"), getScale("raison_2_num4_dessert_2") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_dessert_2"), getScale("raison_3_num2_dessert_2"), getScale("raison_3_num3_dessert_2"), getScale("raison_3_num4_dessert_2") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_dessert_2"), getScale("raison_4_num2_dessert_2"), getScale("raison_4_num3_dessert_2"), getScale("raison_4_num4_dessert_2") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+        ,
+        newText("Pour la boisson de votre menu, pourquoi avez-vous choisi cet aliment ? Donnez un score pour chaque raison (note de 1 à 4 : 1=pas du tout d’accord, 4=tout à fait d’accord). ")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 370, 10, newText ("1"))
+            .add ( 420, 10, newText("2"))
+            .add( 470, 10, newText ("3"))
+            .add ( 520, 10, newText("4"))
+            
+            .add( 0, 30, newText( row.raison_1) )
+            .settings.add( 355, 30, newScale("raison_1_num1_boisson", 1)
+                .settings.callback( getScale("raison_1_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num4_boisson").unselect() ))
+            .settings.add( 405, 30, newScale("raison_1_num2_boisson", 1)
+                .settings.callback( getScale("raison_1_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num4_boisson").unselect() ))
+            .settings.add( 455, 30, newScale("raison_1_num3_boisson", 1)
+                .settings.callback( getScale("raison_1_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num4_boisson").unselect() ))
+            .settings.add( 505, 30, newScale("raison_1_num4_boisson", 1)
+                .settings.callback( getScale("raison_1_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_1_num3_boisson").unselect() ))
+                
+            .add( 0, 50, newText( row.raison_2) )
+            .settings.add( 355, 50, newScale("raison_2_num1_boisson", 1)
+                .settings.callback( getScale("raison_2_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num4_boisson").unselect() ))
+            .settings.add( 405, 50, newScale("raison_2_num2_boisson", 1)
+                .settings.callback( getScale("raison_2_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num4_boisson").unselect() ))
+            .settings.add( 455, 50, newScale("raison_2_num3_boisson", 1)
+                .settings.callback( getScale("raison_2_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num4_boisson").unselect() ))
+            .settings.add( 505, 50, newScale("raison_2_num4_boisson", 1)
+                .settings.callback( getScale("raison_2_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_2_num3_boisson").unselect() ))
+                
+            .add( 0, 70, newText( row.raison_3) )
+            .settings.add( 355, 70, newScale("raison_3_num1_boisson", 1)
+                .settings.callback( getScale("raison_3_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num4_boisson").unselect() ))
+            .settings.add( 405, 70, newScale("raison_3_num2_boisson", 1)
+                .settings.callback( getScale("raison_3_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num4_boisson").unselect() ))
+            .settings.add( 455, 70, newScale("raison_3_num3_boisson", 1)
+                .settings.callback( getScale("raison_3_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num4_boisson").unselect() ))
+            .settings.add( 505, 70, newScale("raison_3_num4_boisson", 1)
+                .settings.callback( getScale("raison_3_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_3_num3_boisson").unselect() ))
+            
+            .add( 0, 90, newText( row.raison_4) )
+            .settings.add( 355, 90, newScale("raison_4_num1_boisson", 1)
+                .settings.callback( getScale("raison_4_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num4_boisson").unselect() ))
+            .settings.add( 405, 90, newScale("raison_4_num2_boisson", 1)
+                .settings.callback( getScale("raison_4_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num3_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num4_boisson").unselect() ))
+            .settings.add( 455, 90, newScale("raison_4_num3_boisson", 1)
+                .settings.callback( getScale("raison_4_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num4_boisson").unselect() ))
+            .settings.add( 505, 90, newScale("raison_4_num4_boisson", 1)
+                .settings.callback( getScale("raison_4_num1_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num2_boisson").unselect() )
+                .settings.callback( getScale("raison_4_num3_boisson").unselect() ))
+            
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_1_num1_boisson"), getScale("raison_1_num2_boisson"), getScale("raison_1_num3_boisson"), getScale("raison_1_num4_boisson") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_2_num1_boisson"), getScale("raison_2_num2_boisson"), getScale("raison_2_num3_boisson"), getScale("raison_2_num4_boisson") )
+            .log()
+            .wait()
+        ,
+        newSelector()
+            .settings.add( getScale("raison_3_num1_boisson"), getScale("raison_3_num2_boisson"), getScale("raison_3_num3_boisson"), getScale("raison_3_num4_boisson") )
+            .log()
+        , 
+        newSelector()
+            .settings.add( getScale("raison_4_num1_boisson"), getScale("raison_4_num2_boisson"), getScale("raison_4_num3_boisson"), getScale("raison_4_num4_boisson") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+        
+
+    )
+    .log( "texte_a_choisir_plat_1_session_2" , row.texte_a_choisir_plat_1 )
+    .log( "choix_1_session_2" , row.choix_1 )
+    .log( "choix_2_session_2" , row.choix_2 )
+    .log( "choix_3_session_2" , row.choix_3 )
+    .log( "choix_4_session_2" , row.choix_4 )
+    .log( "choix_5_session_2" , row.choix_5 )
+    .log( "choix_6_session_2" , row.choix_6 )
+    .log( "choix_7_session_2" , row.choix_7 )
+    .log( "choix_8_session_2" , row.choix_8 )
+    .log( "choix_9_session_2" , row.choix_9 )
+    .log( "texte_a_choisir_plat_2_session_2" , row.texte_a_choisir_plat_2 )
+    .log( "choix_10_session_2" , row.choix_10 )
+    .log( "choix_11_session_2" , row.choix_11 )
+    .log( "choix_12_session_2" , row.choix_12 )
+    .log( "choix_13_session_2" , row.choix_13 )
+    .log( "choix_14_session_2" , row.choix_14 )
+    .log( "choix_15_session_2" , row.choix_15 )
+    .log( "choix_16_session_2" , row.choix_16 )
+    .log( "choix_17_session_2" , row.choix_17 )
+    .log( "choix_18_session_2" , row.choix_18 )
+    .log( "texte_a_choisir_plat_3_session_2" , row.texte_a_choisir_plat_3 )
+    .log( "choix_19_session_2" , row.choix_19 )
+    .log( "choix_20_session_2" , row.choix_20 )
+    .log( "choix_21_session_2" , row.choix_21 )
+    .log( "choix_22_session_2" , row.choix_22 )
+    .log( "choix_23_session_2" , row.choix_23 )
+    .log( "choix_24_session_2" , row.choix_24 )
+    .log( "choix_25_session_2" , row.choix_25 )
+    .log( "choix_26_session_2" , row.choix_26 )
+    .log( "choix_27_session_2" , row.choix_27 )
+    .log( "texte_a_choisir_entree_session_2" , row.texte_a_choisir_entree )
+    .log( "choix_28_session_2" , row.choix_28 )
+    .log( "choix_29_session_2" , row.choix_29 )
+    .log( "choix_30_session_2" , row.choix_30 )
+    .log( "choix_31_session_2" , row.choix_31 )
+    .log( "choix_32_session_2" , row.choix_32 )
+    .log( "texte_a_choisir_fromage_session_2" , row.texte_a_choisir_fromage )
+    .log( "choix_33_session_2" , row.choix_33 )
+    .log( "choix_34_session_2" , row.choix_34 )
+    .log( "texte_a_choisir_dessert_1_session_2" , row.texte_a_choisir_dessert_1 )
+    .log( "choix_35_session_2" , row.choix_35 )
+    .log( "choix_36_session_2" , row.choix_36 )
+    .log( "choix_37_session_2" , row.choix_37 )
+    .log( "choix_38_session_2" , row.choix_38 )
+    .log( "choix_39_session_2" , row.choix_39 )
+    .log( "choix_40_session_2" , row.choix_40 )
+    .log( "texte_a_choisir_dessert_2_session_2" , row.texte_a_choisir_dessert_2 )
+    .log( "choix_41_session_2" , row.choix_41 )
+    .log( "choix_42_session_2" , row.choix_42 )
+    .log( "choix_43_session_2" , row.choix_43 )
+    .log( "choix_44_session_2" , row.choix_44 )
+    .log( "choix_45_session_2" , row.choix_45 )
+    .log( "choix_46_session_2" , row.choix_46 )
+    .log( "texte_a_choisir_boisson_session_2" , row.texte_a_choisir_boisson )
+    .log( "choix_47_session_2" , row.choix_47 )
+    .log( "choix_48_session_2" , row.choix_48 )
+    .log( "choix_49_session_2" , row.choix_49 )
+    .log( "choix_50_session_2" , row.choix_50 )
+    .log( "choix_51_session_2" , row.choix_51 )
+    .log( "choix_52_session_2" , row.choix_52 )
+    .log( "choix_53_session_2" , row.choix_53 )
+    .log( "choix_54_session_2" , row.choix_54 )
+    .log( "choix_55_session_2" , row.choix_55 )
+    .log( "choix_56_session_2" , row.choix_56 )
+    .log( "choix_57_session_2" , row.choix_57 )
+    // Add these six columns to the results lines of these Template-based trials
+)
+
+
+
+
+
+
+
+newTrial( "encouragement" ,
+    newText("Courage, vous êtes presque à la fin du questionnaire !")
+        .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Merci beaucoup d’avoir répondu à notre questionnaire !").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
