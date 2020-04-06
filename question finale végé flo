@@ -1,0 +1,83 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "intro", "choix_vege" , SendResults() , "bye" )
+
+
+// What is in Header happens at the beginning of every single trial
+Header(
+    // We will use this global Var element later to store the participant's name
+    newVar("ParticipantName")
+        .global()
+    ,
+    // Delay of 250ms before every trial
+    newTimer(250)
+        .start()
+        .wait()
+)
+.log( "Name" , getVar("ParticipantName") )
+// This log command adds a column reporting the participant's name to every line saved to the results
+
+
+newTrial( "intro" ,
+    newText("hello")
+        .print()
+)
+
+
+Template( "choixvege.csv" ,
+    row => newTrial( "choix_vege" ,
+        newText("Pour chaque type de produits indiquez si vous en consommez ou non.")
+            .print()
+        , 
+        newCanvas("GM1", 450, 190)
+            .center()
+            .add( 187, 10, newText ("Oui"))
+            .add ( 231, 10, newText("Non"))
+            .add( 0, 30, newText("Viande") )
+            .settings.add( 185, 30, newScale("viande_oui", 1)
+                .settings.callback( getScale("viande_non").unselect() ))
+            .settings.add( 230, 30, newScale("viande_non", 1)
+                .settings.callback( getScale("viande_oui").unselect() ))
+            .add( 0, 50, newText("Oeuf") )
+            .settings.add( 185, 50, newScale("oeuf_oui", 1)
+                .settings.callback( getScale("oeuf_non").unselect() ))
+            .settings.add( 230, 50, newScale("oeuf_non", 1)
+                .settings.callback( getScale("oeuf_oui").unselect() ))
+            .add( 0, 70, newText("Produits laitiers") )
+            .settings.add( 185, 70, newScale("produits_laitiers_oui", 1)
+                .settings.callback( getScale("produits_laitiers_non").unselect() ))
+            .settings.add( 230, 70, newScale("produits_laitiers_non", 1)
+                .settings.callback( getScale("produits_laitiers_oui").unselect() ))
+            .print()
+        , 
+        newSelector()
+            .settings.add( getScale("viande_oui"), getScale("viande_non") )
+            .log()
+            .wait()
+        , 
+        newSelector()
+            .settings.add( getScale("oeuf_oui"), getScale("oeuf_non") )
+            .log()
+            .wait()
+        , 
+        newSelector()
+            .settings.add( getScale("produits_laitiers_oui"), getScale("produits_laitiers_non") )
+            .log()
+            .wait()
+        ,
+        newButton("Suivant")
+            .print()
+            .wait()
+))
+
+
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Thank you for your participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
