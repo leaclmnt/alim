@@ -2,7 +2,7 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 // Show the 'intro' trial first, then all the 'experiment' trials in a random order
 // then send the results and finally show the trial labeled 'bye'
-Sequence( "intro", "question_age", "question_sexe","categorie_socio-professionnelle","question_modedevie", "question_satisfactionpoids", "question_sport", SendResults(),"bye" )
+Sequence( "intro", "question_age", "question_sexe","categorie_socio-professionnelle","question_modedevie", "question_satisfactionpoids", "question_sport", SendResults() ,"bye" )
 
 
 //What is in Header happens at the beginning of every single trial
@@ -52,6 +52,9 @@ newTrial( "question_age" ,
     newTextInput()
         .print()
         .wait()
+        //.setVar("age_participant")
+        
+        // This setVar command stores the value from the TextInput element into the Var element
     ,
     newButton("Suivant")
         .print()
@@ -69,53 +72,50 @@ newTrial("question_sexe",
         .settings.before( getText("sexe") )
         .print()
         .wait()
+        //.setVar("sexe_participant")
     ,
     newButton("Suivant")
         .print()
         .wait()
 )
 
-// This Template command generates as many trials as there are rows in bloc_1.csv
-Template( "catsociopro.csv" ,
-    // Row will iteratively point to every row in catsociopro.csv
-    row => newTrial( "categorie_socio-professionnelle" ,
+newTrial( "categorie_socio-professionnelle" ,
         // The trials are minimal: choose a socioprofessional category from a DropDown list
-        newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
-            .before( newText(row.texte_a_choisir) )    // Print the sentence to the left of the list
-            .add( row.choix_1 )                //ajout dans la liste deroulante du contenu de la colonne choix_1
-            .add( row.choix_2 )
-            .add( row.choix_3 )
-            .add( row.choix_4 )
-            .add( row.choix_5 )
-            .add( row.choix_6 )
-            .add( row.choix_7 )
-            .add( row.choix_8 )
-            .add( row.choix_9 )
-            .add( row.choix_10 )
-            .add( row.choix_11 )// pb : enlever la ligne blanche pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
+    newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+        .before( newText("Veuillez choisir votre catégorie socio-professionnelle") )    // Print the sentence to the left of the list
+        .add( "agriculteur-exploitant" )                //ajout dans la liste deroulante du contenu de la colonne choix_1
+        .add( "artisan" )
+        .add( "commerçant" )
+        .add( "chef d'entreprise" )
+        .add( "cadre et profession intelectuelle superieure" )
+        .add( "profession intermédiaire" )
+        .add( "employe" )
+        .add( "ouvrier" )
+        .add( "étudiant" )
+        .add( "retraite" )
+        .add( "autre" )// pb : enlever la ligne blanche pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
             //.once()                             // Disable the list after the first selection
-            .print()
-            .wait()
-            .log()                 // Make sure to log the participant's selection
-        ,
-        newButton("Suivant")
-            .print()
-            .wait()
-    )
-    .log( "texte_a_choisir" , row.texte_a_choisir )
-    .log( "choix_1" , row.choix_1 )
-    .log( "choix_2" , row.choix_2 )
-    .log( "choix_3" , row.choix_3 )
-    .log( "choix_4" , row.choix_4 )
-    .log( "choix_5" , row.choix_5 )
-    .log( "choix_6" , row.choix_6 )
-    .log( "choix_7" , row.choix_7 )
-    .log( "choix_8" , row.choix_8 )
-    .log( "choix_9" , row.choix_9 )
-    .log( "choix_10" , row.choix_10 )
-    .log( "choix_11" , row.choix_11 )
-    // Add these six columns to the results lines of these Template-based trials
+        .print()
+        .wait()
+        //.setVar("categorie_socio-professionnelle_participant")                              // Make sure to log the participant's selection
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
 )
+    .log( "texte_a_choisir" , "Veuillez choisir votre catégorie socio-professionnelle" )
+    .log( "choix_1" , "agriculteur-exploitant"  )
+    .log( "choix_2" , "artisan" )
+    .log( "choix_3" , "commerçant" )
+    .log( "choix_4" , "chef d'entreprise" )
+    .log( "choix_5" , "cadre et profession intelectuelle superieure" )
+    .log( "choix_6" , "profession intermédiaire" )
+    .log( "choix_7" , "employe" )
+    .log( "choix_8" , "ouvrier" )
+    .log( "choix_9" , "étudiant" )
+    .log( "choix_10" , "retraite" )
+    .log( "choix_11" , "autre" )
+    // Add these six columns to the results lines of these Template-based trials
 
 newTrial("question_modedevie",
     // Don't print it yet, we'll now add it to the left of the scale
@@ -128,6 +128,7 @@ newTrial("question_modedevie",
         .settings.before( getText("modedevie") )
         .print()
         .wait()
+        //.setVar("mode_de_vie_participant")
     ,
     newButton("Suivant")
         .print()
@@ -145,6 +146,7 @@ newTrial("question_sport",
         .settings.before( getText("sport") )
         .print()
         .wait()
+        //.setVar("pratique_sportive_participant")
     ,
     newButton("Suivant")
         .print()
@@ -160,13 +162,14 @@ newTrial("question_satisfactionpoids",
         .settings.add( 185, 30, newScale("oui", 1)
             .settings.callback( getScale("non").unselect() ))
         .settings.add( 230, 30, newScale("non", 1)
-            .settings.callback( getScale("oui").unselect() ))   // Les gens ne peuvent pas choisir oui et non en m�me temps
+            .settings.callback( getScale("oui").unselect() ))   // Les gens ne peuvent pas choisir oui et non en meme temps
         .print()
     , 
-    newSelector()                                             // Permet de r�cup�rer les infos, les gens peuvent changer d'avis 
+    newSelector()                                             // Permet de recuperer les infos, les gens peuvent changer d'avis 
         .settings.add( getScale("oui"), getScale("non") )
         .settings.log()
         .wait()// Tant que les gens n'ont pas fait leur choix, suivant ne s'affiche pas
+        //.setVar("satisfaction_poids_participant")
     ,
     newButton("Suivant")
         .print()
