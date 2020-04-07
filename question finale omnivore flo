@@ -10,11 +10,16 @@ newTrial("habitudes_omnivore",
         //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("frequence","Moins d'une fois par mois","Moins d'une fois par semaine","1 a 3 fois par semaine","3 a 6 fois par semaine","Une fois par jour", "Plusieurs fois par jour")
+    newScale("frequence_conso","Moins d'une fois par mois","Moins d'une fois par semaine","1 a 3 fois par semaine","3 a 6 fois par semaine","Une fois par jour", "Plusieurs fois par jour")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("habitude") )
         .print()
         .wait()
+    ,
+    newVar("frequence_conso_viande")
+        .global()
+        .set(getScale("frequence_conso"))
+.log("Fréquence consommation viande", getVar("frequence_conso_viande"))
     ,
     newButton("Suivant")
         .print()
