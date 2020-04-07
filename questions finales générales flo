@@ -5,64 +5,34 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 Sequence( "questions_generales", SendResults() ,"bye" )
 
 
-//What is in Header happens at the beginning of every single trial
-Header(
-    // We will use this global Var element later to store the participant's name
-    newVar("age_participant")
-        .global()
-    ,
-    newVar("sexe_participant")
-        .global()
-    ,
-    newVar("categorie_socio-professionnelle_participant")
-        .global()
-    ,
-    newVar("mode_de_vie_participant")
-        .global()
-    ,
-    newVar("pratique_sportive_participant")
-        .global()
-    ,
-    newVar("satisfaction_poids_participant")
-        .global()
-    ,
-    //Delay of 250ms before every trial
-    newTimer(250)
-        .start()
-        .wait()
-)
-
-.log( "Age" , getVar("age_participant"))
-.log("Sexe", getVar("sexe_participant"))
-.log("Categorie socio-professionnelle", getVar("categorie_socio-professionnelle_participant"))
-.log("Mode de vie", getVar("mode_de_vie_participant"))
-.log("Pratique sportive", getVar("pratique_sportive_participant"))
-.log("Satisfaction poids", getVar("satisfaction_poids_participant"))
-// This log command adds a column reporting the participant's age to every line saved to the results
-
-
 newTrial( "questions_generales" ,
     newText("<p>Veuillez renseigner votre age: </p>")
         .print()
     ,
-    newTextInput()
+    newTextInput("age")
         .print()
-        //.setVar("age_participant")
-        
-        // This setVar command stores the value from the TextInput element into the Var element
+    ,
+    newVar("age_participant")
+        .global()
+        .set(getTextInput("age"))
+.log("Age", getVar("age_participant"))
     ,
     newText("sexe", "Veuillez renseigner votre sexe: ")
         //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("choix ","Femme","Homme","Autre")
+    newScale("choix","Femme","Homme","Autre")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("sexe") )
         .print()
-        //.setVar("sexe_participant")
+        ,
+    newVar("sexe_participant")
+        .global()
+        .set(getScale("choix"))
+.log("Sexe", getVar("sexe_participant"))
     ,
         // The trials are minimal: choose a socioprofessional category from a DropDown list
-    newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
+    newDropDown("catsociopro", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
         .before( newText("Veuillez choisir votre categorie socio-professionnelle") )    // Print the sentence to the left of the list
         .add( "agriculteur-exploitant" )                //ajout dans la liste deroulante du contenu de la colonne choix_1
         .add( "artisan" )
@@ -93,38 +63,48 @@ newTrial( "questions_generales" ,
     .log( "choix_11" , "autre" )
     // Add these six columns to the results lines of these Template-based trials
     ,
-    // Don't print it yet, we'll now add it to the left of the scale
+    newVar("categorie_socio-professionnelle_participant")
+        .global()
+        .set(getDropDown("catsociopro"))
+.log("Categorie socio-professionnelle", getVar("categorie_socio-professionnelle_participant"))
+    ,
     newText("modedevie", "Vous vous sentez plutot rattaches a un mode de vie : ")
-        //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("choix ","  Rural  ","  Urbain  ")
+    newScale("option","  Rural  ","  Urbain  ")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("modedevie") )
         .print()
-        //.setVar("mode_de_vie_participant")
     ,
-    // Don't print it yet, we'll now add it to the left of the scale
+    newVar("mode_de_vie_participant")
+        .global()
+        .set(getScale("option"))
+.log("Mode de vie", getVar("mode_de_vie_participant"))
+    ,
     newText("sport", "A quelle frequence faites vous du sport? ")
-        //.print()
     ,
-    // Give as many labels as there are buttons
     newScale("frequence","  Jamais  ","  Plusieurs fois par mois  ","  Une fois par semaine  ","  Plusieurs fois par semaine  ","  Tous les jours  ")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("sport") )
         .print()
-        //.setVar("pratique_sportive_participant")
     ,
-   // Don't print it yet, we'll now add it to the left of the scale
+    newVar("pratique_sportive_participant")
+        .global()
+        .set(getScale("frequence"))
+.log("Paratique sportive", getVar("pratique_sportive_participant"))
+    ,
     newText("poids", "Etes-vous satisfaits de votre poids? ")
-        //.print()
     ,
-    // Give as many labels as there are buttons
     newScale("satisfaction","  oui  ","  non  ")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("poids") )
         .print()
         .wait()
+        ,
+    newVar("satisfaction_poids_participant")
+        .global()
+        .set(getScale("satisfaction"))
+.log("Satisfaction poids", getVar("satisfaction_poids_participant"))
     ,
     newButton("Suivant")
         .print()
