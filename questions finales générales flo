@@ -2,7 +2,7 @@ PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 // Show the 'intro' trial first, then all the 'experiment' trials in a random order
 // then send the results and finally show the trial labeled 'bye'
-Sequence( "intro", "question_age", "question_sexe","categorie_socio-professionnelle","question_modedevie", "question_satisfactionpoids", "question_sport", SendResults() ,"bye" )
+Sequence( "questions_generales", SendResults() ,"bye" )
 
 
 //What is in Header happens at the beginning of every single trial
@@ -40,29 +40,17 @@ Header(
 .log("Satisfaction poids", getVar("satisfaction_poids_participant"))
 // This log command adds a column reporting the participant's age to every line saved to the results
 
-newTrial( "intro" ,
-    newText("Bonjour,")
-        .print()
-)
 
-newTrial( "question_age" ,
+newTrial( "questions_generales" ,
     newText("<p>Veuillez renseigner votre age: </p>")
         .print()
     ,
     newTextInput()
         .print()
-        .wait()
         //.setVar("age_participant")
         
         // This setVar command stores the value from the TextInput element into the Var element
     ,
-    newButton("Suivant")
-        .print()
-        .wait()
-)
-
-newTrial("question_sexe",
-    // Don't print it yet, we'll now add it to the left of the scale
     newText("sexe", "Veuillez renseigner votre sexe: ")
         //.print()
     ,
@@ -71,105 +59,72 @@ newTrial("question_sexe",
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("sexe") )
         .print()
-        .wait()
         //.setVar("sexe_participant")
     ,
-    newButton("Suivant")
-        .print()
-        .wait()
-)
-
-newTrial( "categorie_socio-professionnelle" ,
         // The trials are minimal: choose a socioprofessional category from a DropDown list
     newDropDown("choix_bloc_1", "...")  //choix_bloc_1 est le nom de la liste deroulante ????
-        .before( newText("Veuillez choisir votre catégorie socio-professionnelle") )    // Print the sentence to the left of the list
+        .before( newText("Veuillez choisir votre categorie socio-professionnelle") )    // Print the sentence to the left of the list
         .add( "agriculteur-exploitant" )                //ajout dans la liste deroulante du contenu de la colonne choix_1
         .add( "artisan" )
-        .add( "commerçant" )
+        .add( "commercant" )
         .add( "chef d'entreprise" )
         .add( "cadre et profession intelectuelle superieure" )
-        .add( "profession intermédiaire" )
+        .add( "profession intermediaire" )
         .add( "employe" )
         .add( "ouvrier" )
-        .add( "étudiant" )
+        .add( "etudiant" )
         .add( "retraite" )
         .add( "autre" )// pb : enlever la ligne blanche pour les entrees qui apparait car il n'y a pas de 5eme entree, contrairement aux desserts
             //.once()                             // Disable the list after the first selection
         .print()
-        .wait()
         //.setVar("categorie_socio-professionnelle_participant")                              // Make sure to log the participant's selection
-    ,
-    newButton("Suivant")
-        .print()
-        .wait()
-)
-    .log( "texte_a_choisir" , "Veuillez choisir votre catégorie socio-professionnelle" )
+
+    .log( "texte_a_choisir" , "Veuillez choisir votre categorie socio-professionnelle" )
     .log( "choix_1" , "agriculteur-exploitant"  )
     .log( "choix_2" , "artisan" )
-    .log( "choix_3" , "commerçant" )
+    .log( "choix_3" , "commercant" )
     .log( "choix_4" , "chef d'entreprise" )
     .log( "choix_5" , "cadre et profession intelectuelle superieure" )
-    .log( "choix_6" , "profession intermédiaire" )
+    .log( "choix_6" , "profession intermediaire" )
     .log( "choix_7" , "employe" )
     .log( "choix_8" , "ouvrier" )
-    .log( "choix_9" , "étudiant" )
+    .log( "choix_9" , "etudiant" )
     .log( "choix_10" , "retraite" )
     .log( "choix_11" , "autre" )
     // Add these six columns to the results lines of these Template-based trials
-
-newTrial("question_modedevie",
+    ,
     // Don't print it yet, we'll now add it to the left of the scale
     newText("modedevie", "Vous vous sentez plutot rattaches a un mode de vie : ")
         //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("choix ","Rural","Urbain")
+    newScale("choix ","  Rural  ","  Urbain  ")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("modedevie") )
         .print()
-        .wait()
         //.setVar("mode_de_vie_participant")
     ,
-    newButton("Suivant")
-        .print()
-        .wait()
-)
-
-newTrial("question_sport",
     // Don't print it yet, we'll now add it to the left of the scale
-    newText("sport", "A quelle frequence faites vous du sport: ")
+    newText("sport", "A quelle frequence faites vous du sport? ")
         //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("frequence","Jamais","Plusieurs fois par mois","Une fois par semaine","Plusieurs fois par semaine","Tous les jours")
+    newScale("frequence","  Jamais  ","  Plusieurs fois par mois  ","  Une fois par semaine  ","  Plusieurs fois par semaine  ","  Tous les jours  ")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("sport") )
         .print()
-        .wait()
         //.setVar("pratique_sportive_participant")
     ,
-    newButton("Suivant")
+   // Don't print it yet, we'll now add it to the left of the scale
+    newText("poids", "Etes-vous satisfaits de votre poids? ")
+        //.print()
+    ,
+    // Give as many labels as there are buttons
+    newScale("satisfaction","  oui  ","  non  ")
+        .settings.labelsPosition("top")  // Position the labels
+        .settings.before( getText("poids") )
         .print()
         .wait()
-)
-
-newTrial("question_satisfactionpoids",
-    newCanvas("poids", 450, 190)
-        .center()
-        .add( 187, 10, newText ("Oui"))
-        .add ( 231, 10, newText("Non") )
-        .add( 0, 30, newText("Etes vous satisfaits de votre poids?") )
-        .settings.add( 185, 30, newScale("oui", 1)
-            .settings.callback( getScale("non").unselect() ))
-        .settings.add( 230, 30, newScale("non", 1)
-            .settings.callback( getScale("oui").unselect() ))   // Les gens ne peuvent pas choisir oui et non en meme temps
-        .print()
-    , 
-    newSelector()                                             // Permet de recuperer les infos, les gens peuvent changer d'avis 
-        .settings.add( getScale("oui"), getScale("non") )
-        .settings.log()
-        .wait()// Tant que les gens n'ont pas fait leur choix, suivant ne s'affiche pas
-        //.setVar("satisfaction_poids_participant")
     ,
     newButton("Suivant")
         .print()
