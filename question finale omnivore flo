@@ -1,29 +1,7 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
-// Show the 'intro' trial first, then all the 'experiment' trials in a random order
-// then send the results and finally show the trial labeled 'bye'
-Sequence( "intro", "habitudes_omnivore" , SendResults() , "bye" )
+Sequence( "habitudes_omnivore" , SendResults() , "bye" )
 
-
-// What is in Header happens at the beginning of every single trial
-Header(
-    // We will use this global Var element later to store the participant's name
-    newVar("ParticipantName")
-        .global()
-    ,
-    // Delay of 250ms before every trial
-    newTimer(250)
-        .start()
-        .wait()
-)
-.log( "Name" , getVar("ParticipantName") )
-// This log command adds a column reporting the participant's name to every line saved to the results
-
-
-newTrial( "intro" ,
-    newText("hello")
-        .print()
-)
 
 
 newTrial("habitudes_omnivore",
