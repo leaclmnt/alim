@@ -29,20 +29,35 @@ newTrial( "choix_vege" ,
             .settings.callback( getScale("produits_laitiers_oui").unselect() ))
         .print()
     , 
-    newSelector()
+    newSelector("viande")
         .settings.add( getScale("viande_oui"), getScale("viande_non") )
         .log()
         .wait()
+    ,
+    newVar("conso_viande")
+        .global()
+        .set(getSelector("viande"))
+.log("Consommation viande", getVar("conso_viande")
     , 
-    newSelector()
+    newSelector("oeuf")
         .settings.add( getScale("oeuf_oui"), getScale("oeuf_non") )
         .log()
         .wait()
+    ,
+    newVar("conso_oeuf")
+        .global()
+        .set(getSelector("oeuf"))
+.log("Consommation oeuf", getVar("conso_oeuf")
     , 
-    newSelector()
+    newSelector("produits laitiers")
         .settings.add( getScale("produits_laitiers_oui"), getScale("produits_laitiers_non") )
         .log()
         .wait()
+    ,
+    newVar("conso_produits_laitiers")
+        .global()
+        .set(getSelector("produits laitiers"))
+.log("Consommation produits laitiers", getVar("conso_produits_laitiers")
     ,
     newButton("Suivant")
         .print()
