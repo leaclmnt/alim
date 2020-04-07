@@ -26,51 +26,50 @@ newTrial( "intro" ,
 )
 
 
-Template( "choixvege.csv" ,
-    row => newTrial( "choix_vege" ,
-        newText("Pour chaque type de produits indiquez si vous en consommez ou non.")
-            .print()
-        , 
-        newCanvas("GM1", 450, 190)
-            .center()
-            .add( 187, 10, newText ("Oui"))
-            .add ( 231, 10, newText("Non"))
-            .add( 0, 30, newText("Viande") )
-            .settings.add( 185, 30, newScale("viande_oui", 1)
-                .settings.callback( getScale("viande_non").unselect() ))
-            .settings.add( 230, 30, newScale("viande_non", 1)
-                .settings.callback( getScale("viande_oui").unselect() ))
-            .add( 0, 50, newText("Oeuf") )
-            .settings.add( 185, 50, newScale("oeuf_oui", 1)
-                .settings.callback( getScale("oeuf_non").unselect() ))
-            .settings.add( 230, 50, newScale("oeuf_non", 1)
-                .settings.callback( getScale("oeuf_oui").unselect() ))
-            .add( 0, 70, newText("Produits laitiers") )
-            .settings.add( 185, 70, newScale("produits_laitiers_oui", 1)
-                .settings.callback( getScale("produits_laitiers_non").unselect() ))
-            .settings.add( 230, 70, newScale("produits_laitiers_non", 1)
-                .settings.callback( getScale("produits_laitiers_oui").unselect() ))
-            .print()
-        , 
-        newSelector()
-            .settings.add( getScale("viande_oui"), getScale("viande_non") )
-            .log()
-            .wait()
-        , 
-        newSelector()
-            .settings.add( getScale("oeuf_oui"), getScale("oeuf_non") )
-            .log()
-            .wait()
-        , 
-        newSelector()
-            .settings.add( getScale("produits_laitiers_oui"), getScale("produits_laitiers_non") )
-            .log()
-            .wait()
-        ,
-        newButton("Suivant")
-            .print()
-            .wait()
-))
+newTrial( "choix_vege" ,
+    newText("Pour chaque type de produits indiquez si vous en consommez ou non.")
+        .print()
+    , 
+    newCanvas("habitude_vege", 450, 190)
+        .center()
+        .add( 187, 10, newText ("Oui"))
+        .add ( 231, 10, newText("Non"))
+        .add( 0, 30, newText("Viande") )
+        .settings.add( 185, 30, newScale("viande_oui", 1)
+            .settings.callback( getScale("viande_non").unselect() ))
+        .settings.add( 230, 30, newScale("viande_non", 1)
+            .settings.callback( getScale("viande_oui").unselect() ))
+        .add( 0, 50, newText("Oeuf") )
+        .settings.add( 185, 50, newScale("oeuf_oui", 1)
+            .settings.callback( getScale("oeuf_non").unselect() ))
+        .settings.add( 230, 50, newScale("oeuf_non", 1)
+            .settings.callback( getScale("oeuf_oui").unselect() ))
+        .add( 0, 70, newText("Produits laitiers") )
+        .settings.add( 185, 70, newScale("produits_laitiers_oui", 1)
+            .settings.callback( getScale("produits_laitiers_non").unselect() ))
+        .settings.add( 230, 70, newScale("produits_laitiers_non", 1)
+            .settings.callback( getScale("produits_laitiers_oui").unselect() ))
+        .print()
+    , 
+    newSelector()
+        .settings.add( getScale("viande_oui"), getScale("viande_non") )
+        .log()
+        .wait()
+    , 
+    newSelector()
+        .settings.add( getScale("oeuf_oui"), getScale("oeuf_non") )
+        .log()
+        .wait()
+    , 
+    newSelector()
+        .settings.add( getScale("produits_laitiers_oui"), getScale("produits_laitiers_non") )
+        .log()
+        .wait()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
 
 
 
