@@ -21,7 +21,7 @@ newTrial( "questions_generales" ,
         //.print()
     ,
     // Give as many labels as there are buttons
-    newScale("choix","Femme","Homme","Autre", "Je ne souhaite pas préciser")
+    newScale("choix","Femme","Homme","Autre", "Je ne souhaite pas preciser")
         .settings.labelsPosition("top")  // Position the labels
         .settings.before( getText("sexe") )
         .print()
