@@ -1,0 +1,96 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+Sequence( "habitudes_omnivore" , SendResults() , "bye" )
+
+
+
+newTrial("habitudes_omnivore",
+    
+     newCanvas("frequence_conso_viande",450, 170)
+        .add(0,0, newText("A quelle frequence consommez vous de la viande ? "))
+        .add( 0, 30, newText("Moins d'une fois par mois") )
+        .settings.add( 185, 30, newScale("annuel_oui", 1)
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() )
+            .settings.callback( getScale("multiquotidien_oui").unselect () ))
+        .add( 0, 50, newText("Moins d'une fois par semaine") )
+        .settings.add( 185, 50, newScale("mensuel_oui", 1)
+            .settings.callback( getScale("annuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() )
+            .settings.callback( getScale("multiquotidien_oui").unselect () ))
+        .add( 0, 70, newText("Entre 1 et 3 fois par semaine") )
+        .settings.add( 185, 70, newScale("hebdomadaire_oui", 1)
+            .settings.callback( getScale("annuel_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() )
+            .settings.callback( getScale("multiquotidien_oui").unselect () ))
+        .add( 0, 90, newText("Entre 4 et 6 fois par semaine") )
+        .settings.add( 185, 90, newScale("multihebdo_oui", 1)
+            .settings.callback( getScale("annuel_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() )
+            .settings.callback( getScale("multiquotidien_oui").unselect () ))
+        .add( 0, 110, newText("Une fois par jour") )
+            .settings.add( 185, 110, newScale("quotidien_oui", 1)
+            .settings.callback( getScale("annuel_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("multiquotidien_oui").unselect () ))
+        .add( 0, 130, newText("Plusieurs fois par jour") )
+        .settings.add( 185, 130, newScale("multiquotidien_oui", 1)
+            .settings.callback( getScale("annuel_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect () ))
+        .print()
+    ,
+    newSelector("annuel")
+        .settings.add(getScale("annuel_oui"))
+        .log()
+    ,
+    newSelector("mensuel")
+        .settings.add(getScale("mensuel_oui"))
+        .log()
+    ,
+    newSelector("hebdomadaire")
+        .settings.add(getScale("hebdomadaire_oui"))
+        .log()
+    ,
+    newSelector("multihebdo")
+        .settings.add(getScale("multihebdo_oui"))
+        .log()
+    ,
+    newSelector("quotidien")
+        .settings.add(getScale("quotidien_oui"))
+        .log()
+    ,
+    newSelector("multiquotidien")
+        .settings.add(getScale("multiquotidien_oui"))
+        .log()
+    ,
+    newVar("frequence_conso_viande_participant")
+        .global()
+        .set(getCanvas("frequence_conso_viande"))
+.log("Consommation viande", getVar("frequence_conso_viande_participant"))
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Thank you for your participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
