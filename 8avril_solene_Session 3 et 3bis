@@ -1,6 +1,7 @@
 //Session 3
 
-PenController (
+PennController.ResetPrefix(null) 
+newTrial(
     newText("Vous allez de nouveau composer 2 menus différents, à chaque fois pour un repas à domicile. Le fonctionnement est le même que précédemment.")
         .print()
 )
@@ -851,7 +852,7 @@ Template( "TableSession3.csv" ,
     .log( "choix_56_session_2" , row.choix_56 )
     .log( "choix_57_session_2" , row.choix_57 )
     // Add these six columns to the results lines of these Template-based trials
-)
+
 
 //Session 3bis
 
@@ -1702,4 +1703,4 @@ Template( "TableSession3.csv" ,
     .log( "choix_56_session_2" , row.choix_56 )
     .log( "choix_57_session_2" , row.choix_57 )
     // Add these six columns to the results lines of these Template-based trials
-)
+
