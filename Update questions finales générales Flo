@@ -1,0 +1,231 @@
+PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+
+// Show the 'intro' trial first, then all the 'experiment' trials in a random order
+// then send the results and finally show the trial labeled 'bye'
+Sequence( "questions_generales","a plus","au revoir", SendResults() ,"bye" )
+
+
+
+newTrial( "questions_generales" ,
+    newText("<p>Veuillez renseigner votre age: </p>")
+        .print()
+    ,
+    newTextInput("age")
+        .print()
+    ,
+    newVar("age_participant")
+        .global()
+        .set(getTextInput("age"))
+.log("Age", getVar("age_participant"))
+
+    ,
+    newCanvas("choix_sexe",450, 150)
+        .add(0,30, newText("Veuillez renseigner votre sexe"))
+        .add( 0, 50, newText("Femme") )
+        .settings.add( 185, 50, newScale("femme_oui", 1)
+            .settings.callback( getScale("homme_oui").unselect() )
+            .settings.callback( getScale("autre_oui").unselect() )
+            .settings.callback( getScale("anonyme_oui").unselect() ))
+        .add( 0, 70, newText("Homme") )
+        .settings.add( 185, 70, newScale("homme_oui", 1)
+            .settings.callback( getScale("femme_oui").unselect() )
+            .settings.callback( getScale("autre_oui").unselect() )
+            .settings.callback( getScale("anonyme_oui").unselect() ))
+        .add( 0, 90, newText("Autre") )
+        .settings.add( 185, 90, newScale("autre_oui", 1)
+            .settings.callback( getScale("homme_oui").unselect() )
+            .settings.callback( getScale("femme_oui").unselect() )
+            .settings.callback( getScale("anonyme_oui").unselect() ))
+        .add( 0, 110, newText("Je ne souhaite pas preciser") )
+        .settings.add( 185, 110, newScale("anonyme_oui", 1)
+            .settings.callback( getScale("homme_oui").unselect() )
+            .settings.callback( getScale("femme_oui").unselect() )
+            .settings.callback( getScale("autre_oui").unselect() ))
+        .print()
+        
+    ,
+    newSelector("femme")
+        .settings.add(getScale("femme_oui"))
+        .log()
+        
+    ,
+    newSelector("homme")
+        .settings.add(getScale("homme_oui"))
+        .log()
+        
+    ,
+    newSelector("autre")
+        .settings.add(getScale("autre_oui"))
+        .log()
+        
+    ,
+    newSelector("anonyme")
+        .settings.add(getScale("anonyme_oui"))
+        .log()
+    ,
+    newVar("sexe_participant")
+        .global()
+        .set(getCanvas("choix_sexe"))
+.log("Sexe", getVar("sexe_participant"))
+
+    ,
+
+    newDropDown("catsociopro", "...") 
+        .before( newText("Veuillez choisir votre categorie socio-professionnelle : ") )   
+        .add( "agriculteur-exploitant" )               
+        .add( "artisan" )
+        .add( "commercant" )
+        .add( "chef d'entreprise" )
+        .add( "cadre et profession intelectuelle superieure" )
+        .add( "profession intermediaire" )
+        .add( "employe" )
+        .add( "ouvrier" )
+        .add( "etudiant" )
+        .add( "retraite" )
+        .add( "autre" )
+        .print()
+
+    .log( "texte_a_choisir" , "Veuillez choisir votre categorie socio-professionnelle" )
+    .log( "choix_1" , "agriculteur-exploitant"  )
+    .log( "choix_2" , "artisan" )
+    .log( "choix_3" , "commercant" )
+    .log( "choix_4" , "chef d'entreprise" )
+    .log( "choix_5" , "cadre et profession intelectuelle superieure" )
+    .log( "choix_6" , "profession intermediaire" )
+    .log( "choix_7" , "employe" )
+    .log( "choix_8" , "ouvrier" )
+    .log( "choix_9" , "etudiant" )
+    .log( "choix_10" , "retraite" )
+    .log( "choix_11" , "autre" )
+    // Add these six columns to the results lines of these Template-based trials
+    ,
+    newVar("categorie_socio-professionnelle_participant")
+        .global()
+        .set(getDropDown("catsociopro"))
+.log("Categorie socio-professionnelle", getVar("categorie_socio-professionnelle_participant"))
+    //,
+    //newText("modedevie", "Vous vous sentez plutot rattaches a un mode de vie : ")
+
+    ,
+    newCanvas("choix_modedevie",450, 110)
+        .add(0,30, newText("Vous vous sentez plutot rattaches a un mode de vie : "))
+        .add( 0, 50, newText("Rural") )
+        .settings.add( 185, 50, newScale("rural_oui", 1)
+            .settings.callback( getScale("urbain_oui").unselect() ))
+        .add( 0, 70, newText("Urbain") )
+        .settings.add( 185, 70, newScale("urbain_oui", 1)
+            .settings.callback( getScale("rural_oui").unselect() ))
+        .print()
+    ,
+    newSelector("rural")
+        .settings.add(getScale("rural_oui"))
+        .log()
+    ,
+    newSelector("urbain")
+        .settings.add(getScale("urbain_oui"))
+        .log()
+        
+    ,
+    newVar("mode_de_vie_participant")
+        .global()
+        .set(getCanvas("choix_modedevie"))
+.log("Mode de vie", getVar("mode_de_vie_participant"))
+   
+    ,
+    newCanvas("frequence_pratique_sportive",450, 150)
+        .add(0,0, newText("A quelle frequence faites vous du sport ? "))
+        .add( 0, 30, newText("Jamais") )
+        .settings.add( 185, 30, newScale("jamais_oui", 1)
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() ))
+        .add( 0, 50, newText("entre 1 et 3 fois par mois") )
+        .settings.add( 185, 50, newScale("mensuel_oui", 1)
+            .settings.callback( getScale("jamais_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() ))
+        .add( 0, 70, newText("Une fois par semaine") )
+        .settings.add( 185, 70, newScale("hebdomadaire_oui", 1)
+            .settings.callback( getScale("jamais_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() ))
+        .add( 0, 90, newText("2 a 6 fois par semaine") )
+            .settings.add( 185, 90, newScale("multihebdo_oui", 1)
+            .settings.callback( getScale("jamais_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("quotidien_oui").unselect() ))
+        .add( 0, 110, newText("Tous les jours") )
+        .settings.add( 185, 110, newScale("quotidien_oui", 1)
+            .settings.callback( getScale("jamais_oui").unselect() )
+            .settings.callback( getScale("mensuel_oui").unselect() )
+            .settings.callback( getScale("hebdomadaire_oui").unselect() )
+            .settings.callback( getScale("multihebdo_oui").unselect() ))
+        .print()
+    ,
+    newSelector("jamais")
+        .settings.add(getScale("jamais_oui"))
+        .log()
+    ,
+    newSelector("mensuel")
+        .settings.add(getScale("mensuel_oui"))
+        .log()
+    ,
+    newSelector("hebdomadaire")
+        .settings.add(getScale("hebdomadaire_oui"))
+        .log()
+    ,
+    newSelector("multihebdo")
+        .settings.add(getScale("multihebdo_oui"))
+        .log()
+    ,
+    newSelector("quotidien")
+        .settings.add(getScale("quotidien_oui"))
+        .log()
+    ,
+    newVar("pratique_sportive_participant")
+        .global()
+        .set(getCanvas("frequence_pratique_sportive"))
+.log("Paratique sportive", getVar("pratique_sportive_participant"))
+
+    ,
+    newCanvas("choix_satisfaction_poids",450, 90)
+        .add(0,0, newText("Etes-vous satisfaits de votre poids ? "))
+        .add( 0, 30, newText("Oui") )
+        .settings.add( 185, 30, newScale("reponse_oui", 1)
+            .settings.callback( getScale("reponse_non").unselect() ))
+        .add( 0, 50, newText("Non") )
+        .settings.add( 185, 50, newScale("reponse_non", 1)
+            .settings.callback( getScale("reponse_oui").unselect() ))
+        .print()
+    ,
+    newSelector("oui")
+        .settings.add(getScale("reponse_oui"))
+        .log()
+    ,
+    newSelector("non")
+        .settings.add(getScale("reponse_non"))
+        .log()
+    ,
+    newVar("satisfaction_poids_participant")
+        .global()
+        .set(getCanvas("choix_satisfaction_poids"))
+.log("Satisfaction poids", getVar("satisfaction_poids_participant"))
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+)
+
+
+
+// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
+newTrial( "bye" ,
+    newText("Merci beaucoup pour votre participation!").print(),
+    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
+)
+.setOption( "countsForProgressBar" , false )
+// Make sure the progress bar is full upon reaching this last (non-)trial
