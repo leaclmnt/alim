@@ -187,7 +187,7 @@ newTrial( "questions_generales" ,
     newVar("pratique_sportive_participant")
         .global()
         .set(getCanvas("frequence_pratique_sportive"))
-.log("Paratique sportive", getVar("pratique_sportive_participant"))
+.log("Pratique sportive", getVar("pratique_sportive_participant"))
 
     ,
     newCanvas("choix_satisfaction_poids",450, 90)
