@@ -191,7 +191,7 @@ newTrial( "questions_generales" ,
 
     ,
     newCanvas("choix_satisfaction_poids",450, 90)
-        .add(0,0, newText("Etes-vous satisfaits de votre poids ? "))
+        .add(0,0, newText("Etes-vous satisfait de votre poids ? "))
         .add( 0, 30, newText("Oui") )
         .settings.add( 185, 30, newScale("reponse_oui", 1)
             .settings.callback( getScale("reponse_non").unselect() ))
