@@ -231,7 +231,8 @@ Template("TableSession1.csv" ,
                 .add("Vin rouge")
                 .add("Vin rose")
                 .add("Jus de fruit")
-                .add("Sirop a l'eau"))
+                .add("Sirop a l'eau")
+                .add("Pas de boisson supplémentaire"))
             .print()
         , 
         getDropDown("boisson").log(row.GM)
