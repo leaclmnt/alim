@@ -103,8 +103,6 @@ newTrial( "questions_generales" ,
         .global()
         .set(getDropDown("catsociopro"))
 .log("Categorie socio-professionnelle", getVar("categorie_socio-professionnelle_participant"))
-    //,
-    //newText("modedevie", "Vous vous sentez plutot rattaches a un mode de vie : ")
 
     ,
     newCanvas("choix_modedevie",450, 110)
@@ -140,7 +138,7 @@ newTrial( "questions_generales" ,
             .settings.callback( getScale("hebdomadaire_oui").unselect() )
             .settings.callback( getScale("multihebdo_oui").unselect() )
             .settings.callback( getScale("quotidien_oui").unselect() ))
-        .add( 0, 50, newText("entre 1 et 3 fois par mois") )
+        .add( 0, 50, newText("Entre 1 et 3 fois par mois") )
         .settings.add( 185, 50, newScale("mensuel_oui", 1)
             .settings.callback( getScale("jamais_oui").unselect() )
             .settings.callback( getScale("hebdomadaire_oui").unselect() )
