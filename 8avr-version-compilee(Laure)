@@ -23,7 +23,7 @@ session_2_bloc2Choisissez un plat dans la liste suivante,Entrecôte de boeuf,Esc
 //Intro
 PennController.ResetPrefix(null) 
 
-Sequence( "intro", "introbis", randomize("session1"), SendResults(), randomize("experiment_2"), "bye",  "encouragement")
+Sequence( "intro", "introbis", randomize("session1"), SendResults(), randomize("experiment_2"), "encouragement" ,  "bye")
 
 newTrial("intro",
     newText("Bonjour,")
@@ -62,13 +62,7 @@ newTrial("introbis",
 //Session 1 
 Template("TableSession1.csv" , 
     row => newTrial( "session1" ,
-        newText("<b> Session 1 </b>")
-            .center()
-            .print()
-        ,
-        newText("Vous allez composer vos menus.")
-            .print()
-        , 
+        
         newCanvas("plat", 450, 215)
             .center()
             .add(0, 10, newText("Choisissez les aliments qui vous font envie dans la liste suivante :"))
@@ -232,7 +226,7 @@ Template("TableSession1.csv" ,
                 .add("Vin rose")
                 .add("Jus de fruit")
                 .add("Sirop a l'eau")
-                .add("Pas de boisson supplémentaire"))
+                .add("Pas de boisson supplementaire"))
             .print()
         , 
         getDropDown("boisson").log(row.GM)
@@ -1111,6 +1105,10 @@ newTrial( "encouragement" ,
         .wait()
 )
 
+
+
+
+
 newTrial( "bye" ,
     newText("Merci beaucoup d’avoir répondu à notre questionnaire !")
     .print()
@@ -1120,3 +1118,4 @@ newTrial( "bye" ,
 )
 .setOption( "countsForProgressBar" , false )
 // Make sure the progress bar is full upon reaching this last (non-)trial
+
