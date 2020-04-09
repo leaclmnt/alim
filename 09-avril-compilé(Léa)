@@ -158,7 +158,7 @@ Template("TableSession1.csv" ,
         ,
         newCanvas("fromage", 450,90)
             .center()
-            .add(0, 10, newText("Souhaitez vous une assiette de fromage ?"))
+            .add(0, 10, newText("Souhaitez-vous une assiette de fromage ?"))
             .add( 187, 30, newText ("Oui"))
             .add ( 231, 30, newText("Non"))
             .add( 0, 50, newText("Assiette de fromage") )
