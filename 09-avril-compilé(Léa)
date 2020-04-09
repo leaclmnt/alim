@@ -15,41 +15,47 @@ GM6_session1,Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Broco
 
 PennController.ResetPrefix(null) 
 
-Sequence( "intro", "introbis", randomize("experiment_1"), randomize("experiment_2"), SendResults(), "encouragement", "bye")
+Sequence( "intro", "intro2", randomize("experiment_1"), randomize("experiment_2"), SendResults(), "encouragement", "bye")
 
 newTrial("intro",
-    newText("Bonjour,")
+    newCanvas("image", 450, 120)
+        .center()
+        .add(100, 10, newImage("APT.jpg"))
         .print()
     ,
-    newText("Dans le cadre d’un projet de recherche à AgroParisTech, nous souhaiterions que vous répondiez à un questionnaire, qui vous prendra environ 15 minutes. ")
+    newCanvas("presentation_projet", 450, 230)
+        .left()
+        .add (0, 10, newText("Bonjour à tous,"))
+        .add (0, 40, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des français."))
+        .add (0, 100, newText("Si vous pouvez prendre 15 minutes de votre temps pour r&eacute;pondre &agrave; nos questions, cela nous aiderait beaucoup dans nos recherches."))
+        .add (0, 140, newText ("Le questionnaire est anonyme. Les donn&eacute;es collect&eacute;es seront stock&eacute;es dans une base de donn&eacute;es s&eacute;curis&eacute;e."))
+        .add (0, 180, newText("Pour toute question ou commentaire, n'h&eacute;sitez pas &agrave; nous contacter &agrave; l'adresse suivante : xxx. "))
         .print()
-    ,
-    newText("Cela nous aidera beaucoup pour nos recherches. Le questionnaire est anonyme, et les données collectées sont stockées dans une base de données sécurisées.")
-        .print()
-    ,
-    newText("Pour toute question ou commentaire, vous pouvez nous contacter à l’adresse suivante : ??.")
-        .print()
-    ,
+    ,    
     newButton("Suivant")
         .print()
         .wait()
-)
+    )
 
-
-newTrial("introbis",
-    newText("Vous allez composer différents menus, à chaque fois pour un repas à domicile.")
+newTrial("intro2",
+    newCanvas("image", 450, 200)
+        .center()
+        .add(130,0, newImage("Couverts.jpg"))
+        .print()
+    ,    
+    newCanvas("presentation_projet2", 450, 220)
+        .left()
+        .add(0, 10, newText("Au cours de ce questionnaire, nous allons vous interroger sur l'&eacute;laboration d'une dizaine de menus, &agrave; chaque fois pour un repas &agrave; domicile."))
+        .add(0, 70, newText("Pour chaque menu, vous allez &ecirc;tre amen&eacute; &agrave; choisir autant d'aliments que vous souhaitez pour composer votre plat principal."))
+        .add(0, 110, newText("Ensuite, vous pourrez choisir d'accompagner votre plat d'une entr&eacute;e, d'une assiette de fromage et d'un ou deux desserts."))
+        .add(0, 150, newText("Vous pourrez aussi choisir une boisson."))
+        .add(0, 170, newText("Dans tous les cas, l’eau plate, le pain, les condiments et les &eacute;pices sont disponibles &agrave; volont&eacute;."))
         .print()
     ,
-    newText("Pour chaque catégorie (plat principal, entrée, fromage, dessert, boisson), vous allez pouvoir choisir un ou plusieurs aliments.")
-        .print()
-    ,
-    newText("Dans tous les cas, il y a à disposition de l’eau plate, du pain, des condiments, des épices.")
-        .print()
-    ,
-    newButton("Suivant")
+    newButton("Démarrer l'exp&eacute;rience")
         .print()
         .wait()
-)
+    )
 
 //Session 1 
 Template("TableSession1.csv" , 
@@ -721,7 +727,14 @@ Template("session_2.csv" ,
 ))
 
 newTrial("encouragement",
-    newText("Courage, vous êtes presque à la fin du questionnaire !")
+    newCanvas("image", 450, 150)
+        .center()
+        .add(30,10, newImage("Food.jpg"))
+        .print()
+    ,
+    newCanvas("texte", 450, 50)
+        .center()
+        .add(0,10, newText("Courage, vous êtes presque à la fin du questionnaire !"))
         .print()
     ,
     newButton("Suivant")
