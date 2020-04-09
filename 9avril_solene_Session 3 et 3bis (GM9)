@@ -69,43 +69,43 @@ newTrial( "experiment_3" ,
                 .settings.callback( getScale("feculentgras_oui").unselect() ))
             .print()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
             .log()
         ,
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("prot4_oui"), getScale("prot4_non") )
             .log()
         ,         
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("legumineuse1_oui"), getScale("legumineuse1_non") )
             .log()
         ,
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("legumineuse2_oui"), getScale("legumineuse2_non") )
             .log()
         ,         
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
-            .log(row.GM)
+            .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
             .log()
         ,
@@ -124,7 +124,7 @@ newTrial( "experiment_3" ,
                 .add( newText("Pas d'entree" ))
             .print()
         , 
-        getDropDown("entree").log(row.GM)
+        getDropDown("entree").log("GM9")
         ,
         newButton("Suivant")
             .print()
@@ -142,7 +142,7 @@ newTrial( "experiment_3" ,
                 .settings.callback( getScale("fromage_oui").unselect() ))
             .print()
         , 
-        newSelector(row.GM)
+        newSelector("GM9")
             .settings.add( getScale("fromage_oui"), getScale("fromage_non") )
             .log()
             .wait()
@@ -170,9 +170,9 @@ newTrial( "experiment_3" ,
                 .add( newText("Pas de dessert") ))
             .print()
         , 
-        getDropDown("dessert1").log(row.GM)
+        getDropDown("dessert1").log("GM9")
         , 
-        getDropDown("dessert2").log(row.GM)
+        getDropDown("dessert2").log("GM9")
         ,
         newButton("Suivant")
             .print()
@@ -195,7 +195,7 @@ newTrial( "experiment_3" ,
                 .add("Pas de boisson suppl&eacute;mentaire"))
             .print()
         , 
-        getDropDown("boisson").log(row.GM)
+        getDropDown("boisson").log("GM9")
         ,
         newButton("Suivant")
             .print()
@@ -577,35 +577,35 @@ newTrial( "experiment_3bis" ,
                 .settings.callback( getScale("feculentgras_oui").unselect() ))
             .print()
         ,
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
             .log()
         ,
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("prot4_oui"), getScale("prot4_non") )
             .log()
         ,         
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("legumineuse1_oui"), getScale("legumineuse1_non") )
             .log()
         ,
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("legumineuse2_oui"), getScale("legumineuse2_non") )
             .log()
         ,         
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
             .log(row.GM)
         , 
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
             .log()
         ,
@@ -624,7 +624,7 @@ newTrial( "experiment_3bis" ,
                 .add( newText("Pas d'entree" ))
             .print()
         , 
-        getDropDown("entree").log(row.GM)
+        getDropDown("entree").log("GM9bis")
         ,
         newButton("Suivant")
             .print()
@@ -642,7 +642,7 @@ newTrial( "experiment_3bis" ,
                 .settings.callback( getScale("fromage_oui").unselect() ))
             .print()
         , 
-        newSelector(row.GM)
+        newSelector("GM9bis")
             .settings.add( getScale("fromage_oui"), getScale("fromage_non") )
             .log()
             .wait()
@@ -670,9 +670,9 @@ newTrial( "experiment_3bis" ,
                 .add( newText("Pas de dessert") ))
             .print()
         , 
-        getDropDown("dessert1").log(row.GM)
+        getDropDown("dessert1").log("GM9bis")
         , 
-        getDropDown("dessert2").log(row.GM)
+        getDropDown("dessert2").log("GM9bis")
         ,
         newButton("Suivant")
             .print()
@@ -695,7 +695,7 @@ newTrial( "experiment_3bis" ,
                 .add("Pas de boisson suppl&eacute;mentaire"))
             .print()
         , 
-        getDropDown("boisson").log(row.GM)
+        getDropDown("boisson").log("GM9bis")
         ,
         newButton("Suivant")
             .print()
