@@ -615,7 +615,7 @@ Template("session_2.csv" ,
             .wait()
         ,
         newCanvas("dessert_choix", 450, 50)
-            .add ( 0, 10, newText ("Qu'est ce qui vous a guid&eacute; dans le choix de vos desserts"))
+            .add ( 0, 10, newText ("Qu'est-ce qui vous a guid&eacute; dans le choix de vos desserts"))
             .add (0, 30, newText ("Donnez un score pour chaque raison (note de 1 à 4 : 1 = pas du tout d’accord, 4 = tout à fait d’accord). "))
             .print()
         ,
@@ -626,7 +626,7 @@ Template("session_2.csv" ,
             .add ( 466, 30, newText ("3"))
             .add ( 516, 30, newText("4"))
         
-            .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+            .add( 0, 50, newText("Des raisons &eacute;conomiques") )
             .settings.add( 355, 50, newScale("raison_1_num1", 1)
                 .settings.callback( getScale("raison_1_num2").unselect() )
                 .settings.callback( getScale("raison_1_num3").unselect() )
@@ -644,7 +644,7 @@ Template("session_2.csv" ,
                 .settings.callback( getScale("raison_1_num2").unselect() )
                 .settings.callback( getScale("raison_1_num3").unselect() ))
             
-            .add( 0, 70, newText("Pour le plaisir") )
+            .add( 0, 70, newText("Le plaisir") )
             .settings.add( 355, 70, newScale("raison_2_num1", 1)
                 .settings.callback( getScale("raison_2_num2").unselect() )
                 .settings.callback( getScale("raison_2_num3").unselect() )
@@ -662,7 +662,7 @@ Template("session_2.csv" ,
                 .settings.callback( getScale("raison_2_num2").unselect() )
                 .settings.callback( getScale("raison_2_num3").unselect() ))
             
-            .add( 0, 90, newText("Pour des raisons environnementales") )
+            .add( 0, 90, newText("Des raisons environnementales") )
             .settings.add( 355, 90, newScale("raison_3_num1", 1)
                 .settings.callback( getScale("raison_3_num2").unselect() )
                 .settings.callback( getScale("raison_3_num3").unselect() )
@@ -680,7 +680,7 @@ Template("session_2.csv" ,
                 .settings.callback( getScale("raison_3_num2").unselect() )
                 .settings.callback( getScale("raison_3_num3").unselect() ))
             
-            .add( 0, 110, newText("Pour leur impact b&eacute;n&eacute;fique sur ma sant&eacute;") )
+            .add( 0, 110, newText("L'impact b&eacute;n&eacute;fique sur ma sant&eacute;") )
             .settings.add( 355, 110, newScale("raison_4_num1", 1)
                 .settings.callback( getScale("raison_4_num2").unselect() )
                 .settings.callback( getScale("raison_4_num3").unselect() )
