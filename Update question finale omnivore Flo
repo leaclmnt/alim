@@ -76,11 +76,6 @@ newTrial("habitudes_omnivore",
         .settings.add(getScale("multiquotidien_oui"))
         .log()
     ,
-    newVar("frequence_conso_viande_participant")
-        .global()
-        .set(getCanvas("frequence_conso_viande"))
-.log("Consommation viande", getVar("frequence_conso_viande_participant"))
-    ,
     newButton("Suivant")
         .print()
         .wait()
