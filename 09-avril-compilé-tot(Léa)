@@ -2440,7 +2440,7 @@ newTrial("experiment_3",
                 getButton("suivant810").remove()
                 ,
                 newCanvas("stock10", 450, 100)
-                    .add(0, 10, newText ("Malheureusement, il y a eu des problèmes d’approvisionnement dans le magasin, certains aliments sont donc maintenant indisponibles."))
+                    .add(0, 10, newText ("Une nouvelle fois, il y a eu des problèmes d’approvisionnement dans le magasin, certains aliments sont donc maintenant indisponibles."))
                     .add(0, 50, newText ("Vous devez donc adapter votre menu (le fonctionnement est le même que précédemment). "))
                     .print()
                 ,
