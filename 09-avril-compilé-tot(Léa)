@@ -21,6 +21,8 @@ GM6_session1,Steak polenta tomate,Steak soja,Lentilles corail,Pois chiches,Broco
 
 PennController.ResetPrefix(null) 
 
+// PennController.DebugOff() // quand on publie l'exp 
+
 Sequence( "intro", "intro2", randomize("experiment_1"), "encouragement", randomize("experiment_2"), "experiment_3", "questions_generales", SendResults(), "bye")
 
 newTrial("intro",
