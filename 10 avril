@@ -1,4 +1,4 @@
-// les csv sont inchangés
+//les csv sont inchangés
 
 PennController.ResetPrefix(null) 
 
@@ -543,9 +543,9 @@ Template("session_2.csv" ,
 newTrial("experiment_3", 
     newCanvas("regime", 450, 70)
         .center()
-        .add(0, 10, newText("Quel est votre r&eacute;gime ?"))
+        .add(0, 10, newText("Mangez-vous de la viande ?"))
         .add(20, 40, newDropDown("Regime", "...")
-            .settings.add("Omnivore", "V&eacute;g&eacute;tarien"))
+            .settings.add("Oui", "Non"))
         .print()
     ,
     getDropDown("Regime").log("type_regime")
