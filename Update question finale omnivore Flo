@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
-Sequence( "habitudes_omnivore" , SendResults() , "bye" )
+Sequence( "habitudes_omnivore")
 
 
 
@@ -80,12 +80,3 @@ newTrial("habitudes_omnivore",
         .print()
         .wait()
 )
-
-
-// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
-newTrial( "bye" ,
-    newText("Thank you for your participation!").print(),
-    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
-)
-.setOption( "countsForProgressBar" , false )
-// Make sure the progress bar is full upon reaching this last (non-)trial
