@@ -7,12 +7,12 @@ PennController.ResetPrefix(null)
 Sequence( "intro", "intro2", randomize("experiment_1"), "encouragement", randomize("experiment_2"), "experiment_3", "questions_generales", SendResults(), "comm" , "bye")
 
 newTrial("intro",
-    newCanvas("image", 450, 120)
+    newCanvas("image", 470, 120)
         .center()
         .add(100, 10, newImage("APT.jpg"))
         .print()
     ,
-    newCanvas("presentation_projet", 450, 280)
+    newCanvas("presentation_projet", 470, 280)
         .left()
         .add (0, 10, newText("Bonjour à tous,"))
         .add (0, 40, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des consommateurs."))
@@ -27,7 +27,7 @@ newTrial("intro",
     )
 
 newTrial("intro2",
-    newCanvas("image", 450, 200)
+    newCanvas("image", 470, 200)
         .center()
         .add(130,0, newImage("Couverts.jpg"))
         .print()
@@ -50,7 +50,7 @@ newTrial("intro2",
 Template("TableSession1.csv" , 
     row => newTrial( "experiment_1" ,
         
-        newCanvas("plat", 450, 215)
+        newCanvas("plat", 470, 215)
             .center()
             .add(0, 0, newText("Pour votre plat principal, choisissez un ou plusieurs aliments dans la liste suivante :"))
             .add( 187, 35, newText ("Oui"))
