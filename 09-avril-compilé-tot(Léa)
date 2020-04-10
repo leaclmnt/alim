@@ -1462,7 +1462,7 @@ newTrial("experiment_3",
                     .center()
                     .add(0, 10, newText("Choisissez &agrave; pr&eacute;sent une entr&eacute;e dans la liste ci-dessous :"))
                     .add(20, 40, newDropDown("entree", "...")
-                        .add( "Soupe de l&egrave;gumes" )
+                        .add( "Soupe de l&eacute;gumes" )
                         .add( "Feuillet&eacute; &agrave; la viande" )
                         .add("Salade de choux" )
                         .add("Mini goug&egrave;res" )
