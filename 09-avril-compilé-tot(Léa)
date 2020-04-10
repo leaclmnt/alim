@@ -3037,7 +3037,7 @@ newTrial( "questions_generales" ,
             .add( "Artisan" )
             .add( "Commercant" )
             .add( "Chef d'entreprise" )
-            .add( "Cadre et profession intelectuelle superieure" )
+            .add( "Cadre et profession intellectuelle sup&eacute;rieure" )
             .add( "Profession interm&eacute;diaire" )
             .add( "Employ&eacute;" )
             .add( "Ouvrier" )
