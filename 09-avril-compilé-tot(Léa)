@@ -2492,7 +2492,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("feculent_non").unselect() ))
                     .settings.add( 230, 170, newScale("feculent_non", 1)
                         .settings.callback( getScale("feculent_oui").unselect() ))        
-                    .add( 0, 190, newText("Gratin chou fleur b&eacute;chamel") )
+                    .add( 0, 190, newText("Gratin chou-fleur b&eacute;chamel") )
                     .settings.add( 185, 190, newScale("feculentgras_oui", 1)
                         .settings.callback( getScale("feculentgras_non").unselect() ))
                     .settings.add( 230, 190, newScale("feculentgras_non", 1)
