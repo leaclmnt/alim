@@ -220,7 +220,7 @@ Template("TableSession1.csv" ,
         , 
         newCanvas("boissons", 450, 90)
             .center()
-            .add(0, 10, newText("L'eau est disponible &agrave; volont&eacute;. Souhaitez vous accompagner votre plat d'une boisson ?"))
+            .add(0, 10, newText("L'eau est disponible &agrave; volont&eacute;. Souhaitez-vous accompagner votre plat d'une boisson ?"))
             .add(20, 60, newDropDown("boisson", "...")
                 .add("Eau gazeuse")
                 .add("Soda p&eacute;tillant")
