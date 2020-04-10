@@ -1938,7 +1938,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("feculent_non").unselect() ))
                     .settings.add( 230, 170, newScale("feculent_non", 1)
                         .settings.callback( getScale("feculent_oui").unselect() ))        
-                    .add( 0, 190, newText("Gratin chou fleur b&eacute;chamel") )
+                    .add( 0, 190, newText("Gratin chou-fleur b&eacute;chamel") )
                     .settings.add( 185, 190, newScale("feculentgras_oui", 1)
                         .settings.callback( getScale("feculentgras_non").unselect() ))
                     .settings.add( 230, 190, newScale("feculentgras_non", 1)
@@ -3051,7 +3051,7 @@ newTrial( "questions_generales" ,
     getDropDown("catsociopro").log("sociopro")
     ,
     newCanvas("choix_modedevie",450, 90)
-        .add(0,20, newText("Vous sentez-vous plut&ocirc;t rattach&eacute;s &agrave; un mode de vie : "))
+        .add(0,20, newText("Vous sentez-vous plut&ocirc;t rattach&eacute;(e) &agrave; un mode de vie : "))
         .add( 0, 50, newText("Rural") )
         .settings.add( 185, 50, newScale("rural_oui", 1)
             .settings.callback( getScale("urbain_oui").unselect() ))
@@ -3065,7 +3065,7 @@ newTrial( "questions_generales" ,
         .log()
     ,
     newCanvas("frequence_pratique_sportive",450, 150)
-        .add(0,20, newText("A quelle fr&eacute;quence faites vous du sport ? "))
+        .add(0,20, newText("A quelle fr&eacute;quence faites-vous du sport ? "))
         .add( 0, 50, newText("Jamais") )
         .settings.add( 185, 50, newScale("jamais_oui", 1)
             .settings.callback( getScale("mensuel_oui").unselect() )
