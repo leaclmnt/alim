@@ -1390,7 +1390,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("prot4_non").unselect() ))
                     .settings.add( 230, 70, newScale("prot4_non", 1)
                         .settings.callback( getScale("prot4_oui").unselect() ))
-                    .add( 0, 90, newText( "Tofu po&eacute;l&eacute;") )
+                    .add( 0, 90, newText( "Tofu po&ecirc;l&eacute;") )
                     .settings.add( 185, 90, newScale("legumineuse1_oui", 1)
                         .settings.callback( getScale("legumineuse1_non").unselect() ))
                     .settings.add( 230, 90, newScale("legumineuse1_non", 1)
