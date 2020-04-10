@@ -1,8 +1,6 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
-// Show the 'intro' trial first, then all the 'experiment' trials in a random order
-// then send the results and finally show the trial labeled 'bye'
-Sequence( "questions_generales","a plus","au revoir", SendResults() ,"bye" )
+Sequence( "questions_generales")
 
 
 
@@ -12,12 +10,7 @@ newTrial( "questions_generales" ,
     ,
     newTextInput("age")
         .print()
-    ,
-    newVar("age_participant")
-        .global()
-        .set(getTextInput("age"))
-.log("Age", getVar("age_participant"))
-
+   
     ,
     newCanvas("choix_sexe",450, 150)
         .add(0,30, newText("Veuillez renseigner votre sexe"))
@@ -62,11 +55,6 @@ newTrial( "questions_generales" ,
     newSelector("anonyme")
         .settings.add(getScale("anonyme_oui"))
         .log()
-    ,
-    newVar("sexe_participant")
-        .global()
-        .set(getCanvas("choix_sexe"))
-.log("Sexe", getVar("sexe_participant"))
 
     ,
 
@@ -98,12 +86,7 @@ newTrial( "questions_generales" ,
     .log( "choix_10" , "retraite" )
     .log( "choix_11" , "autre" )
     // Add these six columns to the results lines of these Template-based trials
-    ,
-    newVar("categorie_socio-professionnelle_participant")
-        .global()
-        .set(getDropDown("catsociopro"))
-.log("Categorie socio-professionnelle", getVar("categorie_socio-professionnelle_participant"))
-
+    
     ,
     newCanvas("choix_modedevie",450, 110)
         .add(0,30, newText("Vous vous sentez plutot rattaches a un mode de vie : "))
@@ -122,12 +105,7 @@ newTrial( "questions_generales" ,
     newSelector("urbain")
         .settings.add(getScale("urbain_oui"))
         .log()
-        
-    ,
-    newVar("mode_de_vie_participant")
-        .global()
-        .set(getCanvas("choix_modedevie"))
-.log("Mode de vie", getVar("mode_de_vie_participant"))
+
    
     ,
     newCanvas("frequence_pratique_sportive",450, 150)
@@ -183,11 +161,7 @@ newTrial( "questions_generales" ,
     newSelector("quotidien")
         .settings.add(getScale("quotidien_oui"))
         .log()
-    ,
-    newVar("pratique_sportive_participant")
-        .global()
-        .set(getCanvas("frequence_pratique_sportive"))
-.log("Pratique sportive", getVar("pratique_sportive_participant"))
+
 
     ,
     newCanvas("choix_satisfaction_poids",450, 90)
@@ -207,23 +181,10 @@ newTrial( "questions_generales" ,
     newSelector("non")
         .settings.add(getScale("reponse_non"))
         .log()
-    ,
-    newVar("satisfaction_poids_participant")
-        .global()
-        .set(getCanvas("choix_satisfaction_poids"))
-.log("Satisfaction poids", getVar("satisfaction_poids_participant"))
+
     ,
     newButton("Suivant")
         .print()
         .wait()
 )
 
-
-
-// Spaces and linebreaks don't matter to the script: we've only been using them for the sake of readability
-newTrial( "bye" ,
-    newText("Merci beaucoup pour votre participation!").print(),
-    newButton().wait()  // Wait for a click on a non-displayed button = wait here forever
-)
-.setOption( "countsForProgressBar" , false )
-// Make sure the progress bar is full upon reaching this last (non-)trial
