@@ -3116,7 +3116,7 @@ newTrial( "questions_generales" ,
         .settings.add(getScale("reponse_oui"),getScale("reponse_non"))
         .log()
     ,
-    newButton("Suivant")
+    newButton("Fin")
         .print()
         .wait()
 )
