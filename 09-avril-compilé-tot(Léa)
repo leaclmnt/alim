@@ -34,7 +34,7 @@ newTrial("intro",
     newCanvas("presentation_projet", 450, 230)
         .left()
         .add (0, 10, newText("Bonjour à tous,"))
-        .add (0, 40, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des francophones."))
+        .add (0, 40, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des consommateurs."))
         .add (0, 100, newText("Si vous pouvez prendre 15 minutes de votre temps pour r&eacute;pondre &agrave; nos questions, cela nous aiderait beaucoup dans nos recherches."))
         .add (0, 140, newText ("Le questionnaire est anonyme. Les donn&eacute;es collect&eacute;es seront stock&eacute;es dans une base de donn&eacute;es s&eacute;curis&eacute;e."))
         .add (0, 180, newText("Pour toute question ou commentaire, n'h&eacute;sitez pas &agrave; nous contacter &agrave; l'adresse suivante : xxx. "))
