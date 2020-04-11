@@ -2398,7 +2398,7 @@ newTrial("experiment_3",
                         .add("Vin rouge")
                         .add("Vin ros&eacute;")
                         .add("Jus de fruit")
-                        .add("Sirop a l'eau")
+                        .add("Sirop &agrave; l'eau")
                         .add("Pas de boisson suppl&eacute;mentaire"))
                     .print()
                 , 
