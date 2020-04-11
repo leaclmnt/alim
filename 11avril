@@ -2,7 +2,7 @@ PennController.ResetPrefix(null)
 
 // PennController.DebugOff() // quand on publie l'exp 
 
-Sequence( "intro", "intro2", randomize("experiment_1"), "encouragement", randomize("experiment_2"), "experiment_3", "questions_generales", SendResults(), "comm")
+Sequence( "intro", "intro2", "faim", randomize("experiment_1"), "encouragement", randomize("experiment_2"), "experiment_3", "questions_generales", SendResults(), "comm")
 
 // Intro
 
@@ -40,6 +40,27 @@ newTrial("intro2",
         .add(0, 180, newText("Vous pourrez aussi choisir une boisson."))
         .add(0, 210, newText("Dans tous les cas, l’eau plate, le pain, les condiments et les &eacute;pices sont disponibles &agrave; volont&eacute;."))
         .print()
+    ,
+    newButton("Suivant")
+        .print()
+        .wait()
+    )
+
+newTrial("faim",
+     newCanvas("choix_faim",450, 100)
+        .add(0,20 , newText("Avez-vous faim en ce moment ? "))
+        .add( 0, 50, newText("Oui") )
+        .settings.add( 185, 50, newScale("reponse_oui", 1)
+            .settings.callback( getScale("reponse_non").unselect() ))
+        .add( 0, 70, newText("Non") )
+        .settings.add( 185, 70, newScale("reponse_non", 1)
+            .settings.callback( getScale("reponse_oui").unselect() ))
+        .print()
+    ,
+    newSelector("etat_faim")
+        .settings.add(getScale("reponse_oui"),getScale("reponse_non"))
+        .log()
+        .wait()
     ,
     newButton("Démarrer l'exp&eacute;rience")
         .print()
