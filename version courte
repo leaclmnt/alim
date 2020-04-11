@@ -1081,6 +1081,38 @@ newTrial("experiment_3",
                     .print()
                     .wait()
                 ,
+                newCanvas("frustration9bis", 450, 100)
+                    .add(0,20, newText("Avez vous eu des difficultés à faire le repas ?"))
+                    .add(187,50, newText("Oui"))
+                    .settings.add(185,50, newScale("frustration_oui_9bis", 1)
+                        .settings.callback( getScale("frustration_non_9bis").unselected() ))
+                    .add(0,70, newText("Non"))
+                    .settings.add(1850,70, newScale("frustration_non_9bis", 1)
+                        .settings.callback( getScale("frustration_oui_9bis").unselected() ))
+                    .print()
+                , 
+                newSelector("frustrationGM9bis")
+                    .settings.add( getScale("frustration_oui_9bis"), getScale("frustration_non_9bis") )
+                    .log()
+                ,
+                newCanvas("satisfaction9bis",450, 100)
+                    .add(0,20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
+                    .add( 0, 50, newText("Oui") )
+                    .settings.add( 185, 50, newScale("satisfaction_oui_9bis", 1)
+                        .settings.callback( getScale("satisfaction_non_9bis").unselect() ))
+                    .add( 0, 70, newText("Non") )
+                    .settings.add( 185, 70, newScale("satisfaction_non_9bis", 1)
+                        .settings.callback( getScale("satisfaction_oui_9bis").unselect() ))
+                    .print()
+                ,
+                newSelector("satisfactionGM9bis")
+                    .settings.add(getScale("satisfaction_oui_9bis"),getScale("satisfaction_non_9bis"))
+                    .log()
+                ,
+                newButton("suivant79bis", "Suivant (vous pouvez descendre la page)")
+                    .print()
+                    .wait()
+                ,
                 getCanvas("plat9bis").remove()
                 ,
                 getCanvas("entree9bis").remove()
@@ -1103,6 +1135,10 @@ newTrial("experiment_3",
                 ,
                 getCanvas("dessert_choix29bis").remove()
                 ,
+                getCanvas ("satisfaction9bis").remove()
+                ,
+                getCanvas ("frustration9bis").remove()
+                ,                ,
                 getButton("suivant19bis").remove()
                 ,
                 getButton("suivant29bis").remove()
@@ -1114,6 +1150,8 @@ newTrial("experiment_3",
                 getButton("suivant59bis").remove()
                 ,
                 getButton("suivant69bis").remove()
+                ,
+                getButton("suivant79bis").remove()
                 ,
                 newCanvas("plat10", 450, 255)
                     .center()
@@ -1746,6 +1784,38 @@ newTrial("experiment_3",
                     .print()
                     .wait()
                 ,
+                newCanvas("frustration10bis", 450, 100)
+                    .add(0,20, newText("Avez vous eu des difficultés à faire le repas ?"))
+                    .add(187,50, newText("Oui"))
+                    .settings.add(185,50, newScale("frustration_oui_10bis", 1)
+                        .settings.callback( getScale("frustration_non_10bis").unselected() ))
+                    .add(0,70, newText("Non"))
+                    .settings.add(1850,70, newScale("frustration_non_10bis", 1)
+                        .settings.callback( getScale("frustration_oui_10bis").unselected() ))
+                    .print()
+                , 
+                newSelector("frustrationGM10bis")
+                    .settings.add( getScale("frustration_oui_10bis"), getScale("frustration_non_10bis") )
+                    .log()
+                ,
+                newCanvas("satisfaction10bis",450, 100)
+                    .add(0,20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
+                    .add( 0, 50, newText("Oui") )
+                    .settings.add( 185, 50, newScale("satisfaction_oui_10bis", 1)
+                        .settings.callback( getScale("satisfaction_non_10bis").unselect() ))
+                    .add( 0, 70, newText("Non") )
+                    .settings.add( 185, 70, newScale("satisfaction_non_10bis", 1)
+                        .settings.callback( getScale("satisfaction_oui_10bis").unselect() ))
+                    .print()
+                ,
+                newSelector("satisfactionGM10bis")
+                    .settings.add(getScale("satisfaction_oui_10bis"),getScale("satisfaction_non_10bis"))
+                    .log()
+                ,
+                newButton("suivant710bis", "Suivant (vous pouvez descendre la page)")
+                    .print()
+                    .wait()
+                ,
                 getCanvas("plat10bis").remove()
                 ,
                 getCanvas("entree10bis").remove()
@@ -1768,6 +1838,10 @@ newTrial("experiment_3",
                 ,
                 getCanvas("dessert_choix210bis").remove()
                 ,
+                getCanvas ("satisfaction10bis").remove()
+                ,
+                getCanvas ("frustration10bis").remove()
+                ,
                 getButton("suivant110bis").remove()
                 ,
                 getButton("suivant210bis").remove()
@@ -1779,6 +1853,8 @@ newTrial("experiment_3",
                 getButton("suivant510bis").remove()
                 ,
                 getButton("suivant610bis").remove()
+                ,
+                getButton("suivant710bis").remove()
                 ,
                 newCanvas("freq_viande", 450, 190)
                     .add(0,20, newText("A quelle fr&eacute;quence mangez-vous de la viande ? "))
