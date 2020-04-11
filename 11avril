@@ -2981,6 +2981,9 @@ newTrial( "questions_generales" ,
     ,
     getTextInput("commentaire").log()
     ,
+    newCanvas("espace", 450, 20)
+        .print()
+    ,
     newButton("Envoyer !")
         .print()
         .wait()
