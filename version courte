@@ -12,7 +12,7 @@ PennController.ResetPrefix(null)
 
 // PennController.DebugOff() // quand on publie l'exp 
 
-Sequence( "intro", "intro2", "faim", randomize("experiment_1"), "encouragement", randomize("experiment_2"), "experiment_3", "questions_generales", SendResults(), "comm")
+Sequence( "intro", "intro2", "faim", randomize("experiment_1"), "encouragement", "experiment_2", "questions_generales", SendResults(), "bye")
 
 // Intro
 
@@ -279,9 +279,9 @@ newTrial("encouragement",
         .wait()
 )
 
-// Sequence 3
+// Sequence 2
 
-newTrial("experiment_3", 
+newTrial("experiment_2", 
     newCanvas("regime", 450, 70)
         .center()
         .add(0, 10, newText("Mangez-vous de la viande ?"))
@@ -304,12 +304,12 @@ newTrial("experiment_3",
         .test.selected(1)
             
             .success(
-                newCanvas("plat_choix", 450, 50)
+                newCanvas("vege_choix", 450, 50)
                     .add ( 0, 10, newText ("Qu'est ce qui vous a guid&eacute; dans la composition de vos menus ?"))
                     .add (0, 30, newText ("Donnez un score pour chaque raison (note de 1 à 4 : 1 = pas du tout d’accord, 4 = tout à fait d’accord). "))
                     .print()
                 ,
-                newCanvas("plat_choix", 450, 150)
+                newCanvas("vege_choix", 450, 150)
                     .center()
                     .add ( 366, 30, newText ("1"))
                     .add ( 416, 30, newText("2"))
@@ -646,12 +646,12 @@ newTrial("experiment_3",
                     .print()
                     .wait()
                 , 
-                newCanvas("plat_choix", 450, 50)
+                newCanvas("menu_choix", 450, 50)
                     .add ( 0, 10, newText ("Qu'est ce qui vous a guid&eacute; dans la composition de votre menu ?"))
                     .add (0, 30, newText ("Donnez un score pour chaque raison (note de 1 à 4 : 1 = pas du tout d’accord, 4 = tout à fait d’accord). "))
                     .print()
                 ,
-                newCanvas("plat_choix2", 450, 150)
+                newCanvas("menu_choix2", 450, 150)
                     .center()
                     .add ( 366, 30, newText ("1"))
                     .add ( 416, 30, newText("2"))
@@ -659,92 +659,92 @@ newTrial("experiment_3",
                     .add ( 516, 30, newText("4"))
                 
                     .add( 0, 50, newText("Des raisons &eacute;conomiques") )
-                    .settings.add( 355, 50, newScale("raison_1_num1", 1)
-                        .settings.callback( getScale("raison_1_num2").unselect() )
-                        .settings.callback( getScale("raison_1_num3").unselect() )
-                        .settings.callback( getScale("raison_1_num4").unselect() ))
-                    .settings.add( 405, 50, newScale("raison_1_num2", 1)
-                        .settings.callback( getScale("raison_1_num1").unselect() )
-                        .settings.callback( getScale("raison_1_num3").unselect() )
-                        .settings.callback( getScale("raison_1_num4").unselect() ))
-                    .settings.add( 455, 50, newScale("raison_1_num3", 1)
-                        .settings.callback( getScale("raison_1_num1").unselect() )
-                        .settings.callback( getScale("raison_1_num2").unselect() )
-                        .settings.callback( getScale("raison_1_num4").unselect() ))
-                    .settings.add( 505, 50, newScale("raison_1_num4", 1)
-                        .settings.callback( getScale("raison_1_num1").unselect() )
-                        .settings.callback( getScale("raison_1_num2").unselect() )
-                        .settings.callback( getScale("raison_1_num3").unselect() ))
+                    .settings.add( 355, 50, newScale("raison_1_num1_GM9", 1)
+                        .settings.callback( getScale("raison_1_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num4_GM9").unselect() ))
+                    .settings.add( 405, 50, newScale("raison_1_num2_GM9", 1)
+                        .settings.callback( getScale("raison_1_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num4_GM9").unselect() ))
+                    .settings.add( 455, 50, newScale("raison_1_num3_GM9", 1)
+                        .settings.callback( getScale("raison_1_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num4_GM9").unselect() ))
+                    .settings.add( 505, 50, newScale("raison_1_num4_GM9", 1)
+                        .settings.callback( getScale("raison_1_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_1_num3_GM9").unselect() ))
                     
                     .add( 0, 70, newText("Le plaisir") )
-                    .settings.add( 355, 70, newScale("raison_2_num1", 1)
-                        .settings.callback( getScale("raison_2_num2").unselect() )
-                        .settings.callback( getScale("raison_2_num3").unselect() )
-                        .settings.callback( getScale("raison_2_num4").unselect() ))
-                    .settings.add( 405, 70, newScale("raison_2_num2", 1)
-                        .settings.callback( getScale("raison_2_num1").unselect() )
-                        .settings.callback( getScale("raison_2_num3").unselect() )
-                        .settings.callback( getScale("raison_2_num4").unselect() ))
-                    .settings.add( 455, 70, newScale("raison_2_num3", 1)
-                        .settings.callback( getScale("raison_2_num1").unselect() )
-                        .settings.callback( getScale("raison_2_num2").unselect() )
-                        .settings.callback( getScale("raison_2_num4").unselect() ))
-                    .settings.add( 505, 70, newScale("raison_2_num4", 1)
-                        .settings.callback( getScale("raison_2_num1").unselect() )
-                        .settings.callback( getScale("raison_2_num2").unselect() )
-                        .settings.callback( getScale("raison_2_num3").unselect() ))
+                    .settings.add( 355, 70, newScale("raison_2_num1_GM9", 1)
+                        .settings.callback( getScale("raison_2_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num4_GM9").unselect() ))
+                    .settings.add( 405, 70, newScale("raison_2_num2_GM9", 1)
+                        .settings.callback( getScale("raison_2_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num4_GM9").unselect() ))
+                    .settings.add( 455, 70, newScale("raison_2_num3_GM9", 1)
+                        .settings.callback( getScale("raison_2_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num4_GM9").unselect() ))
+                    .settings.add( 505, 70, newScale("raison_2_num4_GM9", 1)
+                        .settings.callback( getScale("raison_2_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_2_num3_GM9").unselect() ))
                             
                     .add( 0, 90, newText("Des raisons environnementales") )
-                    .settings.add( 355, 90, newScale("raison_3_num1", 1)
-                        .settings.callback( getScale("raison_3_num2").unselect() )
-                        .settings.callback( getScale("raison_3_num3").unselect() )
-                        .settings.callback( getScale("raison_3_num4").unselect() ))
-                    .settings.add( 405, 90, newScale("raison_3_num2", 1)
-                        .settings.callback( getScale("raison_3_num1").unselect() )
-                        .settings.callback( getScale("raison_3_num3").unselect() )
-                        .settings.callback( getScale("raison_3_num4").unselect() ))
-                    .settings.add( 455, 90, newScale("raison_3_num3", 1)
-                        .settings.callback( getScale("raison_3_num1").unselect() )
-                        .settings.callback( getScale("raison_3_num2").unselect() )
-                        .settings.callback( getScale("raison_3_num4").unselect() ))
-                    .settings.add( 505, 90, newScale("raison_3_num4", 1)
-                        .settings.callback( getScale("raison_3_num1").unselect() )
-                        .settings.callback( getScale("raison_3_num2").unselect() )
-                        .settings.callback( getScale("raison_3_num3").unselect() ))
+                    .settings.add( 355, 90, newScale("raison_3_num1_GM9", 1)
+                        .settings.callback( getScale("raison_3_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num4_GM9").unselect() ))
+                    .settings.add( 405, 90, newScale("raison_3_num2_GM9", 1)
+                        .settings.callback( getScale("raison_3_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num4_GM9").unselect() ))
+                    .settings.add( 455, 90, newScale("raison_3_num3_GM9", 1)
+                        .settings.callback( getScale("raison_3_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num4_GM9").unselect() ))
+                    .settings.add( 505, 90, newScale("raison_3_num4_GM9", 1)
+                        .settings.callback( getScale("raison_3_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_3_num3_GM9").unselect() ))
                     
                     .add( 0, 110, newText("Des raisons nutritionnelles") )
-                    .settings.add( 355, 110, newScale("raison_4_num1", 1)
-                        .settings.callback( getScale("raison_4_num2").unselect() )
-                        .settings.callback( getScale("raison_4_num3").unselect() )
-                        .settings.callback( getScale("raison_4_num4").unselect() ))
-                    .settings.add( 405, 110, newScale("raison_4_num2", 1)
-                        .settings.callback( getScale("raison_4_num1").unselect() )
-                        .settings.callback( getScale("raison_4_num3").unselect() )
-                        .settings.callback( getScale("raison_4_num4").unselect() ))
-                    .settings.add( 455, 110, newScale("raison_4_num3", 1)
-                        .settings.callback( getScale("raison_4_num1").unselect() )
-                        .settings.callback( getScale("raison_4_num2").unselect() )
-                        .settings.callback( getScale("raison_4_num4").unselect() ))
-                    .settings.add( 505, 110, newScale("raison_4_num4", 1)
-                        .settings.callback( getScale("raison_4_num1").unselect() )
-                        .settings.callback( getScale("raison_4_num2").unselect() )
-                        .settings.callback( getScale("raison_4_num3").unselect() ))
+                    .settings.add( 355, 110, newScale("raison_4_num1_GM9", 1)
+                        .settings.callback( getScale("raison_4_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num4_GM9").unselect() ))
+                    .settings.add( 405, 110, newScale("raison_4_num2_GM9", 1)
+                        .settings.callback( getScale("raison_4_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num3_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num4_GM9").unselect() ))
+                    .settings.add( 455, 110, newScale("raison_4_num3_GM9", 1)
+                        .settings.callback( getScale("raison_4_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num4_GM9").unselect() ))
+                    .settings.add( 505, 110, newScale("raison_4_num4_GM9", 1)
+                        .settings.callback( getScale("raison_4_num1_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num2_GM9").unselect() )
+                        .settings.callback( getScale("raison_4_num3_GM9").unselect() ))
                     .print()
                 ,
                 newSelector("plat_eco")
-                    .settings.add( getScale("raison_1_num1"), getScale("raison_1_num2"), getScale("raison_1_num3"), getScale("raison_1_num4") )
+                    .settings.add( getScale("raison_1_num1_GM9"), getScale("raison_1_num2_GM9"), getScale("raison_1_num3_GM9"), getScale("raison_1_num4_GM9") )
                     .log()
                 , 
                 newSelector("plat_plaisir")
-                    .settings.add( getScale("raison_2_num1"), getScale("raison_2_num2"), getScale("raison_2_num3"), getScale("raison_2_num4") )
+                    .settings.add( getScale("raison_2_num1_GM9"), getScale("raison_2_num2_GM9"), getScale("raison_2_num3_GM9"), getScale("raison_2_num4_GM9") )
                     .log()
                 ,
                 newSelector("plat_environnement")
-                    .settings.add( getScale("raison_3_num1"), getScale("raison_3_num2"), getScale("raison_3_num3"), getScale("raison_3_num4") )
+                    .settings.add( getScale("raison_3_num1_GM9"), getScale("raison_3_num2_GM9"), getScale("raison_3_num3_GM9"), getScale("raison_3_num4_GM9") )
                     .log()
                 , 
                 newSelector("plat_sante")
-                    .settings.add( getScale("raison_4_num1"), getScale("raison_4_num2"), getScale("raison_4_num3"), getScale("raison_4_num4") )
+                    .settings.add( getScale("raison_4_num1_GM9"), getScale("raison_4_num2_GM9"), getScale("raison_4_num3_GM9"), getScale("raison_4_num4_GM9") )
                     .log()
                 ,
                 newButton("suivant6","Suivant (vous pouvez descendre la page)")
@@ -761,17 +761,9 @@ newTrial("experiment_3",
                 ,
                 getCanvas("boissons").remove()
                 ,
-                getCanvas("plat_choix").remove()
+                getCanvas("menu_choix").remove()
                 ,
-                getCanvas("plat_choix2").remove()
-                ,
-                getCanvas("entree_choix").remove()
-                ,
-                getCanvas("entree_choix2").remove()
-                ,
-                getCanvas("dessert_choix").remove()
-                ,
-                getCanvas("dessert_choix2").remove()
+                getCanvas("menu_choix2").remove()
                 ,
                 getButton("suivant1").remove()
                 ,
@@ -790,13 +782,13 @@ newTrial("experiment_3",
                     .add(0, 50, newText ("Vous devez donc adapter votre menu (le fonctionnement est le même que précédemment). "))
                     .print()
                 ,
-                newButton("suiv","Suivant (vous pouvez descendre la page)")
+                newButton("suiv_GM9","Suivant (vous pouvez descendre la page)")
                     .print()
                     .wait()
                 ,
                 getCanvas("stock").remove()
                 ,
-                getButton("suiv").remove()
+                getButton("suiv_GM9").remove()
                 ,
                 newCanvas("plat9bis", 450, 215)
                     .center()
@@ -1082,21 +1074,25 @@ newTrial("experiment_3",
                     .wait()
                 ,
                 newCanvas("frustration9bis", 450, 100)
-                    .add(0,20, newText("Avez vous eu des difficultés à faire le repas ?"))
-                    .add(187,50, newText("Oui"))
-                    .settings.add(185,50, newScale("frustration_oui_9bis", 1)
-                        .settings.callback( getScale("frustration_non_9bis").unselected() ))
-                    .add(0,70, newText("Non"))
-                    .settings.add(1850,70, newScale("frustration_non_9bis", 1)
-                        .settings.callback( getScale("frustration_oui_9bis").unselected() ))
+                    .add(0, 20, newText("Avez vous eu des difficultés à composer votre repas ?"))
+                    .add(0, 50, newText('Oui'))
+                    .add(0, 70, newText("Non"))
+                    .settings.add(185, 50, newScale("frustration_oui_9bis")
+                        .settings.callback(getScale("frustration_non_9bis").unselect() ))
+                    .settings.add(185, 70, newScale("frustration_non_9bis")
+                        .settings.callback(getScale("frustration_oui_9bis").unselect() ))
                     .print()
                 , 
-                newSelector("frustrationGM9bis")
+                newSelector("frust9bis")
                     .settings.add( getScale("frustration_oui_9bis"), getScale("frustration_non_9bis") )
                     .log()
                 ,
+                newButton("suivant79bis", "Suivant (vous pouvez descendre la page)")
+                    .print()
+                    .wait()
+                ,
                 newCanvas("satisfaction9bis",450, 100)
-                    .add(0,20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
+                    .add(0, 20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
                     .add( 0, 50, newText("Oui") )
                     .settings.add( 185, 50, newScale("satisfaction_oui_9bis", 1)
                         .settings.callback( getScale("satisfaction_non_9bis").unselect() ))
@@ -1105,11 +1101,11 @@ newTrial("experiment_3",
                         .settings.callback( getScale("satisfaction_oui_9bis").unselect() ))
                     .print()
                 ,
-                newSelector("satisfactionGM9bis")
-                    .settings.add(getScale("satisfaction_oui_9bis"),getScale("satisfaction_non_9bis"))
+                newSelector("satisf9bis")
+                    .settings.add(getScale("satisfaction_oui_9bis"), getScale("satisfaction_non_9bis"))
                     .log()
                 ,
-                newButton("suivant79bis", "Suivant (vous pouvez descendre la page)")
+                newButton("suivant89bis", "Suivant (vous pouvez descendre la page)")
                     .print()
                     .wait()
                 ,
@@ -1127,18 +1123,10 @@ newTrial("experiment_3",
                 ,
                 getCanvas("plat_choix29bis").remove()
                 ,
-                getCanvas("entree_choix9bis").remove()
+                getCanvas("frustration9bis").remove()
                 ,
-                getCanvas("entree_choix29bis").remove()
+                getCanvas("satisfaction9bis").remove()
                 ,
-                getCanvas("dessert_choix9bis").remove()
-                ,
-                getCanvas("dessert_choix29bis").remove()
-                ,
-                getCanvas ("satisfaction9bis").remove()
-                ,
-                getCanvas ("frustration9bis").remove()
-                ,                ,
                 getButton("suivant19bis").remove()
                 ,
                 getButton("suivant29bis").remove()
@@ -1152,6 +1140,8 @@ newTrial("experiment_3",
                 getButton("suivant69bis").remove()
                 ,
                 getButton("suivant79bis").remove()
+                ,
+                getButton("suivant89bis").remove()
                 ,
                 newCanvas("plat10", 450, 255)
                     .center()
@@ -1468,14 +1458,6 @@ newTrial("experiment_3",
                 ,
                 getCanvas("plat_choix210").remove()
                 ,
-                getCanvas("entree_choix10").remove()
-                ,
-                getCanvas("entree_choix210").remove()
-                ,
-                getCanvas("dessert_choix10").remove()
-                ,
-                getCanvas("dessert_choix210").remove()
-                ,
                 getButton("suivant110").remove()
                 ,
                 getButton("suivant210").remove()
@@ -1785,21 +1767,25 @@ newTrial("experiment_3",
                     .wait()
                 ,
                 newCanvas("frustration10bis", 450, 100)
-                    .add(0,20, newText("Avez vous eu des difficultés à faire le repas ?"))
-                    .add(187,50, newText("Oui"))
-                    .settings.add(185,50, newScale("frustration_oui_10bis", 1)
-                        .settings.callback( getScale("frustration_non_10bis").unselected() ))
-                    .add(0,70, newText("Non"))
-                    .settings.add(1850,70, newScale("frustration_non_10bis", 1)
-                        .settings.callback( getScale("frustration_oui_10bis").unselected() ))
+                    .add(0, 20, newText("Avez vous eu des difficultés à composer votre repas ?"))
+                    .add(0, 50, newText('Oui'))
+                    .add(0, 70, newText("Non"))
+                    .settings.add(185, 50, newScale("frustration_oui_10bis")
+                        .settings.callback(getScale("frustration_non_10bis").unselect() ))
+                    .settings.add(185, 70, newScale("frustration_non_10bis")
+                        .settings.callback(getScale("frustration_oui_10bis").unselect() ))
                     .print()
                 , 
-                newSelector("frustrationGM10bis")
+                newSelector("frust10bis")
                     .settings.add( getScale("frustration_oui_10bis"), getScale("frustration_non_10bis") )
                     .log()
                 ,
+                newButton("suivant710bis", "Suivant (vous pouvez descendre la page)")
+                    .print()
+                    .wait()
+                ,
                 newCanvas("satisfaction10bis",450, 100)
-                    .add(0,20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
+                    .add(0, 20 , newText("Etes-vous satisfait du repas que vous avez composé ? "))
                     .add( 0, 50, newText("Oui") )
                     .settings.add( 185, 50, newScale("satisfaction_oui_10bis", 1)
                         .settings.callback( getScale("satisfaction_non_10bis").unselect() ))
@@ -1808,11 +1794,11 @@ newTrial("experiment_3",
                         .settings.callback( getScale("satisfaction_oui_10bis").unselect() ))
                     .print()
                 ,
-                newSelector("satisfactionGM10bis")
-                    .settings.add(getScale("satisfaction_oui_10bis"),getScale("satisfaction_non_10bis"))
+                newSelector("satisf10bis")
+                    .settings.add(getScale("satisfaction_oui_10bis"), getScale("satisfaction_non_10bis"))
                     .log()
                 ,
-                newButton("suivant710bis", "Suivant (vous pouvez descendre la page)")
+                newButton("suivant810bis", "Suivant (vous pouvez descendre la page)")
                     .print()
                     .wait()
                 ,
@@ -1830,17 +1816,9 @@ newTrial("experiment_3",
                 ,
                 getCanvas("plat_choix210bis").remove()
                 ,
-                getCanvas("entree_choix10bis").remove()
+                getCanvas("frustration10bis").remove()
                 ,
-                getCanvas("entree_choix210bis").remove()
-                ,
-                getCanvas("dessert_choix10bis").remove()
-                ,
-                getCanvas("dessert_choix210bis").remove()
-                ,
-                getCanvas ("satisfaction10bis").remove()
-                ,
-                getCanvas ("frustration10bis").remove()
+                getCanvas("satisfaction10bis").remove()
                 ,
                 getButton("suivant110bis").remove()
                 ,
@@ -1855,6 +1833,8 @@ newTrial("experiment_3",
                 getButton("suivant610bis").remove()
                 ,
                 getButton("suivant710bis").remove()
+                ,
+                getButton("suivant810bis").remove()
                 ,
                 newCanvas("freq_viande", 450, 190)
                     .add(0,20, newText("A quelle fr&eacute;quence mangez-vous de la viande ? "))
@@ -2054,8 +2034,9 @@ newTrial( "questions_generales" ,
 )
 
 
-// Ajout d’une saisie de commentaires globaux
-newTrial( "comm" ,
+// Fin
+
+newTrial( "bye" ,
     
     newText("<p> Merci beaucoup d’avoir répondu à notre questionnaire ! </p>")
         .print()
