@@ -125,7 +125,7 @@ Template("TableSession1.csv" ,
         , 
         newSelector(row.GM)
             .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
-            .log(row.GM)
+            .log()
         , 
         newSelector(row.GM)
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
@@ -2973,14 +2973,6 @@ newTrial( "questions_generales" ,
         .settings.add(getScale("reponse_oui"),getScale("reponse_non"))
         .log()
     ,
-    newButton("Suivant")
-        .print()
-        .wait()
-)
-
-
-// Ajout d’une saisie de commentaires globaux
-newTrial( "comm" ,
     newText("<p> N'hésitez pas à nous laisser un commentaire !  </p>")
         .print()
     ,
@@ -2989,10 +2981,19 @@ newTrial( "comm" ,
     ,
     getTextInput("commentaire").log()
     ,
+    newButton("Envoyer !")
+        .print()
+        .wait()
+)
+
+
+// Ajout d’une saisie de commentaires globaux
+newTrial( "comm" ,
+    
     newText("<p> Merci beaucoup d’avoir répondu à notre questionnaire ! </p>")
         .print()
     ,
-    newButton("Fin !")
+    newButton("Fin")
         .print()
         .wait()  
 )
