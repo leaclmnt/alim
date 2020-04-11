@@ -1024,7 +1024,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_9_dessert", 1)
                         .settings.callback( getScale("raison_1_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_9_dessert").unselect() )
@@ -1042,7 +1042,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_9_dessert").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_9_dessert", 1)
                         .settings.callback( getScale("raison_2_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_9_dessert").unselect() )
@@ -1060,7 +1060,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_9_dessert").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_9_dessert", 1)
                         .settings.callback( getScale("raison_3_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_9_dessert").unselect() )
@@ -1078,7 +1078,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_9_dessert").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_9_dessert", 1)
                         .settings.callback( getScale("raison_4_num2_9_dessert").unselect() )
                         .settings.callback( getScale("raison_4_num3_9_dessert").unselect() )
@@ -1358,7 +1358,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_9bis", 1)
                         .settings.callback( getScale("raison_1_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis").unselect() )
@@ -1376,7 +1376,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_9bis", 1)
                         .settings.callback( getScale("raison_2_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis").unselect() )
@@ -1394,7 +1394,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis").unselect() ))
                             
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_9bis", 1)
                         .settings.callback( getScale("raison_3_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis").unselect() )
@@ -1412,7 +1412,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_9bis", 1)
                         .settings.callback( getScale("raison_4_num2_9bis").unselect() )
                         .settings.callback( getScale("raison_4_num3_9bis").unselect() )
@@ -1463,7 +1463,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_9bis_entree", 1)
                         .settings.callback( getScale("raison_1_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis_entree").unselect() )
@@ -1481,7 +1481,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis_entree").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_9bis_entree", 1)
                         .settings.callback( getScale("raison_2_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis_entree").unselect() )
@@ -1499,7 +1499,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis_entree").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_9bis_entree", 1)
                         .settings.callback( getScale("raison_3_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis_entree").unselect() )
@@ -1517,7 +1517,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis_entree").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_9bis_entree", 1)
                         .settings.callback( getScale("raison_4_num2_9bis_entree").unselect() )
                         .settings.callback( getScale("raison_4_num3_9bis_entree").unselect() )
@@ -1568,7 +1568,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_9bis_dessert", 1)
                         .settings.callback( getScale("raison_1_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis_dessert").unselect() )
@@ -1586,7 +1586,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_9bis_dessert").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_9bis_dessert", 1)
                         .settings.callback( getScale("raison_2_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis_dessert").unselect() )
@@ -1604,7 +1604,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_9bis_dessert").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_9bis_dessert", 1)
                         .settings.callback( getScale("raison_3_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis_dessert").unselect() )
@@ -1622,7 +1622,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_9bis_dessert").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_9bis_dessert", 1)
                         .settings.callback( getScale("raison_4_num2_9bis_dessert").unselect() )
                         .settings.callback( getScale("raison_4_num3_9bis_dessert").unselect() )
@@ -1907,7 +1907,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10", 1)
                         .settings.callback( getScale("raison_1_num2_10").unselect() )
                         .settings.callback( getScale("raison_1_num3_10").unselect() )
@@ -1925,7 +1925,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10").unselect() )
                         .settings.callback( getScale("raison_1_num3_10").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10", 1)
                         .settings.callback( getScale("raison_2_num2_10").unselect() )
                         .settings.callback( getScale("raison_2_num3_10").unselect() )
@@ -1943,7 +1943,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10").unselect() )
                         .settings.callback( getScale("raison_2_num3_10").unselect() ))
                             
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10", 1)
                         .settings.callback( getScale("raison_3_num2_10").unselect() )
                         .settings.callback( getScale("raison_3_num3_10").unselect() )
@@ -1961,7 +1961,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10").unselect() )
                         .settings.callback( getScale("raison_3_num3_10").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10", 1)
                         .settings.callback( getScale("raison_4_num2_10").unselect() )
                         .settings.callback( getScale("raison_4_num3_10").unselect() )
@@ -2012,7 +2012,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10_entree", 1)
                         .settings.callback( getScale("raison_1_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_10_entree").unselect() )
@@ -2030,7 +2030,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_10_entree").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10_entree", 1)
                         .settings.callback( getScale("raison_2_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_10_entree").unselect() )
@@ -2048,7 +2048,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_10_entree").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10_entree", 1)
                         .settings.callback( getScale("raison_3_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_10_entree").unselect() )
@@ -2066,7 +2066,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_10_entree").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10_entree", 1)
                         .settings.callback( getScale("raison_4_num2_10_entree").unselect() )
                         .settings.callback( getScale("raison_4_num3_10_entree").unselect() )
@@ -2117,7 +2117,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10_dessert", 1)
                         .settings.callback( getScale("raison_1_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_10_dessert").unselect() )
@@ -2135,7 +2135,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_10_dessert").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10_dessert", 1)
                         .settings.callback( getScale("raison_2_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_10_dessert").unselect() )
@@ -2153,7 +2153,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_10_dessert").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10_dessert", 1)
                         .settings.callback( getScale("raison_3_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_10_dessert").unselect() )
@@ -2171,7 +2171,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_10_dessert").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10_dessert", 1)
                         .settings.callback( getScale("raison_4_num2_10_dessert").unselect() )
                         .settings.callback( getScale("raison_4_num3_10_dessert").unselect() )
@@ -2451,7 +2451,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10bis", 1)
                         .settings.callback( getScale("raison_1_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis").unselect() )
@@ -2469,7 +2469,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10bis", 1)
                         .settings.callback( getScale("raison_2_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis").unselect() )
@@ -2487,7 +2487,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis").unselect() ))
                             
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10bis", 1)
                         .settings.callback( getScale("raison_3_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis").unselect() )
@@ -2505,7 +2505,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10bis", 1)
                         .settings.callback( getScale("raison_4_num2_10bis").unselect() )
                         .settings.callback( getScale("raison_4_num3_10bis").unselect() )
@@ -2556,7 +2556,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10bis_entree", 1)
                         .settings.callback( getScale("raison_1_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis_entree").unselect() )
@@ -2574,7 +2574,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis_entree").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10bis_entree", 1)
                         .settings.callback( getScale("raison_2_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis_entree").unselect() )
@@ -2592,7 +2592,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis_entree").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10bis_entree", 1)
                         .settings.callback( getScale("raison_3_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis_entree").unselect() )
@@ -2610,7 +2610,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis_entree").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10bis_entree", 1)
                         .settings.callback( getScale("raison_4_num2_10bis_entree").unselect() )
                         .settings.callback( getScale("raison_4_num3_10bis_entree").unselect() )
@@ -2661,7 +2661,7 @@ newTrial("experiment_3",
                     .add ( 466, 30, newText ("3"))
                     .add ( 516, 30, newText("4"))
                 
-                    .add( 0, 50, newText("Pour des raisons &eacute;conomiques") )
+                    .add( 0, 50, newText("Des raisons &eacute;conomiques") )
                     .settings.add( 355, 50, newScale("raison_1_num1_10bis_dessert", 1)
                         .settings.callback( getScale("raison_1_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis_dessert").unselect() )
@@ -2679,7 +2679,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_1_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_1_num3_10bis_dessert").unselect() ))
                     
-                    .add( 0, 70, newText("Pour le plaisir") )
+                    .add( 0, 70, newText("Le plaisir") )
                     .settings.add( 355, 70, newScale("raison_2_num1_10bis_dessert", 1)
                         .settings.callback( getScale("raison_2_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis_dessert").unselect() )
@@ -2697,7 +2697,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_2_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_2_num3_10bis_dessert").unselect() ))
                         
-                    .add( 0, 90, newText("Pour des raisons environnementales") )
+                    .add( 0, 90, newText("Des raisons environnementales") )
                     .settings.add( 355, 90, newScale("raison_3_num1_10bis_dessert", 1)
                         .settings.callback( getScale("raison_3_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis_dessert").unselect() )
@@ -2715,7 +2715,7 @@ newTrial("experiment_3",
                         .settings.callback( getScale("raison_3_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_3_num3_10bis_dessert").unselect() ))
                     
-                    .add( 0, 110, newText("Pour des raisons nutritionnelles") )
+                    .add( 0, 110, newText("Des raisons nutritionnelles") )
                     .settings.add( 355, 110, newScale("raison_4_num1_10bis_dessert", 1)
                         .settings.callback( getScale("raison_4_num2_10bis_dessert").unselect() )
                         .settings.callback( getScale("raison_4_num3_10bis_dessert").unselect() )
