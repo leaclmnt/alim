@@ -1,3 +1,13 @@
+// CSV 
+
+TableSession1
+GM,prot1,prot2,prot3,legumineuse,legume1,legume2,feculent,feculentgras,entree1,entree2,entree3,entree4,pasentree,fruit1,fruit2,laitage,gourmand1,gourmand2,pasdessert
+GM1,Magret de canard,Faux filet de boeuf,Oeufs au plat,F&egrave;ves,Courgettes,Oignons,Quinoa,Gratin dauphinois,Tomates,Feuillet&eacute; &agrave; la viande,Salade de choux,Part de tarte &eacute;pinards ch&egrave;vre,Aucune entr&eacute;e,P&ecirc;che,Orange,Yaourt aux fruits,Cr&egrave;me br&ucirc;l&eacute;e,Crumble aux pommes,Aucun dessert
+GM2,Rosbif,Filet de poulet,Galette de pois chiches,Petits pois,Po&ecirc;l&eacute;e de champignons,Carottes,Gnocchis pomme de terre,Flammekueche,Betteraves,Salade C&eacute;sar au poulet,Soupe &agrave; l&rsquo;oignon,Part de tarte &agrave; la tomate,Aucune entr&eacute;e,Compote,Kiwis,Yaourt nature,Eclair au chocolat,Mousse cr&egrave;me de marron,Aucun dessert
+GM3,Galette de pois chiches,Tofu po&ecirc;l&eacute;,Oeufs brouill&eacute;s,Lentilles vertes,Epinards,Aubergines,Riz,P&acirc;tes farcies au fromage,Champignons &agrave; la grecque,Nems au poulet,Salade pi&eacute;montaise,Cr&ecirc;pe b&eacute;chamel jambon fromage,Aucune entr&eacute;e,Salade de fruits,Framboises,Yaourt sucr&eacute; nature,Glace,Part de tarte aux fruits rouges,Aucun dessert
+GM4,Tofu po&ecirc;l&eacute;,Oeuf au plat,Galette de c&eacute;r&eacute;ales,Haricots rouges,Oignons,Poivrons rouges,Riz,Pommes de terres rissol&eacute;es,Asperges,Salade de p&acirc;tes avec lardons,C&eacute;leri r&eacute;moulade,Tranche de p&acirc;t&eacute; en cro&ucirc;te,Aucune entr&eacute;e,Orange,Poire,Fromage blanc,Cr&egrave;me dessert &agrave; la vanille,Chausson aux pommes,Aucun dessert
+
+
 PennController.ResetPrefix(null) 
 
 // PennController.DebugOff() // quand on publie l'exp 
