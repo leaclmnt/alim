@@ -1278,8 +1278,8 @@ newTrial("experiment_3",
                 getButton("suivant8").remove()
                 ,
                 newCanvas("stock", 450, 100)
-                    .add(0, 10, newText ("Malheureusement, il y a eu des problèmes d’approvisionnement dans le magasin, certains aliments sont donc maintenant indisponibles."))
-                    .add(0, 50, newText ("Vous devez donc adapter votre menu (le fonctionnement est le même que précédemment). "))
+                    .add(0, 10, newText ("Par rapport à votre dernière composition de menu, certains aliments ne sont plus disponibles (problèmes d’approvisionnement). "))
+                    .add(0, 50, newText ("Vous êtes invités à recomposer un menu avec les aliments à disposition. "))
                     .print()
                 ,
                 newButton("suiv","Suivant (vous pouvez descendre la page)")
@@ -2371,8 +2371,8 @@ newTrial("experiment_3",
                 getButton("suivant810").remove()
                 ,
                 newCanvas("stock10", 450, 100)
-                    .add(0, 10, newText ("Une nouvelle fois, il y a eu des problèmes d’approvisionnement dans le magasin, certains aliments sont donc maintenant indisponibles."))
-                    .add(0, 50, newText ("Vous devez donc adapter votre menu (le fonctionnement est le même que précédemment). "))
+                    .add(0, 10, newText ("Par rapport à votre dernière composition de menu, certains aliments ne sont plus disponibles (problèmes d’approvisionnement). "))
+                    .add(0, 50, newText ("Vous êtes invités à recomposer un menu avec les aliments à disposition. "))
                     .print()
                 ,
                 newButton("suiv10","Suivant (vous pouvez descendre la page)")
