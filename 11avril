@@ -32,7 +32,7 @@ newTrial("intro2",
         .add(130,0, newImage("Couverts.jpg"))
         .print()
     ,    
-    newCanvas("presentation_projet2", 450, 260)
+    newCanvas("presentation_projet2", 450, 310)
         .left()
         .add(0, 10, newText("Au cours de ce questionnaire, nous allons vous interroger sur l'&eacute;laboration d'une dizaine de menus, &agrave; chaque fois pour un repas du quotidien."))
         .add(0, 80, newText("Pour chaque menu, vous allez &ecirc;tre amen&eacute; &agrave; choisir autant d'aliments que vous souhaitez pour composer votre plat principal."))
