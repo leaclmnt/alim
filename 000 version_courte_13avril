@@ -153,7 +153,7 @@ Template("TableSession1.csv" ,
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
             .log()
         ,
-        newButton("Suivant (vous pouvez descendre la page)")
+        newButton("Suivant (ci-dessous)")
             .print()
             .wait()
         , 
@@ -171,7 +171,7 @@ Template("TableSession1.csv" ,
         getDropDown("entree").log(row.GM)
             .wait()
         ,
-        newButton("Suivant (vous pouvez descendre la page)")
+        newButton("Suivant (ci-dessous)")
             .print()
             .wait()
         ,
@@ -211,7 +211,7 @@ Template("TableSession1.csv" ,
         getDropDown("dessert1").log(row.GM)
             .wait()
         ,
-        newButton("Suivant (vous pouvez descendre la page)")
+        newButton("Suivant (ci-dessous)")
             .print()
             .wait()
         , 
@@ -229,7 +229,7 @@ Template("TableSession1.csv" ,
         ,
         getDropDown("dessert2").log(row.GM)
         ,
-        newButton("Suivant (vous pouvez descendre la page)")
+        newButton("Suivant (ci-dessous)")
             .print()
             .wait()
         , 
@@ -549,7 +549,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
                     .log()
                 ,
-                newButton("suivant1","Suivant (vous pouvez descendre la page)")
+                newButton("suivant1","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -567,7 +567,7 @@ newTrial("experiment_2",
                 getDropDown("entree").log("GM9")
                     .wait()
                 ,
-                newButton("suivant2","Suivant (vous pouvez descendre la page)")
+                newButton("suivant2","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -588,7 +588,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant3","Suivant (vous pouvez descendre la page)")
+                newButton("suivant3","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -607,7 +607,7 @@ newTrial("experiment_2",
                 getDropDown("dessert1").log("GM9")
                     .wait()
                 ,
-                newButton("suivant3bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant3bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -625,7 +625,7 @@ newTrial("experiment_2",
                 ,
                 getDropDown("dessert2").log("GM9")
                 ,
-                newButton("suivant4","Suivant (vous pouvez descendre la page)")
+                newButton("suivant4","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -650,7 +650,7 @@ newTrial("experiment_2",
                 getDropDown("boisson").log("GM9")
                     .wait()
                 ,
-                newButton("suivant5","Suivant (vous pouvez descendre la page)")
+                newButton("suivant5","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -771,7 +771,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("feculentgras_oui9bis"), getScale("feculentgras_non9bis") )
                     .log()
                 ,
-                newButton("suivant19bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant19bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -789,7 +789,7 @@ newTrial("experiment_2",
                 getDropDown("entree9bis").log("GM9bis")
                     .wait()
                 ,
-                newButton("suivant29bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant29bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -810,7 +810,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant39bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant39bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -829,7 +829,7 @@ newTrial("experiment_2",
                 getDropDown("dessert19bis")
                     .wait()
                 ,
-                newButton("suivant3bis9bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant3bis9bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -847,7 +847,7 @@ newTrial("experiment_2",
                 ,
                 getDropDown("dessert29bis").log("GM9bis")
                 ,
-                newButton("suivant49bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant49bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -872,7 +872,7 @@ newTrial("experiment_2",
                 getDropDown("boisson9bis").log("GM9bis")
                     .wait()
                 ,
-                newButton("suivant59bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant59bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -891,7 +891,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant79bis", "Suivant (vous pouvez descendre la page)")
+                newButton("suivant79bis", "Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1044,7 +1044,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("feculentgras_oui10"), getScale("feculentgras_non10") )
                     .log()
                 ,
-                newButton("suivant110","Suivant (vous pouvez descendre la page)")
+                newButton("suivant110","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1062,7 +1062,7 @@ newTrial("experiment_2",
                 getDropDown("entree10").log("GM10")
                     .wait()
                 ,
-                newButton("suivant210","Suivant (vous pouvez descendre la page)")
+                newButton("suivant210","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1083,7 +1083,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant310","Suivant (vous pouvez descendre la page)")
+                newButton("suivant310","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1102,7 +1102,7 @@ newTrial("experiment_2",
                 getDropDown("dessert1_10").log("GM10")
                     .wait()
                 ,
-                newButton("suivant3bis10","Suivant (vous pouvez descendre la page)")
+                newButton("suivant3bis10","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1120,7 +1120,7 @@ newTrial("experiment_2",
                 ,
                 getDropDown("dessert2_10").log("GM10")
                 ,
-                newButton("suivant410","Suivant (vous pouvez descendre la page)")
+                newButton("suivant410","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1145,7 +1145,7 @@ newTrial("experiment_2",
                 getDropDown("boisson10").log("GM10")
                     .wait()
                 ,
-                newButton("suivant510","Suivant (vous pouvez descendre la page)")
+                newButton("suivant510","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1250,7 +1250,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("raison_4_num1_10"), getScale("raison_4_num2_10"), getScale("raison_4_num3_10"), getScale("raison_4_num4_10") )
                     .log()
                 ,
-                newButton("suivant610","Suivant (vous pouvez descendre la page)")
+                newButton("suivant610","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1377,7 +1377,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("feculentgras_oui_10bis"), getScale("feculentgras_non_10bis") )
                     .log()
                 ,
-                newButton("suivant110bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant110bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1395,7 +1395,7 @@ newTrial("experiment_2",
                 getDropDown("entree_10bis").log("GM10bis")
                     .wait()
                 ,
-                newButton("suivant210bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant210bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1416,7 +1416,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant310bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant310bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1435,7 +1435,7 @@ newTrial("experiment_2",
                 getDropDown("dessert1_10bis").log("GM10bis")
                     .wait()
                 ,
-                newButton("suivant3bis10bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant3bis10bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1453,7 +1453,7 @@ newTrial("experiment_2",
                 ,
                 getDropDown("dessert2_10bis").log("GM10bis")
                 ,
-                newButton("suivant410bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant410bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1478,7 +1478,7 @@ newTrial("experiment_2",
                 getDropDown("boisson_10bis").log("GM10bis")
                     .wait()
                 ,
-                newButton("suivant510bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant510bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 , 
@@ -1583,7 +1583,7 @@ newTrial("experiment_2",
                     .settings.add( getScale("raison_4_num1_10bis"), getScale("raison_4_num2_10bis"), getScale("raison_4_num3_10bis"), getScale("raison_4_num4_10bis") )
                     .log()
                 ,
-                newButton("suivant610bis","Suivant (vous pouvez descendre la page)")
+                newButton("suivant610bis","Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1602,7 +1602,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant710bis", "Suivant (vous pouvez descendre la page)")
+                newButton("suivant710bis", "Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
@@ -1621,7 +1621,7 @@ newTrial("experiment_2",
                     .log()
                     .wait()
                 ,
-                newButton("suivant810bis", "Suivant (vous pouvez descendre la page)")
+                newButton("suivant810bis", "Suivant (ci-dessous)")
                     .print()
                     .wait()
                 ,
