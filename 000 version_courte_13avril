@@ -192,7 +192,7 @@ Template("TableSession1.csv" ,
             .log()
             .wait()
         ,
-        newButton("Suivant (vous pouvez descendre la page)")
+        newButton("Suivant (ci-dessous)")
             .print()
             .wait()
         ,
