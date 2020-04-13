@@ -38,7 +38,7 @@ newTrial("intro2",
         .add(0, 80, newText("Pour chaque menu, vous allez &ecirc;tre amen&eacute; &agrave; choisir autant d'aliments que vous souhaitez pour composer votre plat principal."))
         .add(0, 130, newText("Ensuite, vous pourrez choisir d'accompagner votre plat d'une entr&eacute;e, d’une assiette de fromage et d'un ou deux desserts."))
         .add(0, 180, newText("Vous pourrez aussi choisir une boisson."))
-        .add(0, 210, newText("Dans tous les cas, l’eau plate, le pain, les condiments et les &eacute;pices sont disponibles &agrave; volont&eacute;."))
+        .add(0, 210, newText("Dans tous les cas, l’eau plate, le pain, les condiments et les &eacute;pices sont disponibles &agrave; volont&eacute; et vous pouvez cuisiner les aliments comme vous voulez."))
         .add(0, 260, newText("Cette étude ne tient pas compte de la saisonnalité des aliments."))
         .print()
     ,
