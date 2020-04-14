@@ -12,7 +12,7 @@ newTrial("intro",
         .add(100, 10, newImage("APT.jpg"))
         .print()
     ,
-    newCanvas("presentation_projet", 500, 270)
+    newCanvas("presentation_projet", 500, 290)
         .left()
         .add (0, 10, newText("Bonjour à tous,"))
         .add (0, 50, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des consommateurs."))
