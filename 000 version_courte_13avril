@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null) 
 
-// PennController.DebugOff() // quand on publie l'exp 
+PennController.DebugOff() // quand on publie l'exp 
 
 Sequence( "intro", "intro2", "faim", randomize("experiment_1"), "encouragement", "experiment_2", "questions_generales", SendResults(), "bye")
 
@@ -12,13 +12,13 @@ newTrial("intro",
         .add(100, 10, newImage("APT.jpg"))
         .print()
     ,
-    newCanvas("presentation_projet", 500, 290)
+    newCanvas("presentation_projet", 550, 270)
         .left()
         .add (0, 10, newText("Bonjour à tous,"))
         .add (0, 50, newText("Dans le cadre d'un projet de recherche &agrave; AgroParisTech, nous avons &eacute;labor&eacute; un questionnaire afin d'&eacute;tudier les habitudes alimentaires des consommateurs."))
         .add (0, 120, newText("Si vous pouvez prendre 15 minutes de votre temps pour r&eacute;pondre &agrave; nos questions, cela nous aiderait beaucoup dans nos recherches."))
         .add (0, 170, newText ("Le questionnaire est anonyme. Les donn&eacute;es collect&eacute;es seront stock&eacute;es dans une base de donn&eacute;es s&eacute;curis&eacute;e."))
-        .add (0, 220, newText("Pour toute question ou commentaire, n'h&eacute;sitez pas &agrave; nous contacter &agrave; l'adresse suivante : solene.larcher@agroparistech.fr. "))
+        .add (0, 220, newText("Pour toute question ou commentaire, n'h&eacute;sitez pas &agrave; nous contacter &agrave; l'adresse suivante : solene.larcher [at] agroparistech.fr. "))
         .print()
     ,    
     newButton("Suivant")
@@ -32,7 +32,7 @@ newTrial("intro2",
         .add(130,0, newImage("Couverts.jpg"))
         .print()
     ,    
-    newCanvas("presentation_projet2", 500, 310)
+    newCanvas("presentation_projet2", 550, 310)
         .left()
         .add(0, 10, newText("Au cours de ce questionnaire, nous allons vous interroger sur l'&eacute;laboration d'une dizaine de menus, &agrave; chaque fois pour un repas du quotidien."))
         .add(0, 80, newText("Pour chaque menu, vous allez &ecirc;tre amen&eacute; &agrave; choisir autant d'aliments que vous souhaitez pour composer votre plat principal."))
@@ -121,35 +121,35 @@ Template("TableSession1.csv" ,
                 .settings.callback( getScale("feculentgras_oui").unselect() ))
             .print()
         , 
-        newSelector(row.GM)
+        newSelector(row.prot1)
             .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.prot2)
             .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.prot3)
             .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.legumineuse)
             .settings.add( getScale("legumineuse_oui"), getScale("legumineuse_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.legume1)
             .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.legume2)
             .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.feculent)
             .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
             .log()
         , 
-        newSelector(row.GM)
+        newSelector(row.feculentgras)
             .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
             .log()
         ,
@@ -457,7 +457,7 @@ newTrial("experiment_2",
                         .left())
                     .add( 187, 35, newText ("Oui"))
                     .add ( 231, 35, newText("Non"))
-                    .add( 0, 50, newText( "Poulet filet sans peau") )
+                    .add( 0, 50, newText( "Filet de poulet") )
                     .settings.add( 185, 50, newScale("prot1_oui", 1)
                         .settings.callback( getScale("prot1_non").unselect() ))
                     .settings.add( 230, 50, newScale("prot1_non", 1)
@@ -509,43 +509,43 @@ newTrial("experiment_2",
                         .settings.callback( getScale("feculentgras_oui").unselect() ))
                     .print()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_poulet_filet")
                     .settings.add( getScale("prot1_oui"), getScale("prot1_non") )
                     .log()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_boulettes_boeuf")
                     .settings.add( getScale("prot2_oui"), getScale("prot2_non") )
                     .log()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_galette_millet")
                     .settings.add( getScale("prot3_oui"), getScale("prot3_non") )
                     .log()
                 ,
-                newSelector("GM9")
+                newSelector("GM9_omelette")
                     .settings.add( getScale("prot4_oui"), getScale("prot4_non") )
                     .log()
                 ,         
-                newSelector("GM9")
+                newSelector("GM9_tofu")
                     .settings.add( getScale("legumineuse1_oui"), getScale("legumineuse1_non") )
                     .log()
                 ,
-                newSelector("GM9")
+                newSelector("GM9_pois_chiches")
                     .settings.add( getScale("legumineuse2_oui"), getScale("legumineuse2_non") )
                     .log()
                 ,         
-                newSelector("GM9")
+                newSelector("GM9_brocolis")
                     .settings.add( getScale("legume1_oui"), getScale("legume1_non") )
                     .log()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_carottes")
                     .settings.add( getScale("legume2_oui"), getScale("legume2_non") )
                     .log()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_patates_douces")
                     .settings.add( getScale("feculent_oui"), getScale("feculent_non") )
                     .log()
                 , 
-                newSelector("GM9")
+                newSelector("GM9_pates_farcies")
                     .settings.add( getScale("feculentgras_oui"), getScale("feculentgras_non") )
                     .log()
                 ,
@@ -598,7 +598,7 @@ newTrial("experiment_2",
                     .add(20, 40, newDropDown("dessert1", "...")
                         .add("Compote" )
                         .add("Poire")
-                        .add("Yaourt nature" )
+                        .add("Yaourt nature (sucre &agrave; disposition)" )
                         .add("Part de tarte au citron" )
                         .add("&Icirc;le flottante" )
                         .add("Pas de dessert"))
@@ -617,7 +617,7 @@ newTrial("experiment_2",
                     .add(20, 40, newDropDown("dessert2", "...")
                         .add("Compote")
                         .add("Poire")
-                        .add("Yaourt nature")
+                        .add("Yaourt nature (sucre &agrave; disposition)")
                         .add("Part de tarte au citron")
                         .add("&Icirc;le flottante" )
                         .add("Pas de dessert"))
@@ -678,7 +678,7 @@ newTrial("experiment_2",
                 ,
                 getButton("suivant5").remove()
                 ,
-                newCanvas("stock", 500, 100)
+                newCanvas("stock", 550, 100)
                     .add(0, 10, newText ("Par rapport &agrave; votre dernière composition de menu, certains aliments ne sont plus disponibles (probl&egrave;mes d’approvisionnement). "))
                     .add(0, 50, newText ("Vous &ecirc;tes invit&eacute;s &agrave; recomposer votre menu avec les aliments &agrave; disposition. "))
                     .print()
@@ -739,35 +739,35 @@ newTrial("experiment_2",
                         .settings.callback( getScale("feculentgras_oui9bis").unselect() ))
                     .print()
                 ,
-                newSelector("GM9bis")
+                newSelector("GM9bis_galette_millet")
                     .settings.add( getScale("prot3_oui9bis"), getScale("prot3_non9bis") )
                     .log()
                 ,
-                newSelector("GM9bis")
+                newSelector("GM9bis_omlette")
                     .settings.add( getScale("prot4_oui9bis"), getScale("prot4_non9bis") )
                     .log()
                 ,         
-                newSelector("GM9bis")
+                newSelector("GM9bis_tofu")
                     .settings.add( getScale("legumineuse1_oui9bis"), getScale("legumineuse1_non9bis") )
                     .log()
                 ,
-                newSelector("GM9bis")
+                newSelector("GM9bis_pois_chiches")
                     .settings.add( getScale("legumineuse2_oui9bis"), getScale("legumineuse2_non9bis") )
                     .log()
                 ,         
-                newSelector("GM9bis")
+                newSelector("GM9bis_brocolis")
                     .settings.add( getScale("legume1_oui9bis"), getScale("legume1_non9bis") )
                     .log()
                 , 
-                newSelector("GM9bis")
+                newSelector("GM9bis_carottes")
                     .settings.add( getScale("legume2_oui9bis"), getScale("legume2_non9bis") )
                     .log()
                 , 
-                newSelector("GM9bis")
+                newSelector("GM9bis_patates_douces")
                     .settings.add( getScale("feculent_oui9bis"), getScale("feculent_non9bis") )
                     .log()
                 , 
-                newSelector("GM9bis")
+                newSelector("GM9bis_pates_farcies")
                     .settings.add( getScale("feculentgras_oui9bis"), getScale("feculentgras_non9bis") )
                     .log()
                 ,
@@ -820,7 +820,7 @@ newTrial("experiment_2",
                     .add(20, 40, newDropDown("dessert19bis", "...")
                         .add( "Compote" )
                         .add( "Poire" )
-                        .add( "Yaourt nature" )
+                        .add( "Yaourt nature (sucre &agrave; disposition)" )
                         .add("Part de tarte au citron" )
                         .add( "	&Icirc;le flottante" )
                         .add("Pas de dessert"))
@@ -839,7 +839,7 @@ newTrial("experiment_2",
                     .add(20, 40, newDropDown("dessert29bis", "...")
                         .add("Compote")
                         .add("Poire")
-                        .add("Yaourt nature")
+                        .add("Yaourt nature (sucre &agrave; disposition)")
                         .add("Part de tarte au citron")
                         .add("&Icirc;le flottante" )
                         .add("Pas de dessert"))
@@ -997,50 +997,50 @@ newTrial("experiment_2",
                         .settings.callback( getScale("feculent_non10").unselect() ))
                     .settings.add( 230, 210, newScale("feculent_non10", 1)
                         .settings.callback( getScale("feculent_oui10").unselect() ))        
-                    .add( 0, 230, newText("Gratin chou-fleur b&eacute;chamel") )
+                    .add( 0, 230, newText("Frites") )
                     .settings.add( 185, 230, newScale("feculentgras_oui10", 1)
                         .settings.callback( getScale("feculentgras_non10").unselect() ))
                     .settings.add( 230, 230, newScale("feculentgras_non10", 1)
                         .settings.callback( getScale("feculentgras_oui10").unselect() ))
                     .print()
                 ,
-                newSelector("GM10")
+                newSelector("GM10_galette_cereales")
                     .settings.add( getScale("prot1_oui10"), getScale("prot1_non10") )
                     .log()
                 , 
-                newSelector("GM10")
+                newSelector("GM10_oeuf_coque")
                     .settings.add( getScale("prot2_oui10"), getScale("prot2_non10") )
                     .log()
                 , 
-                newSelector("GM10")
+                newSelector("GM10_haricots_blancs")
                     .settings.add( getScale("legumineuse1_oui10"), getScale("legumineuse1_non10") )
                     .log()
                 ,
-                newSelector("GM10")
+                newSelector("GM10_lentilles_corail")
                     .settings.add( getScale("legumineuse2_oui10"), getScale("legumineuse2_non10") )
                     .log()
                 ,         
-                newSelector("GM10")
+                newSelector("GM10_haricots_beurre")
                     .settings.add( getScale("legume1_oui10"), getScale("legume1_non10") )
                     .log()
                 , 
-                newSelector("GM10")
+                newSelector("GM10_poireaux")
                     .settings.add( getScale("legume2_oui10"), getScale("legume2_non10") )
                     .log()
                 , 
-                newSelector("GM10")
+                newSelector("GM10_pates")
                     .settings.add( getScale("feculent_oui10"), getScale("feculent_non10") )
                     .log()
                 ,
-                newSelector("GM10")
+                newSelector("GM10_steak_boeuf")
                     .settings.add( getScale("viande1_oui10"), getScale("viande1_non10") )
                     .log()
                 ,
-                newSelector("GM10")
+                newSelector("GM10_cordon_bleu")
                     .settings.add( getScale("viande2_oui10"), getScale("viande2_non10") )
                     .log()
                 ,
-                newSelector("GM10")
+                newSelector("GM10_frites")
                     .settings.add( getScale("feculentgras_oui10"), getScale("feculentgras_non10") )
                     .log()
                 ,
@@ -1284,7 +1284,7 @@ newTrial("experiment_2",
                 ,
                 getButton("suivant610").remove()
                 ,
-                newCanvas("stock10", 500, 100)
+                newCanvas("stock10", 550, 100)
                     .add(0, 10, newText ("Une nouvelle fois, suite &agrave; des problèmes d’approvisionnement, certains aliments de votre dernier menu sont indisponibles."))
                     .add(0, 50, newText ("Vous &ecirc;tes invit&eacute;s &agrave; recomposer votre menu avec les aliments &agrave; disposition. "))
                     .print()
@@ -1338,42 +1338,42 @@ newTrial("experiment_2",
                         .settings.callback( getScale("feculent_non_10bis").unselect() ))
                     .settings.add( 230, 170, newScale("feculent_non_10bis", 1)
                         .settings.callback( getScale("feculent_oui_10bis").unselect() ))        
-                    .add( 0, 190, newText("Gratin chou-fleur b&eacute;chamel") )
+                    .add( 0, 190, newText("Frites") )
                     .settings.add( 185, 190, newScale("feculentgras_oui_10bis", 1)
                         .settings.callback( getScale("feculentgras_non_10bis").unselect() ))
                     .settings.add( 230, 190, newScale("feculentgras_non_10bis", 1)
                         .settings.callback( getScale("feculentgras_oui_10bis").unselect() ))
                     .print()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_galette_cereales")
                     .settings.add( getScale("prot1_oui_10bis"), getScale("prot1_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_oeuf_coque")
                     .settings.add( getScale("prot2_oui_10bis"), getScale("prot2_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_haricots_blancs")
                     .settings.add( getScale("legumineuse1_oui_10bis"), getScale("legumineuse1_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_lentilles_corail")
                     .settings.add( getScale("legumineuse2_oui_10bis"), getScale("legumineuse2_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_haricots_beurre")
                     .settings.add( getScale("legume1_oui_10bis"), getScale("legume1_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_poireaux")
                     .settings.add( getScale("legume2_oui_10bis"), getScale("legume2_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_pates")
                     .settings.add( getScale("feculent_oui_10bis"), getScale("feculent_non_10bis") )
                     .log()
                 , 
-                newSelector("GM10bis")
+                newSelector("GM10bis_frites")
                     .settings.add( getScale("feculentgras_oui_10bis"), getScale("feculentgras_non_10bis") )
                     .log()
                 ,
@@ -1844,7 +1844,7 @@ newTrial( "questions_generales" ,
         .settings.add(getScale("reponse_oui"),getScale("reponse_non"))
         .log()
     ,
-    newText("<p> N'hésitez pas à nous laisser un commentaire !  </p>")
+    newText("<p> N'hésitez pas à nous laisser un commentaire et nous dire si vous ne conaissiez pas un aliment !  </p>")
         .print()
     ,
     newTextInput("commentaire")
@@ -1865,6 +1865,11 @@ newTrial( "questions_generales" ,
 newTrial( "bye" ,
     
     newText("<p> Merci beaucoup d’avoir répondu à notre questionnaire ! </p>")
+        .center()
+        .print()
+    ,
+    newText("<p> N'hésitez pas à partager autour de vous ! </p>")
+        .center()
         .print()
     ,
     newButton("Fin")
