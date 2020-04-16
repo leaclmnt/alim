@@ -4926,3 +4926,1192 @@
 1586974263,ddc646a44c843d1e8bc7cd8d025a2238,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_non,1586974243755,NULL
 1586974263,ddc646a44c843d1e8bc7cd8d025a2238,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Etudiant,1586974222897,8
 1586974263,ddc646a44c843d1e8bc7cd8d025a2238,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1586974246671,NULL
+#
+# Results on Wednesday April 15 2020 19:52:17 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+# Design number was non-random = 44
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1586979361007,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1586979365956,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1586979365960,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1586979383558,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1586979383560,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_non,1586979390188,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1586979392703,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1586979392704,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_oui,1586979415138,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1586979409408,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1586979440112,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Asperges,1586979428938,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Poire,1586979461420,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586979478916,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Vin blanc,1586979502270,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1586979507294,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1586979507300,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_oui,1586979527981,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_non,1586979558876,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Nems au poulet,1586979551270,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Salade de fruits,1586979571091,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586979582741,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Vin rouge,1586979598703,6
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1586979603031,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1586979603037,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_oui,1586979635059,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1586979659225,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Soupe aux l&eacute;gumes,1586979653313,2
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Eclair au chocolat,1586979675422,3
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Kiwis,1586979686990,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Vin blanc,1586979698548,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1586979702876,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1586979702881,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_oui,1586979713787,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1586979735247,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Feuillet&eacute; &agrave; la viande,1586979731242,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,P&ecirc;che,1586979761033,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,Cr&egrave;me br&ucirc;l&eacute;e,1586979780988,3
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Vin rouge,1586979793038,6
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1586979796772,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1586979796777,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1586979801203,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1586979801205,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1586979804986,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Salade de choux,1586979831082,2
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Part de tarte au citron,1586979848198,3
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Pas de dessert,1586979862754,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Vin ros&eacute;,1586979871011,7
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Soupe de l&eacute;gumes,1586979918249,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Part de tarte au citron,1586979932139,3
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1586979941455,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Vin ros&eacute;,1586979948973,7
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Jambon de Bayonne,1586980096145,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Salade de fruits,1586980111514,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Aucun dessert,1586980120846,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Vin rouge,1586980130275,6
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Jambon de Bayonne,1586980169565,1
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Salade de fruits,1586980184251,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Aucun dessert,1586980220762,5
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Eau gazeuse,1586980232598,0
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_oui,1586979814808,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1586979834823,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,feculentgras_oui9bis,1586979901408,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1586979921948,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1586979960362,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1586979970981,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_oui10,1586980087451,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1586980100103,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1586980144380,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num4_10,1586980145683,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_oui_10bis,1586980160261,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1586980174000,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num4_10bis,1586980241157,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,NA,Never,No selection happened
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num4_10bis,1586980244050,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1586980251800,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1586980260292,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,3_6_par_semaine,1586980282754,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1586980284220,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1586980284228,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,TextInput,age,Final,,1586980322135,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1586980322135,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,homme_oui,1586980290746,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1586980301728,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,multihebdo_oui,1586980310365,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_non,1586980314571,NULL
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Chef d'entreprise,1586980298919,3
+1586980337,1ef0a66e2e1c6d479705040e791fe9cd,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1586980322139,NULL
+#
+# Results on Wednesday April 15 2020 20:00:25 UTC.
+# USER AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+# Design number was non-random = 44
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1586979988781,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1586980032920,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1586980032923,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1586980059817,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1586980059820,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_non,1586980062065,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1586980064061,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1586980064063,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot1_non,1586980079812,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,legumineuse_non,1586980087188,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,legume1_non,1586980089029,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,feculentgras_non,1586980092589,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1586980093675,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_oui,1586980094418,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,prot2_oui,1586980099550,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,prot3_non,1586980101181,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1586980112389,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1586980116124,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Fromage blanc,1586980128783,2
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586980138092,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Soda p&eacute;tillant,1586980153837,1
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1586980157796,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1586980157799,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,prot1_non,1586980170125,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot3_non,1586980171757,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,legumineuse_non,1586980172629,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,feculentgras_non,1586980176912,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,feculent_oui,1586980177962,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,legume1_oui,1586980179264,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,legume2_non,1586980182653,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_oui,1586980183695,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1586980196326,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Eclair au chocolat,1586980205022,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586980211857,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1586980219472,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Vin blanc,1586980227043,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1586980228636,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1586980228638,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,prot1_non,1586980232475,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_non,1586980233129,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,legumineuse_non,1586980234602,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,feculentgras_non,1586980238809,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,feculent_oui,1586980240457,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1586980241595,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,legume1_oui,1586980242432,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,prot3_non,1586980247131,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Part de tarte &eacute;pinards ch&egrave;vre,1586980254378,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1586980256904,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,Crumble aux pommes,1586980264925,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586980269149,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Eau gazeuse,1586980280054,0
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1586980281601,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1586980281604,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,legumineuse_oui,1586980288556,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,legume1_oui,1586980289291,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,feculentgras_non,1586980297221,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_non,1586980298093,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_oui,1586980302171,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot2_non,1586980303265,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot1_non,1586980304040,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,feculent_non,1586980311308,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1586980327149,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_non,1586980329749,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Part de tarte aux fruits rouges,1586980337915,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586980344370,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Soda p&eacute;tillant,1586980350357,1
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1586980351619,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1586980351620,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1586980354293,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1586980354295,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1586980356778,0
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,prot3_non,1586980364626,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,prot4_non,1586980365650,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,legumineuse1_non,1586980366929,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,legumineuse2_non,1586980367836,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,feculentgras_non,1586980370362,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,feculent_non,1586980371041,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_oui,1586980372233,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_non,1586980373298,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,prot2_oui,1586980381357,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_non,1586980386068,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Salade de choux,1586980397279,2
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1586980400317,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Part de tarte au citron,1586980411179,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Pas de dessert,1586980416745,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586980420907,10
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,prot3_non9bis,1586980434669,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,legume1_oui9bis,1586980439510,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,legumineuse2_non9bis,1586980440826,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,legumineuse1_non9bis,1586980441642,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,feculentgras_non9bis,1586980448001,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,feculent_non9bis,1586980448599,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,legume2_non9bis,1586980449560,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1586980455532,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Feuillet&eacute; &agrave; la viande,1586980469324,1
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1586980478120,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Part de tarte au citron,1586980483169,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1586980487054,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Bi&egrave;re,1586980494857,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1586980498809,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1586980503763,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,legumineuse1_non10,1586980511003,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,prot2_non10,1586980511657,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,feculent_oui10,1586980518680,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,legume2_oui10,1586980519349,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_oui10,1586980522807,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,viande2_non10,1586980523728,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,prot1_non10,1586980525222,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,legume1_non10,1586980527601,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,legumineuse2_non10,1586980528740,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,feculentgras_non10,1586980530710,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Aucune entr&eacute;e,1586980624302,4
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1586980626728,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Banane,1586980643477,1
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Aucun dessert,1586980648347,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Eau gazeuse,1586980657416,0
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num1_10,1586980664337,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num4_10,1586980667748,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num3_10,1586980672225,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1586980675254,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,legumineuse2_oui_10bis,1586980693284,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,prot1_oui_10bis,1586980705216,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_non_10bis,1586980706068,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,legumineuse1_non_10bis,1586980706544,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,legume1_non_10bis,1586980707465,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,legume2_non_10bis,1586980707952,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,feculentgras_non_10bis,1586980709484,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,feculent_non_10bis,1586980710074,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Part de flan aux l&eacute;gumes,1586980716915,2
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1586980719232,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Brioches aux p&eacute;pites de chocolat,1586980729934,3
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Aucun dessert,1586980734437,5
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Soda p&eacute;tillant,1586980749010,1
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num1_10bis,1586980753608,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num4_10bis,1586980755761,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num4_10bis,1586980756508,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num4_10bis,1586980765436,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1586980770415,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1586980774135,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,1_3_par_semaine,1586980785258,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1586980787401,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1586980787404,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,TextInput,age,First,,1586980791991,Shift
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,femme_oui,1586980794745,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Etudiant,1586980799401,8
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1586980801133,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,quotidien_oui,1586980804428,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_oui,1586980808114,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1586980810255,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,TextInput,age,Final,21,1586980810255,NULL
+1586980826,b9b01d2d0b97d9cc928cd152d41dd3a0,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1586980810258,NULL
+#
+# Results on Wednesday April 15 2020 20:43:30 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+# Design number was non-random = 46
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1586982856482,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1586982861280,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1586982861293,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1586982874441,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1586982874442,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_non,1586982876944,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1586982878012,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1586982878014,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,prot1_non,1586982887287,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_oui,1586982886053,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot3_non,1586982889213,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,legumineuse_oui,1586982896308,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,legume1_non,1586982892172,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,legume2_non,1586982894052,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,feculent_oui,1586982897862,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1586982916587,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Part de tarte &agrave; la tomate,1586982913959,3
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Kiwis,1586982926802,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586982935062,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586982949476,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1586982951537,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1586982951542,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_oui,1586982956551,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,legume1_oui,1586982959042,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1586982959807,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,feculent_oui,1586982963341,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1586982976321,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Salade de choux,1586982973033,2
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,Crumble aux pommes,1586982983623,4
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586982990912,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586982998964,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1586983000875,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1586983000882,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,prot2_oui,1586983003743,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,legume1_oui,1586983011036,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_oui,1586983007535,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1586983008868,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,NA,Never,No selection happened
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1586983024491,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Salade de p&acirc;tes avec lardons,1586983021205,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Poire,1586983036162,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586983040103,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586983043516,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1586983044832,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1586983044842,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot1_non,1586983063779,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot2_non,1586983064437,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_oui,1586983057843,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,legumineuse_non,1586983062654,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,legume1_non,1586983062094,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1586983050808,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1586983051508,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,feculentgras_non,1586983061254,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_non,1586983078795,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Nems au poulet,1586983075769,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Framboises,1586983086277,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1586983089555,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586983092571,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1586983093667,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1586983093673,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1586983095698,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1586983095702,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1586983097536,0
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Salade de choux,1586983124737,2
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Compote,1586983132372,0
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Pas de dessert,1586983135685,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586983138197,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Salade de choux,1586983163123,2
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Compote,1586983169675,0
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1586983177087,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Pas de boisson suppl&eacute;mentaire,1586983179649,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Jambon de Bayonne,1586983250898,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Brioches aux p&eacute;pites de chocolat,1586983263504,3
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Aucun dessert,1586983267236,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Pas de boisson suppl&eacute;mentaire,1586983271964,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Jambon de Bayonne,1586983324827,1
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Brioches aux p&eacute;pites de chocolat,1586983333542,3
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Aucun dessert,1586983337387,5
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Pas de boisson suppl&eacute;mentaire,1586983340339,10
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_oui,1586983104427,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,prot2_non,1586983117723,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,prot3_non,1586983117143,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,prot4_non,1586983115934,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,legumineuse1_non,1586983115453,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,legumineuse2_non,1586983114970,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_oui,1586983111320,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_oui,1586983112310,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,feculent_oui,1586983113350,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,feculentgras_non,1586983118706,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1586983127107,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,prot3_non9bis,1586983156427,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1586983145489,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,legumineuse1_non9bis,1586983153256,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,legumineuse2_non9bis,1586983154316,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,legume1_oui9bis,1586983147205,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,legume2_oui9bis,1586983147843,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,feculent_oui9bis,1586983150129,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,feculentgras_non9bis,1586983155295,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1586983165575,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1586983186362,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1586983191888,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,prot1_oui10,1586983235722,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,prot2_non10,1586983238637,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,legumineuse1_non10,1586983239996,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,legumineuse2_non10,1586983239153,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,legume1_oui10,1586983210642,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,legume2_oui10,1586983211279,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,feculent_non10,1586983242036,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_non10,1586983241129,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,viande2_non10,1586983236507,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,feculentgras_non10,1586983242565,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1586983256871,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num1_10,1586983281214,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1586983292536,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num2_10,1586983288358,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num3_10,1586983296096,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,prot1_oui_10bis,1586983313966,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_non_10bis,1586983320876,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,legumineuse1_non_10bis,1586983321668,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,legumineuse2_oui_10bis,1586983308833,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,legume1_oui_10bis,1586983309401,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,legume2_oui_10bis,1586983311261,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,feculent_non_10bis,1586983318759,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,feculentgras_non_10bis,1586983317194,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1586983327427,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num1_10bis,1586983349563,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num4_10bis,1586983348353,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num3_10bis,1586983351184,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num3_10bis,1586983352019,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1586983356430,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1586983362468,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,quotidien,1586983368513,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1586983370969,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1586983370979,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,TextInput,age,Final,21,1586983396268,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,TextInput,age,First,,1586983374370,Shift
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1586983396268,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,homme_oui,1586983378783,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1586983383201,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,multihebdo_oui,1586983388228,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_oui,1586983391796,NULL
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Etudiant,1586983381395,8
+1586983411,c240dda3a83881d180506b15bab5dcc7,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1586983396274,NULL
+#
+# Results on Thursday April 16 2020 00:16:23 UTC.
+# USER AGENT: Mozilla/5.0 (Linux; Android 9; LLD-L31) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36
+# Design number was non-random = 47
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1586995681995,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1586995692052,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1586995692078,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1586995700192,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1586995700202,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_oui,1586995705617,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1586995707362,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1586995707375,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot1_oui,1586995717404,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,prot2_oui,1586995715441,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,prot3_non,1586995719283,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,legumineuse_oui,1586995723014,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,legume1_non,1586995721875,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_non,1586995724243,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1586995725269,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,feculentgras_oui,1586995726139,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1586995741805,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,C&eacute;leri r&eacute;moulade,1586995737164,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Poire,1586995750692,1
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Fromage blanc,1586995757469,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586995765140,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1586995766431,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1586995766443,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_oui,1586995775845,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1586995778925,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,feculentgras_oui,1586995781581,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1586995790328,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Salade de choux,1586995787516,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,P&ecirc;che,1586995798204,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,...,Never,Default
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586995805720,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1586995806929,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1586995806943,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot3_oui,1586995822020,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,legumineuse_oui,1586995824714,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,legume1_oui,1586995815181,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,legume2_oui,1586995817231,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1586995835079,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Part de tarte &agrave; la tomate,1586995832218,3
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Eclair au chocolat,1586995840992,3
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,...,Never,Default
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586995846944,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1586995848033,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1586995848042,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot1_oui,1586995865374,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_oui,1586995854545,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,legume1_oui,1586995857146,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_non,1586995873328,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1586995870420,4
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Yaourt nature (sucre &agrave; disposition),1586995880640,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Part de tarte aux fruits rouges,1586995885341,4
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586995889926,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1586995891243,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1586995891251,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1586995894850,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1586995894865,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1586995897699,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Salade de choux,1586995924103,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Compote,1586995937607,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Pas de dessert,1586995942192,5
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1586995946691,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Salade de choux,1586995970937,2
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Compote,1586995979208,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1586995982990,5
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Pas de boisson suppl&eacute;mentaire,1586995987082,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Carottes r&acirc;p&eacute;es,1586996023935,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Salade de fruits,1586996033014,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,...,Never,Default
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Pas de boisson suppl&eacute;mentaire,1586996038901,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Carottes r&acirc;p&eacute;es,1586996094788,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Salade de fruits,1586996100776,0
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Aucun dessert,1586996104710,5
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Pas de boisson suppl&eacute;mentaire,1586996108125,10
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_oui,1586995909941,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_oui,1586995913430,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_oui,1586995920421,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,feculent_oui,1586995906202,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1586995927196,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1586995966450,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,legume2_oui9bis,1586995962062,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,feculent_oui9bis,1586995960493,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1586995974172,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1586995991025,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1586995994307,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,legume2_oui10,1586996007041,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_oui10,1586996018493,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,feculentgras_oui10,1586996013896,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1586996026595,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num1_10,1586996054732,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1586996053895,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num3_10,1586996062441,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num3_10,1586996066799,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_oui_10bis,1586996083422,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,legume1_oui_10bis,1586996090833,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,legume2_oui_10bis,1586996081737,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,NA,Never,No selection happened
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,feculentgras_oui_10bis,1586996086354,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1586996097276,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num1_10bis,1586996118602,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num4_10bis,1586996122467,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num4_10bis,1586996124016,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num3_10bis,1586996132727,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1586996136231,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1586996139833,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,1_3_par_semaine,1586996147126,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1586996148846,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1586996148884,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,TextInput,age,Final,47,1586996183278,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,TextInput,age,First,,1586996156728,Unidentified
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1586996183279,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,femme_oui,1586996158689,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1586996166348,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,hebdomadaire_oui,1586996179493,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_oui,1586996181506,NULL
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Cadre et profession intellectuelle sup&eacute;rieure,1586996161978,4
+1586996183,30cc3c4720c4424664880da109e635c6,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1586996183310,NULL
+#
+# Results on Thursday April 16 2020 07:33:14 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+# Design number was non-random = 48
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1587021741587,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1587021767603,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1587021767616,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1587021786787,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1587021786790,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_oui,1587021797059,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1587021798445,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1587021798447,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,prot1_non,1587021830084,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_non,1587021828589,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot3_oui,1587021826856,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,legumineuse_oui,1587021815301,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,legume1_oui,1587021813521,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,legume2_non,1587021822537,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,feculent_non,1587021831787,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,feculentgras_non,1587021832826,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1587021847165,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587021838395,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Kiwis,1587021858190,1
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587021867204,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587021875171,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1587021877071,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1587021877090,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,prot1_non,1587021902076,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_non,1587021902596,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,prot3_oui,1587021895118,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,legumineuse_non,1587021903446,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,legume1_oui,1587021882885,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1587021887562,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,feculent_non,1587021904595,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,feculentgras_non,1587021905094,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1587021911975,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587021909329,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,P&ecirc;che,1587021918409,0
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587021921333,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587021924987,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1587021925997,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1587021926006,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot1_oui,1587021942967,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,prot2_non,1587021944040,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,prot3_oui,1587021935887,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,legumineuse_oui,1587021936941,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,legume1_oui,1587021937679,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_non,1587021947571,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_non,1587021947987,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,feculentgras_non,1587021948488,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1587021959191,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587021955647,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Orange,1587021966023,0
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587021968787,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587021971522,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1587021972412,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1587021972417,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot1_oui,1587021983237,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot2_non,1587021991510,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_non,1587021991052,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,legumineuse_non,1587021990216,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,legume1_oui,1587021978863,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_non,1587021989171,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,feculent_non,1587021988714,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,feculentgras_non,1587021988132,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_oui,1587022006938,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587022006219,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Salade de fruits,1587022020644,0
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587022024891,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587022028819,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1587022029675,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1587022029683,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1587022031109,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1587022031112,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1587022033367,0
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Pas d'entr&eacute;e,1587022060353,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,&Icirc;le flottante,1587022071639,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Pas de dessert,1587022075255,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587022078380,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Pas d'entr&eacute;e,1587022101951,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,%09&Icirc;le flottante,1587022110958,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1587022113872,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Pas de boisson suppl&eacute;mentaire,1587022116554,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Aucune entr&eacute;e,1587022157467,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Fromage blanc,1587022175345,2
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Aucun dessert,1587022181473,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Pas de boisson suppl&eacute;mentaire,1587022184003,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Aucune entr&eacute;e,1587022212993,4
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Salade de fruits,1587022218137,0
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Aucun dessert,1587022221443,5
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Pas de boisson suppl&eacute;mentaire,1587022224027,10
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_oui,1587022050815,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,prot2_non,1587022051514,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,prot3_non,1587022052063,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,prot4_non,1587022052736,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,legumineuse1_non,1587022053225,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,legumineuse2_non,1587022053684,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_oui,1587022040393,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_non,1587022054381,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,feculent_non,1587022054999,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,feculentgras_non,1587022056794,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1587022063423,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,prot3_non9bis,1587022092825,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1587022091432,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,legumineuse1_non9bis,1587022093874,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,legumineuse2_non9bis,1587022094485,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,legume1_oui9bis,1587022086697,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,legume2_non9bis,1587022097314,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,feculent_non9bis,1587022095196,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,feculentgras_non9bis,1587022097874,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1587022107242,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1587022122413,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1587022129280,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,prot1_oui10,1587022141740,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,prot2_non10,1587022144150,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,legumineuse1_non10,1587022144582,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,legumineuse2_non10,1587022142898,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,NA,Never,No selection happened
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,legume2_oui10,1587022137631,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,feculent_non10,1587022150911,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_non10,1587022145802,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,viande2_non10,1587022145386,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,feculentgras_non10,1587022151354,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1587022177791,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num1_10,1587022191993,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num2_10,1587022194619,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num4_10,1587022197539,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num4_10,1587022198269,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,prot1_oui_10bis,1587022204665,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_non_10bis,1587022207201,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,legumineuse1_non_10bis,1587022207639,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,legumineuse2_non_10bis,1587022208111,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,legume1_non_10bis,1587022208873,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,legume2_oui_10bis,1587022206258,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,feculent_non_10bis,1587022209549,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,feculentgras_non_10bis,1587022209965,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1587022215002,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num1_10bis,1587022230619,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num2_10bis,1587022231596,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num4_10bis,1587022233021,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num4_10bis,1587022233486,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1587022239770,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1587022245293,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,1_3_par_semaine,1587022262603,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1587022263319,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1587022263338,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,TextInput,age,Final,,1587022284228,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1587022284228,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,femme_oui,1587022266703,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1587022273215,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,multihebdo_oui,1587022277489,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_non,1587022280055,NULL
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Etudiant,1587022269521,8
+1587022395,e17562ff057f2e493b56676bf63ef98a,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1587022284234,NULL
+#
+# Results on Thursday April 16 2020 07:52:30 UTC.
+# USER AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:74.0) Gecko/20100101 Firefox/74.0
+# Design number was non-random = 49
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1587022731457,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1587022734432,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1587022734436,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1587022761850,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1587022761855,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_non,1587022764956,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1587022766010,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1587022766013,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot1_non,1587022771756,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot2_non,1587022772786,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_non,1587022773627,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,legumineuse_non,1587022774546,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1587022777659,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,legume1_non,1587022778611,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1587022781820,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,feculentgras_non,1587022783547,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Nems au poulet,1587022798353,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Salade de fruits,1587022824709,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Yaourt nature (sucre &agrave; disposition),1587022834767,2
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_oui,1587022839211,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Eau gazeuse,1587022853229,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1587022855820,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1587022855824,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,prot1_oui,1587022859248,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_non,1587022866273,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,prot3_non,1587022867549,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,legumineuse_oui,1587022869071,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,legume1_non,1587022870465,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,feculent_non,1587022872494,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,feculentgras_non,1587022873620,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,legume2_oui,1587022876385,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Betteraves,1587022887558,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_non,1587022891059,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Kiwis,1587022896802,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587022905688,5
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Eau gazeuse,1587022918357,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1587022920934,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1587022920938,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,legume1_oui,1587022925323,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_non,1587022936036,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,feculent_non,1587022937106,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,feculentgras_non,1587022937843,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,legumineuse_non,1587022939475,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,prot3_oui,1587022998251,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,prot2_non,1587022999272,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,prot1_non,1587023000327,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Tomates,1587023005558,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_oui,1587023011245,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,Orange,1587023017908,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587023024659,5
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587023030408,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1587023032002,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1587023032005,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,prot1_non,1587023035069,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,prot2_non,1587023037383,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,prot3_oui,1587023038533,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,legume2_oui,1587023040648,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,legumineuse_non,1587023044736,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,legume1_non,1587023045425,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1587023047882,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,feculentgras_non,1587023048943,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587023063530,4
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_non,1587023068745,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Orange,1587023072982,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,Fromage blanc,1587023081262,2
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587023086182,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1587023087956,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1587023087959,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1587023089772,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1587023089776,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1587023092093,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,prot4_oui,1587023101192,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,prot3_non,1587023102721,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,prot2_non,1587023103655,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_non,1587023104424,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,legumineuse1_non,1587023106144,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,legumineuse2_non,1587023108306,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,feculent_oui,1587023111998,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_non,1587023112854,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_non,1587023113448,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,feculentgras_non,1587023115318,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Soupe de l&eacute;gumes,1587023120938,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_non,1587023125079,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Poire,1587023133390,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,Yaourt nature (sucre &agrave; disposition),1587023138244,2
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587023144001,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1587023156452,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,prot3_non9bis,1587023157806,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,legume2_oui9bis,1587023161309,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,legumineuse1_non9bis,1587023162901,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,legumineuse2_non9bis,1587023163717,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,legume1_non9bis,1587023164882,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,feculent_non9bis,1587023165634,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,feculentgras_non9bis,1587023166371,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Soupe de l&eacute;gumes,1587023169698,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1587023171956,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Poire,1587023175109,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1587023179966,5
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Pas de boisson suppl&eacute;mentaire,1587023183319,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1587023189125,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1587023198156,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,legume2_oui10,1587023210723,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,legumineuse1_oui10,1587023219200,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_oui10,1587023226387,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,viande2_non10,1587023227536,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,prot1_non10,1587023228170,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,prot2_non10,1587023229001,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,legumineuse2_non10,1587023230570,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,legume1_non10,1587023231124,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,feculent_non10,1587023232812,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,feculentgras_non10,1587023233580,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Carottes r&acirc;p&eacute;es,1587023249123,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_non10,1587023251808,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Banane,1587023256728,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Fromage blanc,1587023262470,2
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Pas de boisson suppl&eacute;mentaire,1587023267548,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num1_10,1587023275333,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1587023277234,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num2_10,1587023283264,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num4_10,1587023284611,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,prot1_oui_10bis,1587023298528,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,prot2_non_10bis,1587023300216,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,legumineuse1_non_10bis,1587023300763,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,legumineuse2_non_10bis,1587023301507,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,legume1_non_10bis,1587023302584,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,legume2_oui_10bis,1587023303575,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,feculent_non_10bis,1587023304351,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,feculentgras_non_10bis,1587023305160,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Carottes r&acirc;p&eacute;es,1587023308916,0
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1587023311545,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Banane,1587023315957,1
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,Fromage blanc,1587023320939,2
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Pas de boisson suppl&eacute;mentaire,1587023326452,10
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num1_10bis,1587023333976,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num4_10bis,1587023336076,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num2_10bis,1587023337700,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num4_10bis,1587023338802,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1587023344388,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1587023349601,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,quotidien_multi,1587023357428,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1587023358378,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1587023358382,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,TextInput,age,First,,1587023361679,Shift
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,femme_oui,1587023363859,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Etudiant,1587023369143,8
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1587023371924,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,quotidien_oui,1587023374404,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_oui,1587023376346,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,TextInput,age,Final,22,1587023378026,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1587023378026,NULL
+1587023551,6187d2004e4011f47ae9e3d895c2ad83,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1587023378034,NULL
+#
+# Results on Thursday April 16 2020 08:23:15 UTC.
+# USER AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+# Design number was non-random = 50
+#
+# Columns below this comment are as follows:
+# 1. Time results were received.
+# 2. MD5 hash of participant's IP address.
+# 3. Controller name.
+# 4. Item number.
+# 5. Element number.
+# 6. Type.
+# 7. Group.
+# 8. PennElementType.
+# 9. PennElementName.
+# 10. Parameter.
+# 11. Value.
+# 12. EventTime.
+# 13. Comments.
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,1,0,intro,NULL,PennController,0,_Trial_,Start,1587023652435,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,1,0,intro,NULL,PennController,0,_Trial_,End,1587023769853,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,2,0,intro2,NULL,PennController,1,_Trial_,Start,1587023769861,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,2,0,intro2,NULL,PennController,1,_Trial_,End,1587023813037,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,3,0,faim,NULL,PennController,2,_Trial_,Start,1587023813041,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,3,0,faim,NULL,Selector,etat_faim,Selection,reponse_non,1587023832412,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,3,0,faim,NULL,PennController,2,_Trial_,End,1587023836333,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,Start,1587023836338,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Rosbif,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Filet de poulet,Selection,prot2_oui,1587023865872,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Petits pois,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Po&ecirc;l&eacute;e de champignons,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Carottes,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Gnocchis pomme de terre,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,Flammekueche,Selection,feculentgras_oui,1587023910831,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,Selector,GM2,Selection,fromage_oui,1587023963092,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587023938636,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,DropDown,dessert1,Selected,Compote,1587024004199,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,DropDown,dessert2,Selected,Aucun dessert,1587024028276,5
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,DropDown,boisson,Selected,Vin rouge,1587024057567,6
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,5,0,experiment_1,NULL,PennController,8,_Trial_,End,1587024067444,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,Start,1587024067458,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Galette de pois chiches,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Oeufs brouill&eacute;s,Selection,prot3_oui,1587024104957,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Lentilles vertes,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Epinards,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Aubergines,Selection,legume2_oui,1587024094345,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,Riz,Selection,feculent_oui,1587024100942,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,P&acirc;tes farcies au fromage,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,Selector,GM3,Selection,fromage_non,1587024145773,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,DropDown,entree,Selected,Aucune entr&eacute;e,1587024120556,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,DropDown,dessert1,Selected,Yaourt nature (sucre &agrave; disposition),1587024165185,2
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,DropDown,dessert2,Selected,Part de tarte aux fruits rouges,1587024210503,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,DropDown,boisson,Selected,Pas de boisson suppl&eacute;mentaire,1587024234470,10
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,6,0,experiment_1,NULL,PennController,9,_Trial_,End,1587024246556,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,Start,1587024246571,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Tofu po&ecirc;l&eacute;,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Oeuf au plat,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Galette de c&eacute;r&eacute;ales,Selection,prot3_oui,1587024254802,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Haricots rouges,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Ma&iuml;s,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Poivrons rouges,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Riz,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,Pommes de terres rissol&eacute;es,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,Selector,GM4,Selection,fromage_oui,1587024294516,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,DropDown,entree,Selected,Asperges,1587024284347,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,DropDown,dessert1,Selected,Poire,1587024310312,1
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,DropDown,dessert2,Selected,...,Never,Default
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,DropDown,boisson,Selected,Vin rouge,1587024345150,6
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,7,0,experiment_1,NULL,PennController,10,_Trial_,End,1587024351819,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,Start,1587024351832,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Magret de canard,Selection,prot1_oui,1587024401758,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Faux filet de boeuf,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Oeufs au plat,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,F&egrave;ves,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Courgettes,Selection,legume1_oui,1587024363797,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Aubergines,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Quinoa,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,Gratin dauphinois,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,Selector,GM1,Selection,fromage_non,1587024452826,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,DropDown,entree,Selected,Tomates,1587024433286,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,DropDown,dessert1,Selected,Crumble aux pommes,1587024472251,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,DropDown,dessert2,Selected,...,Never,Default
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,DropDown,boisson,Selected,Eau gazeuse,1587024499492,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,4,0,experiment_1,NULL,PennController,7,_Trial_,End,1587024503875,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,Start,1587024503888,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,8,0,encouragement,NULL,PennController,3,_Trial_,End,1587024509855,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,Start,1587024509862,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,Regime,Selected,Oui,1587024515320,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,entree,Selected,Pas d'entr&eacute;e,1587024618662,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert1,Selected,Compote,1587024658680,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert2,Selected,...,Never,Default
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,boisson,Selected,Vin rouge,1587024696601,6
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,entree9bis,Selected,Salade de choux,1587024750603,2
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert19bis,Selected,Yaourt nature (sucre &agrave; disposition),1587024772387,2
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert29bis,Selected,Pas de dessert,1587024789903,5
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,boisson9bis,Selected,Pas de boisson suppl&eacute;mentaire,1587024820658,10
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,entree10,Selected,Carottes r&acirc;p&eacute;es,1587024889669,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10,Selected,Salade de fruits,1587024919563,0
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10,Selected,Aucun dessert,1587024935131,5
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,boisson10,Selected,Pas de boisson suppl&eacute;mentaire,1587024958345,10
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,entree_10bis,Selected,Jambon de Bayonne,1587025107503,1
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert1_10bis,Selected,Fromage blanc,1587025147213,2
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,dessert2_10bis,Selected,...,Never,Default
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,DropDown,boisson_10bis,Selected,Pas de boisson suppl&eacute;mentaire,1587025173234,10
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_poulet_filet,Selection,prot1_non,1587024580999,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_boulettes_boeuf,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_galette_millet,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_omelette,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_tofu,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_pois_chiches,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_brocolis,Selection,legume1_oui,1587024537715,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_carottes,Selection,legume2_oui,1587024550485,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_patates_douces,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9_pates_farcies,Selection,feculentgras_oui,1587024555064,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9,Selection,fromage_oui,1587024629533,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_galette_millet,Selection,prot3_oui9bis,1587024738791,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_omlette,Selection,prot4_oui9bis,1587024720963,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_tofu,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pois_chiches,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_brocolis,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_carottes,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_patates_douces,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis_pates_farcies,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM9bis,Selection,fromage_non9bis,1587024758940,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,frust9bis,Selection,frustration_non_9bis,1587024831439,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,satisf9bis,Selection,satisfaction_oui_9bis,1587024850332,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_galette_cereales,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_oeuf_coque,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_blancs,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_lentilles_corail,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_haricots_beurre,Selection,legume1_oui10,1587024874164,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_poireaux,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_pates,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_steak_boeuf,Selection,viande1_oui10,1587024867247,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_cordon_bleu,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10_frites,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10,Selection,fromage_oui10,1587024900300,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10,Selection,raison_1_num3_10,1587025015610,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10,Selection,raison_2_num4_10,1587025020411,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10,Selection,raison_3_num3_10,1587025023574,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10,Selection,raison_4_num3_10,1587025028240,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_galette_cereales,Selection,prot1_oui_10bis,1587025067186,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_oeuf_coque,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_blancs,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_lentilles_corail,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_haricots_beurre,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_poireaux,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_pates,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis_frites,Selection,NA,Never,No selection happened
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,GM10bis,Selection,fromage_non_10bis,1587025123337,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_eco_10bis,Selection,raison_1_num3_10bis,1587025189265,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_plaisir_10bis,Selection,raison_2_num3_10bis,1587025191446,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_environnement_10bis,Selection,raison_3_num3_10bis,1587025195166,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,plat_sante_10bis,Selection,raison_4_num3_10bis,1587025196511,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,frust10bis,Selection,frustration_non_10bis,1587025233615,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,satisf10bis,Selection,satisfaction_oui_10bis,1587025243348,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,Selector,frequence_viande,Selection,1_3_par_semaine,1587025262397,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,9,0,experiment_2,NULL,PennController,4,_Trial_,End,1587025265337,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,Start,1587025265360,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,TextInput,age,Final,60,1587025382277,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,TextInput,age,First,,1587025285122,6
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,TextInput,commentaire,Final,,1587025382277,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,TextInput,commentaire,First,,1587025275515,Shift
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,Selector,sexe,Selection,femme_oui,1587025290992,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,Selector,modedevie,Selection,urbain_oui,1587025344326,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,Selector,pratique_sportive,Selection,mensuel_oui,1587025356870,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,Selector,satisfaction_poids,Selection,reponse_oui,1587025371618,NULL
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,DropDown,catsociopro,Selected,Cadre et profession intellectuelle sup&eacute;rieure,1587025312592,4
+1587025396,1bb750dbd95b48c9ffa15c605857c397,PennController,10,0,questions_generales,NULL,PennController,5,_Trial_,End,1587025382289,NULL
