@@ -1,0 +1,88 @@
+---
+title: "projet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, include=FALSE}
+rm (list=ls()) #Nettoyage
+library(knitr)
+library(FactoMineR)
+library(factoextra)
+library(corrplot)
+library(ggplot2) # pour faire des graphes
+library(car) # pour obtenir les tests de type II
+library(multcomp) # pour les comparaisons deux à deux
+library(emmeans)
+library(tinytex)
+```
+
+```{r, echo=FALSE}
+tableau <- read.csv("testGM1.csv", sep = ";", header=TRUE, na.strings = "N.A.")
+tableau <- na.omit(tableau)
+summary(tableau)
+
+```
+```{r, echo=FALSE}
+tableaubis <- tableau[,-c(1,2,10,11,12,13,15,16,19,20,21,22)]
+tableaubis$Sexe <- sub("Femme","1",tableaubis$Sexe)
+tableaubis$Sexe <- sub("Homme","0",tableaubis$Sexe)
+tableaubis$Sexe <- sub("Pas précisé","N.A.",tableaubis$Sexe)
+```
+
+
+```{r, echo=FALSE}
+tableaubis$Sexe <- as.numeric(as.character(tableaubis$Sexe))
+tableaubis <- na.omit(tableaubis)
+summary(tableaubis)
+           
+```
+
+
+```{r, echo=FALSE}
+# Corrélations 
+correlation = cor(tableaubis)
+kable(correlation,digits = 3)
+
+# Visualisation des correlations 
+corrplot(correlation)
+```
+
+```{r, echo=FALSE}
+ggplot(tableaubis, aes(y=GM1_Prot_viande, x=Age, color=as.factor(Sexe))) +geom_point() + labs(x="Age", y="Prot_Viande")
+```
+0 = les hommes 
+1 = les femmes 
+Les femmes ont l'air de manger moins souvent de la viande que les hommes. 
+
+```{r, echo=FALSE}
+ggplot(tableaubis, aes(y=GM1_Prot_viande, x=Age, color=as.factor(GM1_Légume))) +geom_point() + labs(x="Age", y="Prot_Viande")
+```
+
+Ceux qui prennent 2 fois de la viande prennent plus de légumes
+Ceux qui prennent 1 fois de la viande prennent en général au moins 1 légume
+
+```{r, echo=FALSE}
+ggplot(tableaubis, aes(y=GM1_Oeuf, x=Age, color=as.factor(GM1_Légume))) +geom_point() + labs(x="Age", y="Prot_Viande")
+```
+
+```{r}
+effectif_legume_viande <- table(tableau$GM1_Légume, tableau$GM1_Prot_viande != 0)
+frequence_legume_viande <- effectif_legume_viande*100/sum(effectif_legume_viande)
+colnames(frequence_legume_viande) <- c("Pas de viande", "1 fois et plus")
+frequence_legume_viande 
+
+barplot(frequence_legume_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix de viande", ylab = "Fréquence de personnes")
+```
+
+```{r}
+effectif_legume_oeuf <- table(tableau$GM1_Légume, tableau$GM1_Oeuf != 0)
+frequence_legume_oeuf <- effectif_legume_oeuf*100/sum(effectif_legume_oeuf)
+colnames(frequence_legume_oeuf) <- c("Pas d'oeuf", "Oeuf")
+frequence_legume_oeuf
+
+barplot(frequence_legume_oeuf, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix d'oeuf", ylab = "Fréquence de personnes")
+```
