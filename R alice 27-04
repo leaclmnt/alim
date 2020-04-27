@@ -1,0 +1,464 @@
+---
+title: "Test GM2 23 04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+rm(list=ls())
+library(knitr)
+library(ggplot2)
+library(FactoMineR)
+library(factoextra)
+library(corrplot)
+library(ppcor)
+library(missMDA)
+library(emmeans)
+library(car)
+library(stringr)
+```
+
+
+```{r}
+#on importe les données
+tableau_resultats<- read.csv("macro output lea 22-04 csv.csv", sep=";", header = TRUE)
+```
+
+```{r}
+tableau_resultats$GM2_viande_tot <- rowSums(tableau_resultats[, c('GM2_Rosbif', 'GM2_Filet.de.poulet')])
+
+tableau_resultats$GM2_legumes_tot <- rowSums(tableau_resultats[, c('GM2_Petit.pois', 'GM2_Poêlée.de.champignons')])
+
+tableau_resultats$GM2_nb_periph_tot <- rowSums(tableau_resultats[, c('GM2_Petit.pois','GM2_Poêlée.de.champignons','GM2_Carottes','GM2_Gnocchis.pomme.de.terre','GM2_Flammenkueche','GM2_Bettraves','GM2_Salade.César.au.poulet','GM2_Soupe.de.légumes','GM2_Part.de.tarte.à.la.tomate','GM2_fromage','GM2_compote','GM2_kiwis','GM2_Yaourt.aux.fruits','GM2_Eclair.au.chocolat','GM2_Mousse.crème.de.marron','GM2_Eau.gazeuse','GM2_Soda.pétillant','GM2_Soda.non.pétillant','GM2_Bière','GM2_Cidre','GM2_Vin.blanc','GM2_Vin.rouge','GM2_Vin.rosé','GM2_Jus.de.fruit','GM2_Sirop.à.l.eau')])
+
+# non inclus : 'GM2_Rosbif', 'GM2_Filet.de.poulet','GM2_Galette.de.pois.chiches',
+
+tableau_resultats$GM2_nb_periphplat_tot <- rowSums(tableau_resultats[,c('GM2_Petit.pois','GM2_Poêlée.de.champignons','GM2_Carottes','GM2_Gnocchis.pomme.de.terre','GM2_Flammenkueche')])
+```
+
+
+
+```{r}
+#PAS TRES UTILE POUR L INTERPRETATION JE CROIS
+
+#hist(tableau_resultats$GM2_viande_tot)
+#barplot(xtabs(~ tableau_resultats$GM2_viande_tot))
+
+counts <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_viande_tot)
+barplot(counts,xlab="nombre de viande choisi",legend=c("Aucun légume", "1 légume", "2 légumes"),beside=TRUE)
+```
+
+
+```{r}
+#PAS TRES UTILE POUR L INTERPRETATION JE CROIS
+counts_2 <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_Galette.de.pois.chiches)
+barplot(counts_2,xlab="galette de pois chiches non/oui",legend=c("Aucun légume", "1 légume", "2 légumes"),beside=TRUE)
+
+```
+
+
+```{r}
+str_replace(tableau_resultats$age, "([ans])", "")
+tableau_resultats$age <- as.numeric(as.character(tableau_resultats$age))
+
+#nombre d'individi pour chaque age
+nb_age <- table(tableau_resultats$age)
+nb_age
+
+#freq de chque age
+freq_age <- nb_age/sum(nb_age)
+
+barplot(freq_age,xlab="age",ylab="frequence",beside=TRUE)
+
+#hist(age_freq)
+#hist(tableau_resultats$age)
+```
+conclu : majorité de 20-24 ans
+
+
+```{r}
+#PAS TRES UTILE POUR L INTERPRETATION JE CROIS
+
+# diagramme en bâtons où somme de toutes les barres = 1
+nb_leg_viande <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_viande_tot)
+freq_leg_viande <- nb_leg_viande/sum(nb_leg_viande) #viande = colonnes, légumes = lignes
+#nb_leg_viande et freq_leg_viande sont des tables
+#freq_leg_viande
+
+barplot(freq_leg_viande,xlab="nombre de viande choisi",legend=c("Aucun légume", "1 légume", "2 légumes"),beside=TRUE)
+```
+conclu : la majorité des gens prennent 1 viande et 1 legume
+
+
+
+```{r}
+# diagramme en bâtons où somme de toutes les barres PAR conso VIANDE = 1
+
+#calcul des effectifs pour chaque conso viande et chaque conso leg
+nb_leg_viande <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_viande_tot)
+
+#calcul des frequences de chaque conso leg par conso viande
+#pour pas de viande
+freq_leg_0_viande <- nb_leg_viande[,1]/sum(nb_leg_viande[,1]) #viande = 1 ligne, légumes = colonnes
+#pour 1 viande
+freq_leg_1_viande <- nb_leg_viande[,2]/sum(nb_leg_viande[,2]) #viande = 1 ligne, légumes = colonnes
+#pour 2 viandes
+freq_leg_2_viande <- nb_leg_viande[,3]/sum(nb_leg_viande[,3]) #viande = 1 ligne, légumes = colonnes
+
+#on recree un table avec les frequences de conso leg PAR CONSO VIANDE
+freq2_leg_viande <- cbind(freq_leg_0_viande,freq_leg_1_viande,freq_leg_2_viande)
+
+
+barplot(freq2_leg_viande,xlab="nombre de viande choisi",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("Aucun légume", "1 légume", "2 légumes"),args.legend = list(x="bottomleft"), names.arg=c("Aucune viande", "1 viande", "2 viandes"))
+
+```
+conclu : la présence ou non de viande est correlée au nb de légumes choisis. 
+Quand il n'y a pas de viande, la moitié les individus prend 1 légume, 30% ne prennent aucun légume. 
+Quand il y a 1 viande, plus de la moitié les individus prend 1 légume, 25% prennent 2 légumes. 
+Quand il y a 2 viandes, la moitié les individus prend 2 légumes, 40% prennent 1 legume. 
+
+--> les individus qui ne prennent pas de viande prennent plus aucun légumes que ceux qui prennet de la viande : peut être qu'ils compensent l'absence de viande par plus de legumineuses et autres sources de prot végé. --> à vérifier grâce à d'autres graphes. (pas de compensation par legumineuse mais compensation par prot vege)
+--> les individus qui ont choisi 2 viandes semblent ne pas avoir compris la question car ils prennet souvent aussi 2 légumes : on arrive à un repas très (trop) important vis à vis de la question posée. 
+
+
+
+```{r}
+# diagramme en bâtons où somme de toutes les barres PAR conso PROT VEGE = 1
+
+#calcul des effectifs pour chaque conso prot vege et chaque conso leg
+nb_leg_protvege <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_Galette.de.pois.chiches)
+
+#calcul des frequences de chaque conso leg par conso prot vege
+#pour pas de prot vege
+freq_leg_0_protvege <- nb_leg_protvege[,1]/sum(nb_leg_protvege[,1]) 
+#pour 1 prot vege
+freq_leg_1_protvege <- nb_leg_protvege[,2]/sum(nb_leg_protvege[,2])
+
+
+#on recree un table avec les frequences de conso leg PAR CONSO PROT VEGE
+freq2_leg_protvege <- cbind(freq_leg_0_protvege,freq_leg_1_protvege)
+
+
+#par(mfrow=c(1,2))
+
+barplot(freq2_leg_protvege,xlab="conso prot vege",ylab="fréquence (par conso prot vege)",beside=TRUE,legend=c("Aucun légume", "1 légume", "2 légumes"),args.legend = list(x="top"), names.arg=c("Pas de prot vege", "Prot vege"))
+
+
+
+
+
+# diagramme en bâtons où somme de toutes les barres PAR conso PROT VEGE = 1
+
+#calcul des effectifs pour chaque conso prot vege et chaque conso legumineuse
+nb_legumineuse_protvege <- table(tableau_resultats$GM2_Petit.pois,tableau_resultats$GM2_Galette.de.pois.chiches)
+
+#calcul des frequences de chaque conso legumineuse par conso prot vege
+#pour pas de prot vege
+freq_legumineuse_0_protvege <- nb_legumineuse_protvege[,1]/sum(nb_legumineuse_protvege[,1]) 
+#pour 1 prot vege
+freq_legumineuse_1_protvege <- nb_legumineuse_protvege[,2]/sum(nb_legumineuse_protvege[,2])
+
+
+#on recree un table avec les frequences de conso legumineuse PAR CONSO PROT VEGE
+freq2_legumineuse_protvege <- cbind(freq_legumineuse_0_protvege,freq_legumineuse_1_protvege)
+
+
+
+
+barplot(freq2_legumineuse_protvege,xlab="conso prot vege",ylab="fréquence (par conso prot vege)",beside=TRUE,legend=c("Aucun legumineuse", "1 legumineuse"),args.legend = list(x="top"), names.arg=c("Pas de prot vege", "Prot vege"))
+
+
+```
+conclu : la présence ou non de prot végé est correlée au nb de légumes choisis. 
+Quand il n'y a pas de prot végé, plus de la moitié les individus prend 1 légume, 25% prennent 2 légumes. 
+Quand il y a 1 prot végé, plus de la moitié les individus prend 1 légume, 30% prennent 2 légumes. 
+
+--> pas de conclu très interessante à faire
+
+conclu bis : la présence ou non de prot végé n'est pas correlée à la présence de legumineuse. 
+
+
+
+```{r}
+# diagramme en bâtons où somme de toutes les barres PAR conso VIANDE = 1
+
+#calcul des effectifs pour chaque conso viande et chaque conso legumineuse
+nb_legumineuse_viande <- table(tableau_resultats$GM2_Petit.pois,tableau_resultats$GM2_viande_tot)
+
+#calcul des frequences de chaque conso legumineuse par conso viande
+#pour pas de viande
+freq_legumineuse_0_viande <- nb_legumineuse_viande[,1]/sum(nb_legumineuse_viande[,1]) 
+#pour 1 viande
+freq_legumineuse_1_viande <- nb_legumineuse_viande[,2]/sum(nb_legumineuse_viande[,2]) 
+#pour 2 viandes
+freq_legumineuse_2_viande <- nb_legumineuse_viande[,3]/sum(nb_legumineuse_viande[,3]) 
+
+#on recree un table avec les frequences de conso legumineuse PAR CONSO VIANDE
+freq2_legumineuse_viande <- cbind(freq_legumineuse_0_viande,freq_legumineuse_1_viande,freq_legumineuse_2_viande)
+
+
+barplot(freq2_legumineuse_viande,xlab="nombre de viande choisi",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("Aucune legumineuse", "1 legumineuse"),args.legend = list(x="topright"), names.arg=c("Aucune viande", "1 viande", "2 viandes"))
+
+```
+conclu :
+--> les individus qui ne prennent pas de viande ne compensent pas par des legumineuses, on observe même le phénomène inverse : pour 2/3 des individus, pas de viande = pas de legumineuse.
+--> quand les individus ont choisi de la viande, il n'y a pas d'influence du nb de viande choisi sur la conso de legumineuse.
+
+
+```{r}
+# diagramme en bâtons où somme de toutes les barres PAR conso VIANDE = 1
+
+#calcul des effectifs pour chaque conso viande et chaque conso prot vege
+nb_protvege_viande <- table(tableau_resultats$GM2_Galette.de.pois.chiches,tableau_resultats$GM2_viande_tot)
+
+#calcul des frequences de chaque conso prot vege par conso viande
+#pour pas de viande
+freq_protvege_0_viande <- nb_protvege_viande[,1]/sum(nb_protvege_viande[,1]) #viande = 1 ligne, légumes = colonnes
+#pour 1 viande
+freq_protvege_1_viande <- nb_protvege_viande[,2]/sum(nb_protvege_viande[,2]) #viande = 1 ligne, légumes = colonnes
+#pour 2 viandes
+freq_protvege_2_viande <- nb_protvege_viande[,3]/sum(nb_protvege_viande[,3]) #viande = 1 ligne, légumes = colonnes
+
+#on recree un table avec les frequences de conso prot vege PAR CONSO VIANDE
+freq2_protvege_viande <- cbind(freq_protvege_0_viande,freq_protvege_1_viande,freq_protvege_2_viande)
+
+
+barplot(freq2_protvege_viande,xlab="nombre de viande choisi",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("Aucune prot végé", "1 prot végé"),args.legend = list(x="topright"), names.arg=c("Aucune viande", "1 viande", "2 viandes"))
+
+```
+
+conclu :
+--> les individus qui ne prennent pas de viande compensent par des prot végé.
+--> de même, les individus qui ont pris 2 viandes prennent souvent des prot végé : ceci montre encore qu'ils n'ont surement pas compris la question, et qu'ils ont juste pris ce qui leur plaisait. 
+
+
+
+
+```{r}
+
+#calcul des effectifs pour chaque conso viande et chaque conso prot vege et chaque conso legumes
+nb_leg__protvege_viande <- table(tableau_resultats$GM2_legumes_tot,tableau_resultats$GM2_Galette.de.pois.chiches,tableau_resultats$GM2_viande_tot)
+nb_leg__protvege_viande
+#prot vege=colonnes
+#legumes=lignes
+#viande="profondeur"=plusieurs tableaux
+
+#nb_leg__protvege_viande : peut aider à comprendre : les 3 tableaux = nb de viande choisi
+
+
+#calcul des frequences de chaque conso legume par conso viande et conso prot vege
+
+#pour 0 viande
+#pour pas de prot vege
+freq_leg__0_protvege_O_viande <- nb_leg__protvege_viande[,1,1]/sum(nb_leg__protvege_viande[,1,1])
+#pour 1 prot vege
+freq_leg__1_protvege_O_viande <- nb_leg__protvege_viande[,2,1]/sum(nb_leg__protvege_viande[,2,1]) 
+
+#pour 1 viande
+#pour pas de prot vege
+freq_leg__0_protvege_1_viande <- nb_leg__protvege_viande[,1,2]/sum(nb_leg__protvege_viande[,1,2]) 
+#pour 1 prot vege
+freq_leg__1_protvege_1_viande <- nb_leg__protvege_viande[,2,2]/sum(nb_leg__protvege_viande[,2,2])
+
+#pour 2 viande
+#pour pas de prot vege
+freq_leg__0_protvege_2_viande <- nb_leg__protvege_viande[,1,3]/sum(nb_leg__protvege_viande[,1,3]) 
+#pour 1 prot vege
+freq_leg__1_protvege_2_viande <- nb_leg__protvege_viande[,2,3]/sum(nb_leg__protvege_viande[,2,3])
+
+
+#on recree un table avec les frequences de conso prot vege PAR CONSO VIANDE
+freq2_leg__protvege_viande <- cbind(freq_leg__0_protvege_O_viande,freq_leg__1_protvege_O_viande,freq_leg__0_protvege_1_viande,freq_leg__1_protvege_1_viande,freq_leg__0_protvege_2_viande,freq_leg__1_protvege_2_viande)
+
+
+barplot(freq2_leg__protvege_viande,xlab="choix viande et prot végé, ex : 2v,1pv = 2 viandes et 1 prot végé",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("Aucun légume", "1 légume", "2 légumes"),args.legend = list(x="topleft"), names.arg=c("0v,0pv","0v,1pv","1v,0pv","1v,1pv","2v,0pv","2v,1pv"))
+```
+
+
+
+conclu : le choix de la source de proteines (choix assez explicite : viande et/ou STEAK végé, on ne tient pas compte des legumineuses par ex) est correlé au nb de légumes consommés.
+
+--> les individus qui ne prennent ni viande ni steak vege prennent peu souvent des légumes.
+--> les individus qui ont pris seulement 1 source de prot (viande seulement ou steak vege seulement) ont les memes choix de légumes. Les individus qui prennent 1 viande et 1 steak vege ont également des choix de légumes similaires.
+
+```{r}
+
+#calcul des effectifs pour chaque conso viande et chaque conso prot vege et chaque conso entree
+nb_entree__protvege_viande <- table(tableau_resultats$GM2_entrees,tableau_resultats$GM2_Galette.de.pois.chiches,tableau_resultats$GM2_viande_tot)
+
+#pour 0 viande
+#pour pas de prot vege
+freq_entree__0_protvege_O_viande <- nb_entree__protvege_viande[,1,1]/sum(nb_entree__protvege_viande[,1,1])
+#pour 1 prot vege
+freq_entree__1_protvege_O_viande <- nb_entree__protvege_viande[,2,1]/sum(nb_entree__protvege_viande[,2,1]) 
+
+#pour 1 viande
+#pour pas de prot vege
+freq_entree__0_protvege_1_viande <- nb_entree__protvege_viande[,1,2]/sum(nb_entree__protvege_viande[,1,2]) 
+#pour 1 prot vege
+freq_entree__1_protvege_1_viande <- nb_entree__protvege_viande[,2,2]/sum(nb_entree__protvege_viande[,2,2])
+
+#pour 2 viande
+#pour pas de prot vege
+freq_entree__0_protvege_2_viande <- nb_entree__protvege_viande[,1,3]/sum(nb_entree__protvege_viande[,1,3]) 
+#pour 1 prot vege
+freq_entree__1_protvege_2_viande <- nb_entree__protvege_viande[,2,3]/sum(nb_entree__protvege_viande[,2,3])
+
+
+#on recree un table avec les frequences de conso prot vege PAR CONSO VIANDE
+freq2_entree__protvege_viande <- cbind(freq_entree__0_protvege_O_viande,freq_entree__1_protvege_O_viande,freq_entree__0_protvege_1_viande,freq_entree__1_protvege_1_viande,freq_entree__0_protvege_2_viande,freq_entree__1_protvege_2_viande)
+
+
+barplot(freq2_entree__protvege_viande,xlab="choix viande et prot végé, ex : 2v,1pv = 2 viandes et 1 prot végé",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("bettraves", "salade cesar poulet", "soupe legumes","tarte tomate"),args.legend = list(x="topleft"), names.arg=c("0v,0pv","0v,1pv","1v,0pv","1v,1pv","2v,0pv","2v,1pv"))
+```
+Conclu : source prot influe un peu choix entree
+
+
+```{r}
+#calcul des effectifs pour chaque conso viande et chaque conso prot vege et chaque conso fromage
+nb_fromage__protvege_viande <- table(tableau_resultats$GM2_fromage,tableau_resultats$GM2_Galette.de.pois.chiches,tableau_resultats$GM2_viande_tot)
+
+#pour 0 viande
+#pour pas de prot vege
+freq_fromage__0_protvege_O_viande <- nb_fromage__protvege_viande[,1,1]/sum(nb_fromage__protvege_viande[,1,1])
+#pour 1 prot vege
+freq_fromage__1_protvege_O_viande <- nb_fromage__protvege_viande[,2,1]/sum(nb_fromage__protvege_viande[,2,1]) 
+
+#pour 1 viande
+#pour pas de prot vege
+freq_fromage__0_protvege_1_viande <- nb_fromage__protvege_viande[,1,2]/sum(nb_fromage__protvege_viande[,1,2]) 
+#pour 1 prot vege
+freq_fromage__1_protvege_1_viande <- nb_fromage__protvege_viande[,2,2]/sum(nb_fromage__protvege_viande[,2,2])
+
+#pour 2 viande
+#pour pas de prot vege
+freq_fromage__0_protvege_2_viande <- nb_fromage__protvege_viande[,1,3]/sum(nb_fromage__protvege_viande[,1,3]) 
+#pour 1 prot vege
+freq_fromage__1_protvege_2_viande <- nb_fromage__protvege_viande[,2,3]/sum(nb_fromage__protvege_viande[,2,3])
+
+
+#on recree un table avec les frequences de conso prot vege PAR CONSO VIANDE
+freq2_fromage__protvege_viande <- cbind(freq_fromage__0_protvege_O_viande,freq_fromage__1_protvege_O_viande,freq_fromage__0_protvege_1_viande,freq_fromage__1_protvege_1_viande,freq_fromage__0_protvege_2_viande,freq_fromage__1_protvege_2_viande)
+
+
+barplot(freq2_fromage__protvege_viande,xlab="choix viande et prot végé, ex : 2v,1pv = 2 viandes et 1 prot végé",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("pas de fromage", "fromage"),args.legend = list(x="topleft"), names.arg=c("0v,0pv","0v,1pv","1v,0pv","1v,1pv","2v,0pv","2v,1pv"))
+```
+
+Conclu : source prot n'influe pas choix fromage (on néglige 2 viandes)
+
+```{r}
+
+nb_nbperiph_faim <- table(tableau_resultats$GM2_nb_periph_tot,tableau_resultats$Faim..)
+
+#calcul des frequences de chaque conso periph par conso faim
+#pour pas faim
+freq_nbperiph_0_faim <- nb_nbperiph_faim[,1]/sum(nb_nbperiph_faim[,1]) 
+#pour faim
+freq_nbperiph_1_faim <- nb_nbperiph_faim[,2]/sum(nb_nbperiph_faim[,2]) 
+ 
+
+#on recree un table avec les frequences de conso periph PAR CONSO faim
+freq2_nbperiph_faim <- cbind(freq_nbperiph_0_faim,freq_nbperiph_1_faim)
+
+
+barplot(freq2_nbperiph_faim,xlab="faim ?",ylab="fréquence (par faim)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("pas faim", "faim"),legend=c("1 periph", "2 periph","3 periph","4 periph","5 periph","6 periph","7 periph","8 periph","9 periph","10 periph"))
+
+```
+--> biais
+```{r}
+
+nb_nbperiphplat_faim <- table(tableau_resultats$GM2_nb_periphplat_tot,tableau_resultats$Faim..)
+
+#calcul des frequences de chaque conso periphplat plat par conso faim
+#pour pas faim
+freq_nbperiphplat_0_faim <- nb_nbperiphplat_faim[,1]/sum(nb_nbperiphplat_faim[,1]) 
+#pour faim
+freq_nbperiphplat_1_faim <- nb_nbperiphplat_faim[,2]/sum(nb_nbperiphplat_faim[,2]) 
+ 
+
+#on recree un table avec les frequences de conso periphplat plat PAR CONSO faim
+freq2_nbperiphplat_faim <- cbind(freq_nbperiphplat_0_faim,freq_nbperiphplat_1_faim)
+
+
+barplot(freq2_nbperiphplat_faim,xlab="faim ?",ylab="fréquence (par faim)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("pas faim", "faim"),legend=c("0 periph","1 periph", "2 periph","3 periph","4 periph","5 periph"))
+
+```
+
+```{r}
+# diagramme en bâtons où somme de toutes les barres PAR conso VIANDE = 1
+
+#calcul des effectifs pour chaque conso viande et chaque conso from
+nb_fromage_viande <- table(tableau_resultats$GM2_fromage,tableau_resultats$GM2_viande_tot)
+
+#calcul des frequences de chaque conso from par conso viande
+#pour pas de viande
+freq_fromage_0_viande <- nb_fromage_viande[,1]/sum(nb_fromage_viande[,1]) #viande = 1 ligne, légumes = colonnes
+#pour 1 viande
+freq_fromage_1_viande <- nb_fromage_viande[,2]/sum(nb_fromage_viande[,2]) #viande = 1 ligne, légumes = colonnes
+#pour 2 viandes
+freq_fromage_2_viande <- nb_fromage_viande[,3]/sum(nb_fromage_viande[,3]) #viande = 1 ligne, légumes = colonnes
+
+#on recree un table avec les frequences de conso from PAR CONSO VIANDE
+freq2_fromage_viande <- cbind(freq_fromage_0_viande,freq_fromage_1_viande,freq_fromage_2_viande)
+
+
+barplot(freq2_fromage_viande,xlab="nombre de viande choisi",ylab="fréquence (par conso viande)",beside=TRUE,legend=c("Pas de fromage", "Fromage"),args.legend = list(x="topright"), names.arg=c("Aucune viande", "1 viande", "2 viandes"))
+
+```
+
+
+
+```{r}
+
+nb_nbperiph_sexe <- table(tableau_resultats$GM2_nb_periph_tot,tableau_resultats$sexe)
+
+#calcul des frequences de chaque conso periph par sexe
+#homme
+freq_nbperiph_homme <- nb_nbperiph_sexe[,1]/sum(nb_nbperiph_sexe[,1]) 
+#femme
+freq_nbperiph_femme  <- nb_nbperiph_sexe[,2]/sum(nb_nbperiph_sexe[,2]) 
+#autre
+#pas de autre!!!
+#pas précisé
+freq_nbperiph_pasprecise  <- nb_nbperiph_sexe[,3]/sum(nb_nbperiph_sexe[,3])
+ 
+
+#on recree un table avec les frequences de conso periph PAR CONSO faim
+freq2_nbperiph_sexe <- cbind(freq_nbperiph_homme,freq_nbperiph_femme,freq_nbperiph_pasprecise)
+
+
+barplot(freq2_nbperiph_sexe,xlab="sexe",ylab="fréquence (par sexe)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("homme", "femme","pas précisé"),legend=c("1 periph", "2 periph","3 periph","4 periph","5 periph","6 periph","7 periph","8 periph","9 periph","10 periph"))
+
+```
+
+```{r}
+
+
+boxplot(freq2_nbperiph_sexe,xlab="sexe",ylab="fréquence (par sexe)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("homme", "femme","pas précisé"),legend=c("1 periph", "2 periph","3 periph","4 periph","5 periph","6 periph","7 periph","8 periph","9 periph","10 periph"))
+
+```
+
+
+```{r}
+
+nb_nbperiphplat_sexe <- table(tableau_resultats$GM2_nb_periphplat_tot,tableau_resultats$sexe)
+
+#calcul des frequences de chaque conso periphplat plat par sexe
+freq_nbperiphplat_homme <- nb_nbperiphplat_sexe[,1]/sum(nb_nbperiphplat_sexe[,1]) 
+freq_nbperiphplat_femme <- nb_nbperiphplat_sexe[,2]/sum(nb_nbperiphplat_sexe[,2])
+freq_nbperiphplat_pasprecise <- nb_nbperiphplat_sexe[,3]/sum(nb_nbperiphplat_sexe[,3])
+ 
+
+#on recree un table avec les frequences de conso periphplat plat PAR sexe
+freq2_nbperiphplat_sexe <- cbind(freq_nbperiphplat_homme,freq_nbperiphplat_femme,freq_nbperiphplat_pasprecise)
+
+
+barplot(freq2_nbperiphplat_sexe,xlab="sexe ?",ylab="fréquence (par sexe)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("homme", "femme","pas précisé"),legend=c("0 periph","1 periph", "2 periph","3 periph","4 periph","5 periph"))
+
+boxplot(freq2_nbperiphplat_sexe,xlab="sexe ?",ylab="fréquence (par sexe)",beside=TRUE,args.legend = list(x="topright"),names.arg=c("homme", "femme","pas précisé"),legend=c("0 periph","1 periph", "2 periph","3 periph","4 periph","5 periph"))
+
+```
+
