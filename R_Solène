@@ -1,0 +1,181 @@
+---
+title: "projet"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, include=FALSE}
+rm (list=ls()) #Nettoyage
+library(knitr)
+library(FactoMineR)
+library(factoextra)
+library(corrplot)
+library(ggplot2) # pour faire des graphes
+library(car) # pour obtenir les tests de type II
+library(multcomp) # pour les comparaisons deux à deux
+library(emmeans)
+library(tinytex)
+```
+
+```{r, echo=FALSE}
+tableau <- read.csv("donnees-modifs.csv", sep = ";", header=TRUE, na.strings = "N.A.")
+tableau <- na.omit(tableau)
+summary(tableau)
+
+```
+```{r, echo=FALSE}
+tableau1 <- tableau[,-c(1,3,4,6,8,10,11,12,14,25,26,27,28)]
+tableau1$Sexe <- sub("Femme","1",tableau1$Sexe)
+tableau1$Sexe <- sub("Homme","0",tableau1$Sexe)
+tableau1$Sexe <- sub("Pas précisé","N.A.",tableau1$Sexe)
+tableau1$GM9_fromage <- sub("Oui","1",tableau1$GM9_fromage)
+tableau1$GM9_fromage <- sub("Non","0",tableau1$GM9_fromage)
+tableau1$GM9_fromage <- sub("Pas précisé","N.A.",tableau1$GM9_fromage)
+```
+
+
+```{r, echo=FALSE}
+tableau1$Sexe <- as.numeric(as.character(tableau1$Sexe))
+tableau1 <- na.omit(tableau1)
+summary(tableau1)
+
+tableau1$GM9_fromage <- as.numeric(as.character(tableau1$GM9_fromage))
+
+tableau2<- tableau1[,-c(1,9,11,12,13)]
+```
+
+
+```{r, echo=FALSE}
+# Corrélations 
+correlation = cor(tableau2)
+kable(correlation,digits = 3)
+
+# Visualisation des correlations 
+corrplot(correlation)
+```
+
+```{r, echo=FALSE}
+ggplot(tableau, aes(y=GM9_protcarne, x=Age, color=as.factor(Sexe))) +geom_point() + labs(x="Age", y="Protcarne")
+```
+0 = les hommes 
+1 = les femmes 
+Les femmes ont l'air de manger moins souvent de la viande que les hommes. 
+
+```{r, echo=FALSE}
+ggplot(tableau1, aes(y=GM9_protcarne, x=Somme_alim_GM9, color=as.factor(GM9_entrée))) +geom_point() + labs(x="somme alim", y="protcarne")
+ggplot(tableau1, aes(y=GM9_protcarne, x=Age, color=as.factor(GM9_dessert2))) +geom_point() + labs(x="Age", y="protcarne")
+```
+
+Ceux qui prennent 2 fois de la viande prennent plus de légumes
+Ceux qui prennent 1 fois de la viande prennent en général au moins 1 légume
+
+```{r, echo=FALSE}
+ggplot(tableau, aes(y=GM9_oeuf, x=Age, color=as.factor(GM9_Legumes))) +geom_point() + labs(x="Age", y="Prot_oeuf")
+```
+
+```{r}
+effectif_legume_viande <- table(tableau1$GM9_Legumes, tableau1$GM9_protcarne != 0)
+frequence_legume_viande <- effectif_legume_viande*100/sum(effectif_legume_viande)
+colnames(frequence_legume_viande) <- c("Pas de viande", "1 fois et plus")
+frequence_legume_viande 
+
+barplot(frequence_legume_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix de viande", ylab = "Fréquence de personnes")
+```
+
+```{r}
+effectif_legume_oeuf <- table(tableau1$GM9_Legumes, tableau1$GM9_oeuf != 0)
+frequence_legume_oeuf <- effectif_legume_oeuf*100/sum(effectif_legume_oeuf)
+colnames(frequence_legume_oeuf) <- c("Pas d'oeuf", "Oeuf")
+frequence_legume_oeuf
+
+barplot(frequence_legume_oeuf, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix d'oeuf", ylab = "Fréquence de personnes")
+```
+
+
+
+```{r}
+effectif_legume_legumi <- table(tableau1$GM9_Legumes, tableau1$GM9_protvege != 0)
+frequence_legume_legumi <- effectif_legume_legumi*100/sum(effectif_legume_legumi)
+colnames(effectif_legume_legumi) <- c("Pas de legumineuse", "1 ou plus de legumineuse")
+effectif_legume_legumi
+
+barplot(frequence_legume_legumi, beside=TRUE, xlab = "Consommation de legumineuse", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix de prot végétale", ylab = "Fréquence de personnes")
+```
+
+
+
+```{r pressure, echo=FALSE}
+effectif_fromage_viande <- table(tableau1$GM9_fromage, tableau1$GM9_protcarne != 0)
+frequence_fromage_viande <- effectif_fromage_viande*100/sum(effectif_fromage_viande)
+colnames(frequence_fromage_viande) <- c("Pas de viande", "1 fois et plus")
+frequence_fromage_viande 
+
+barplot(frequence_fromage_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Pas de Fromage", "Fromage"), ylim = c(0,60), main = "Choix du fromage en fonction du choix de viande", ylab = "Fréquence de personnes")
+```
+```{r}
+effectif_fromage_vege <- table(tableau1$GM9_fromage, tableau1$GM9_protvege != 0)
+frequence_fromage_vege <- effectif_fromage_vege*100/sum(effectif_fromage_vege)
+colnames(frequence_fromage_vege) <- c("Pas de prot vege", "1 fois et plus")
+frequence_fromage_vege 
+
+barplot(frequence_fromage_vege, beside=TRUE, xlab = "Consommation de prot vege", legend=c("Pas de Fromage", "Fromage"), ylim = c(0,60), main = "Choix du fromage en fonction du choix de prot vege", ylab = "Fréquence de personnes")
+```
+```{r}
+effectif_fromage_oeuf <- table(tableau1$GM9_fromage, tableau1$GM9_oeuf != 0)
+frequence_fromage_oeuf <- effectif_fromage_oeuf*100/sum(effectif_fromage_oeuf)
+colnames(frequence_fromage_oeuf) <- c("Pas d'oeuf", "1 fois et plus")
+frequence_fromage_oeuf 
+
+barplot(frequence_fromage_oeuf, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Pas de Fromage", "Fromage"), ylim = c(0,60), main = "Choix du fromage en fonction de conso oeuf", ylab = "Fréquence de personnes")
+```
+```{r}
+effectif_somme_alim_faim <- table(tableau1$Somme_alim_GM9, tableau1$Faim.. != "Oui")
+Somme_alim_faim <- effectif_somme_alim_faim*100/sum(effectif_somme_alim_faim)
+colnames(Somme_alim_faim) <- c("Pas faim", "Faim")
+Somme_alim_faim
+
+barplot(Somme_alim_faim, beside=TRUE, xlab = "Faim ou pas", legend=c("Pas faim", "Faim"), ylim = c(0,50), main = "Nombre d'aliments en fonction de la faim", ylab = "Nproportion de personnes")
+```
+
+```{r}
+#ACP CERCLE DES VARIABLES POUR LES MOINS DE 25 ANS
+moins_de_25_ans <- tableau2$Age < 25
+tableau_moins_25ans<- tableau2 [moins_de_25_ans , ]
+res.pca <- PCA(tableau_moins_25ans, scale.unit = TRUE, graph = FALSE, ncp = 8)
+get_eigenvalue(res.pca)
+fviz_eig(res.pca, addlabels = TRUE, ylim = c(0,50))
+fviz_pca_var(res.pca, axes = 1:2)
+ind=get_pca_ind(res.pca)
+cos2 = rowSums(res.pca$ind$cos2[,1:2])
+fviz_pca_ind (res.pca, pointsize = "cos2", pointshape = 21, fill = "#E7B800",
+repel = TRUE , axes = c(1, 2))
+```
+
+```{r}
+#ACP CERCLE DES VARIABLES POUR LES MANGEURS DE VIANDE
+avec_viande <- tableau2$GM9_protcarne != 0
+tableau_avec_viande <- tableau2 [avec_viande , ]
+res.pca2 <- PCA(tableau_avec_viande, scale.unit = TRUE, graph = FALSE, ncp = 8)
+get_eigenvalue(res.pca2)
+fviz_eig(res.pca2, addlabels = TRUE, ylim = c(0,50))
+fviz_pca_var(res.pca2, axes = 1:2)
+ind2=get_pca_ind(res.pca2)
+#cos22 = rowSums(res.pca2$ind2$cos2[,1:2])
+#fviz_pca_ind (res.pca2, pointsize = "cos2", pointshape = 21, fill = "#E7B800",
+#repel = TRUE , axes = c(1, 2))
+```
+
+
+```{r}
+#Anova
+ggplot(tableau1, aes(x = GM9_entrée, y = GM9_protcarne, colour = GM9_dessert1))+geom_boxplot() + theme_bw()
+modA2I = lm(GM9_protcarne ~ GM9_entrée * GM9_dessert1,data=tableau1)
+summary(modA2I)
+par(mfrow=c(2,2))
+plot(modA2I)
+```
