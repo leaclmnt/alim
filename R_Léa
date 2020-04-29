@@ -22,11 +22,15 @@ library(tinytex)
 
 ```{r, echo=FALSE}
 tableau <- read.csv("testGM1.csv", sep = ";", header=TRUE, na.strings = "N.A.")
-tableau <- na.omit(tableau)
-summary(tableau)
+tableau <- subset(tableau, tableau$Sexe != "Pas précisé")
+# tableau$Age <- na.omit(tableau$Age)
+tableau_naomit <- na.omit(tableau)
 
+summary(tableau)
 ```
 ```{r, echo=FALSE}
+# Création d'un tableau simplifier pour faire un tableau des corrélations. 
+
 tableaubis <- tableau[,-c(1,2,10,11,12,13,15,16,19,20,21,22)]
 tableaubis$Sexe <- sub("Femme","1",tableaubis$Sexe)
 tableaubis$Sexe <- sub("Homme","0",tableaubis$Sexe)
@@ -35,10 +39,11 @@ tableaubis$Sexe <- sub("Pas précisé","N.A.",tableaubis$Sexe)
 
 
 ```{r, echo=FALSE}
+# Transfo de l'info en numérique 
+
 tableaubis$Sexe <- as.numeric(as.character(tableaubis$Sexe))
 tableaubis <- na.omit(tableaubis)
 summary(tableaubis)
-           
 ```
 
 
@@ -50,39 +55,378 @@ kable(correlation,digits = 3)
 # Visualisation des correlations 
 corrplot(correlation)
 ```
-
-```{r, echo=FALSE}
-ggplot(tableaubis, aes(y=GM1_Prot_viande, x=Age, color=as.factor(Sexe))) +geom_point() + labs(x="Age", y="Prot_Viande")
-```
-0 = les hommes 
-1 = les femmes 
-Les femmes ont l'air de manger moins souvent de la viande que les hommes. 
-
-```{r, echo=FALSE}
-ggplot(tableaubis, aes(y=GM1_Prot_viande, x=Age, color=as.factor(GM1_Légume))) +geom_point() + labs(x="Age", y="Prot_Viande")
-```
-
-Ceux qui prennent 2 fois de la viande prennent plus de légumes
-Ceux qui prennent 1 fois de la viande prennent en général au moins 1 légume
-
-```{r, echo=FALSE}
-ggplot(tableaubis, aes(y=GM1_Oeuf, x=Age, color=as.factor(GM1_Légume))) +geom_point() + labs(x="Age", y="Prot_Viande")
-```
+Ceux qui prennent des féculents ne prennent pas de féculents gras
 
 ```{r}
+# On regarde le nombre de légumes pris en fonction du choix de la viande (/!\ on raisonne sur frequence totale et pas sur fréquence par groupe de pop)
+
 effectif_legume_viande <- table(tableau$GM1_Légume, tableau$GM1_Prot_viande != 0)
 frequence_legume_viande <- effectif_legume_viande*100/sum(effectif_legume_viande)
 colnames(frequence_legume_viande) <- c("Pas de viande", "1 fois et plus")
 frequence_legume_viande 
 
-barplot(frequence_legume_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix de viande", ylab = "Fréquence de personnes")
+barplot(frequence_legume_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisi en f° du choix de viande", ylab = "Fréquence de personnes")
+
+# On ramène à l'effectif par nombre de personnes mangeant de la viande et ne mangeant pas de viande
+frequence_legume_viande2 <- matrix(nrow = 3, ncol = 2)
+for (k in 1:2)
+  {frequence_legume_viande2[,k] <- effectif_legume_viande[,k]*100/sum(effectif_legume_viande[,k])}
+colnames(frequence_legume_viande2) <- c("Pas de viande", "1 fois et plus")
+rownames(frequence_legume_viande2) <- c("Aucun légume", "1 légume", "2 légumes")
+frequence_legume_viande2
+
+barplot(frequence_legume_viande2, beside=TRUE, xlab = "Consommation de viande", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,100), main = "Nombre de légumes choisi en f° du choix de viande", ylab = "Fréquence de personnes")
 ```
+Ceux qui ne consomment pas de viande prennent plus de légumes. 
 
 ```{r}
+# On regarde les féculents en fonction du choix de la viande (/!\ on raisonne sur frequence totale et pas sur fréquence par groupe de pop)
+
+effectif_feculent_viande <- table(tableau$GM1_Féculent, tableau$GM1_Prot_viande != 0)
+frequence_feculent_viande <- effectif_feculent_viande*100/sum(effectif_feculent_viande)
+colnames(frequence_feculent_viande) <- c("Pas de viande", "1 fois et plus")
+frequence_feculent_viande 
+
+barplot(frequence_feculent_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Pas de féculent", "Féculent"), ylim = c(0,50), main = "Consommation de féculents en f° du choix de viande", ylab = "Fréquence de personnes")
+
+# On ramène à l'effectif par nombre de personnes mangeant de la viande et ne mangeant pas de viande
+frequence_feculent_viande2 <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_feculent_viande2[,k] <- effectif_feculent_viande[,k]*100/sum(effectif_feculent_viande[,k])}
+colnames(frequence_feculent_viande2) <- c("Pas de viande", "1 fois et plus")
+rownames(frequence_feculent_viande2) <- c("Pas de féculent", "Féculent")
+frequence_feculent_viande2
+
+barplot(frequence_feculent_viande2, beside=TRUE, xlab = "Consommation de viande", legend=c("Pas de féculent", "Féculent"), ylim = c(0,100), main = "Consommation de féculent en f° du choix de viande", ylab = "Fréquence de personnes")
+```
+Ceux qui consomment de la viande ont moins tendance à prendre des féculents. 
+
+```{r}
+# On regarde les féculents gras en fonction du choix de la viande (/!\ on raisonne sur frequence totale et pas sur fréquence par groupe de pop)
+
+effectif_frequence_feculent_gras_viande <- table(tableau$GM1_Féculent_gras, tableau$GM1_Prot_viande != 0)
+frequence_frequence_feculent_gras_viande <- effectif_frequence_feculent_gras_viande*100/sum(effectif_frequence_feculent_gras_viande)
+colnames(frequence_frequence_feculent_gras_viande) <- c("Pas de viande", "1 fois et plus")
+frequence_frequence_feculent_gras_viande 
+
+barplot(frequence_frequence_feculent_gras_viande, beside=TRUE, xlab = "Consommation de viande", legend=c("Pas de féculent gras", "Féculent gras"), ylim = c(0,50), main = "Consommation de féculent gras en f° du choix de viande", ylab = "Fréquence de personnes")
+
+# On ramène à l'effectif par nombre de personnes mangeant de la viande et ne mangeant pas de viande
+frequence_frequence_feculent_gras_viande2 <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_frequence_feculent_gras_viande2[,k] <- effectif_frequence_feculent_gras_viande[,k]*100/sum(effectif_frequence_feculent_gras_viande[,k])}
+colnames(frequence_frequence_feculent_gras_viande2) <- c("Pas de viande", "1 fois et plus")
+rownames(frequence_frequence_feculent_gras_viande2) <- c("Pas de féculent gras", "Féculent gras")
+frequence_frequence_feculent_gras_viande2
+
+barplot(frequence_frequence_feculent_gras_viande2, beside=TRUE, xlab = "Consommation de viande", legend=c("Pas de féculent gras", "Féculent gras"), ylim = c(0,100), main = "Consommation de féculent gras en f° du choix de viande", ylab = "Fréquence de personnes")
+```
+Les gens qui consomment de la viande ont plus tendance à consommer de féculents gras que ceux qui ne mangent pas de viande. 
+
+```{r}
+# On regarde les légumes en fonction du choix de l'oeuf (/!\ on raisonne sur frequence totale et pas sur fréquence par groupe de pop)
+
 effectif_legume_oeuf <- table(tableau$GM1_Légume, tableau$GM1_Oeuf != 0)
 frequence_legume_oeuf <- effectif_legume_oeuf*100/sum(effectif_legume_oeuf)
 colnames(frequence_legume_oeuf) <- c("Pas d'oeuf", "Oeuf")
 frequence_legume_oeuf
 
-barplot(frequence_legume_oeuf, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisis en fonction du choix d'oeuf", ylab = "Fréquence de personnes")
+barplot(frequence_legume_oeuf, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,40), main = "Nombre de légumes choisi en f° du choix d'oeuf", ylab = "Fréquence de personnes")
+
+# On ramène à l'effectif par nombre de personnes mangeant des oeufs et ne mangeant pas d'oeuf
+frequence_legume_oeuf2 <- matrix(nrow = 3, ncol = 2)
+for (k in 1:2)
+  {frequence_legume_oeuf2[,k] <- effectif_legume_oeuf[,k]*100/sum(effectif_legume_oeuf[,k])}
+colnames(frequence_legume_oeuf2) <- c("Pas d'oeuf", "Oeuf")
+rownames(frequence_legume_oeuf2) <- c("Aucun légume", "1 légume", "2 légumes")
+frequence_legume_oeuf2
+
+barplot(frequence_legume_oeuf2, beside=TRUE, xlab = "Consommation d'oeuf", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,100), main = "Nombre de légumes en f° du choix de l'oeuf", ylab = "Fréquence de personnes")
 ```
+Ceux qui mangent des oeufs prennent plus souvent 2 légumes. 
+
+```{r}
+# On regarde les légumineuses en fonction du choix de légumes (/!\ on raisonne sur frequence totale et pas sur fréquence par groupe de pop)
+
+effectif_legume_legumineuse <- table(tableau$GM1_Légume, tableau$GM1_Légumneuse != 0)
+frequence_legume_legumineuse <- effectif_legume_legumineuse*100/sum(effectif_legume_legumineuse)
+colnames(frequence_legume_legumineuse) <- c("Pas de légumineuse", "Légumineuse")
+frequence_legume_legumineuse
+
+barplot(frequence_legume_legumineuse, beside=TRUE, xlab = "Consommation de légumineuse", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,30), main = "Nombre de légumes choisi en f° du choix de légumineuse", ylab = "Fréquence de personnes")
+
+# On ramène à l'effectif par nombre de personnes mangeant des légumineuses et ne mangeant pas de légumineuses
+frequence_legume_legumineuse2 <- matrix(nrow = 3, ncol = 2)
+for (k in 1:2)
+  {frequence_legume_legumineuse2[,k] <- effectif_legume_legumineuse[,k]*100/sum(effectif_legume_legumineuse[,k])}
+colnames(frequence_legume_legumineuse2) <- c("Pas de legumineuse", "Legumineuse")
+rownames(frequence_legume_legumineuse2) <- c("Aucun légume", "1 légume", "2 légumes")
+frequence_legume_legumineuse2
+
+barplot(frequence_legume_legumineuse2, beside=TRUE, xlab = "Consommation de Legumineuse", legend=c("Aucun légume", "1 légume", "2 légumes"), ylim = c(0,100), main = "Nombre de légumes en f° du choix de legumineuse", ylab = "Fréquence de personnes")
+```
+Ceux qui consomment des légumineuses consomment plus de légumes. 
+
+```{r}
+# Tableau du nombre de personnes mangeant de la viande en fonction du sexe
+effectif_viande_sexe <- table(tableau$GM1_Prot_viande == 1, tableau$Sexe == "Femme")
+colnames(effectif_viande_sexe) <- c("Homme", "Femme")
+rownames(effectif_viande_sexe) <- c("Pas de viande", "1 fois et plus")
+effectif_viande_sexe
+
+#Tableau du nombre de personnes sur le nombre de personnes total mangeant de la viande 
+frequence_viande_sexe <- effectif_viande_sexe*100/sum(effectif_viande_sexe)
+colnames(frequence_viande_sexe) <- c("Homme", "Femme")
+rownames(frequence_viande_sexe) <- c("Pas de viande", "1 fois et plus")
+frequence_viande_sexe
+
+#Tableau du nombre de personnes sur le nombre de personne du sexe correspondant mangeant de la viande
+frequence_viande_sexeFM <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_viande_sexeFM[,k] <- effectif_viande_sexe[,k]*100/sum(effectif_viande_sexe[,k])}
+colnames(frequence_viande_sexeFM) <- c("Homme", "Femme")
+rownames(frequence_viande_sexeFM) <- c("Pas de viande", "1 fois et plus")
+frequence_viande_sexeFM
+
+
+barplot(frequence_viande_sexeFM, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Sexe", legend=c("Pas de viande", "1 fois et plus"), ylim = c(0,80), main = "Consommation ou absence de consommation de viande en f° du sexe")
+```
+Les hommes semblent manger plus de viande que les femmes. 
+
+```{r}
+# Tableau du nombre de personnes mangeant de la viande en fonction de l'âge
+effectif_viande_age <- table(tableau_naomit$GM1_Prot_viande == 1, tableau_naomit$Age)
+rownames(effectif_viande_sexe) <- c("Pas de viande", "1 fois et plus")
+# effectif_viande_age
+
+#Tableau du nombre de personnes sur le nombre de personnes total mangeant de la viande 
+# frequence_viande_age <- effectif_viande_age*100/sum(effectif_viande_age)
+# rownames(frequence_viande_age) <- c("Pas de viande", "1 fois et plus")
+# frequence_viande_age
+
+#Regrouper les classes d'age 
+frequence_viande_age_classe <- matrix(data = 0, nrow = 2, ncol = 5) # création de la matrice 
+
+#Classe 18-24
+for (k in 1:7)
+{frequence_viande_age_classe[,1] <- frequence_viande_age_classe[,1] + effectif_viande_age[,k]} 
+#Classe 25-34
+for (k in 8:15)
+{frequence_viande_age_classe[,2] <- frequence_viande_age_classe[,2] + effectif_viande_age[,k]}
+#Classe 35-49
+for (k in 16:28)
+{frequence_viande_age_classe[,3] <- frequence_viande_age_classe[,3] + effectif_viande_age[,k]} 
+#Classe 50-64
+for (k in 29:42)
+{frequence_viande_age_classe[,4] <- frequence_viande_age_classe[,4] + effectif_viande_age[,k]} 
+#Classe 65 et +
+for (k in 43:46)
+{frequence_viande_age_classe[,5] <- frequence_viande_age_classe[,5] + effectif_viande_age[,k]} 
+
+colnames(frequence_viande_age_classe) <- c("18-24","25-34","35-49","50-65","65 et plus")
+rownames(frequence_viande_age_classe) <- c("Pas de viande", "1 fois et plus")
+
+for (k in 1:5)
+{a <- sum(frequence_viande_age_classe[,k]) 
+frequence_viande_age_classe[,k] <- frequence_viande_age_classe[,k]*100/a}
+
+frequence_viande_age_classe
+
+barplot(frequence_viande_age_classe, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Age", legend=c("Pas de viande", "1 fois et plus"), ylim = c(0,100), main = "Consommation ou absence de consommation de viande en f° de l'âge")
+```
+En moyenne qq soit la classe d'âge les gens mangent plus de viande. Pas tellement de différence selon la classe d'âge. 
+
+```{r}
+# On étudie la population qui a choisi de la viande 
+tableau_viande <- subset(tableau, tableau$GM1_Prot_viande == 1) # On garde que les gens qui ont pris de la viande 
+
+effectif_viande_oui_legumineuse_sexe <- table(tableau_viande$GM1_Légumneuse, tableau_viande$Sexe)
+effectif_viande_oui_legumineuse_sexe <- effectif_viande_oui_legumineuse_sexe[,-3]
+effectif_viande_oui_legumineuse_sexe
+
+#Tableau du nombre de personnes sur le nombre de personne du sexe correspondant mangeant de la viande
+frequence_viande_oui_legumineuse_sexe <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_viande_oui_legumineuse_sexe[,k] <- effectif_viande_oui_legumineuse_sexe[,k]*100/sum(effectif_viande_oui_legumineuse_sexe[,k])}
+colnames(frequence_viande_oui_legumineuse_sexe) <- c("Femme", "Homme")
+rownames(frequence_viande_oui_legumineuse_sexe) <- c("Pas de Légumineuses", "Légumineuses")
+frequence_viande_oui_legumineuse_sexe
+
+
+barplot(frequence_viande_oui_legumineuse_sexe, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Sexe", legend=c("Pas de Légumineuse", "Légumineuse"), ylim = c(0,100), main = "Consommation de légumineuse chez les gens consommant de la viande en f° du sexe")
+```
+Quand les gens consomment de la viande ils ne prennent pas tellement de légumineuses.  
+
+```{r}
+tableau_viandenon <- subset(tableau, tableau$GM1_Prot_viande == 0) # On garde que les gens qui n'ont pas pris de viande 
+
+effectif_viande_non_legumineuse_sexe <- table(tableau_viandenon$GM1_Légumneuse, tableau_viandenon$Sexe)
+effectif_viande_non_legumineuse_sexe <- effectif_viande_non_legumineuse_sexe[,-3]
+effectif_viande_non_legumineuse_sexe
+
+#Tableau du nombre de personnes sur le nombre de personne du sexe correspondant mangeant de la viande
+frequence_viande_non_legumineuse_sexe <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_viande_non_legumineuse_sexe[,k] <- effectif_viande_non_legumineuse_sexe[,k]*100/sum(effectif_viande_non_legumineuse_sexe[,k])}
+colnames(frequence_viande_non_legumineuse_sexe) <- c("Femme", "Homme")
+rownames(frequence_viande_non_legumineuse_sexe) <- c("Pas de Légumineuses", "Légumineuses")
+frequence_viande_non_legumineuse_sexe
+
+
+barplot(frequence_viande_non_legumineuse_sexe, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Sexe", legend=c("Pas de Légumineuse", "Légumineuse"), ylim = c(0,100), main = "Consommation de légumineuse chez les gens ne consommant pas de viande en f° du sexe")
+```
+Les personnes qui ne prennent pas de viande ont peu tendance à prendre des légumineuses pour remplacer.  
+
+```{r}
+# On étudie toujours les gens qui ne mangent pas de viande. On regarde si ils remplacent la viande par les oeufs 
+
+effectif_viande_non_oeuf_sexe <- table(tableau_viandenon$GM1_Oeuf, tableau_viandenon$Sexe)
+effectif_viande_non_oeuf_sexe <- effectif_viande_non_oeuf_sexe[,-3]
+effectif_viande_non_oeuf_sexe
+
+#Tableau du nombre de personnes sur le nombre de personne du sexe correspondant mangeant de la viande
+frequence_viande_non_oeuf_sexe <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_viande_non_oeuf_sexe[,k] <- effectif_viande_non_oeuf_sexe[,k]*100/sum(effectif_viande_non_oeuf_sexe[,k])}
+colnames(frequence_viande_non_oeuf_sexe) <- c("Femme", "Homme")
+rownames(frequence_viande_non_oeuf_sexe) <- c("Pas d'oeuf", "Oeuf")
+frequence_viande_non_oeuf_sexe
+
+
+barplot(frequence_viande_non_oeuf_sexe, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Sexe", legend=c("Pas d'oeuf", "Oeuf"), ylim = c(0,100), main = "Consommation de d'oeuf chez les gens ne consommant pas de la viande en f° du sexe")
+
+# Sans différencier le sexe 
+
+effectif_viande_non_oeuf <- table(tableau_viandenon$GM1_Oeuf)
+effectif_viande_non_oeuf
+
+frequence_viande_non_oeuf <- effectif_viande_non_oeuf*100/sum(effectif_viande_non_oeuf)
+frequence_viande_non_oeuf
+
+barplot(frequence_viande_non_oeuf, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Consommation d'oeufs", ylim = c(0,100), main = "Consommation de d'oeuf chez les gens ne consommant pas de viande")
+```
+Les gens ne remplacent pas automatiquement la viande par des oeufs. Les femmes ont plus tendance à la substitution que les hommes. 
+
+```{r}
+tableau_oeuf <- subset(tableau, tableau$GM1_Oeuf == 1) # On garde que les gens qui ont pris de l'oeuf
+
+# On étudie la population qui a choisi de l'oeuf
+
+effectif_oeuf_oui_legumineuse_sexe <- table(tableau_oeuf$GM1_Légumneuse, tableau_oeuf$Sexe)
+effectif_oeuf_oui_legumineuse_sexe <- effectif_oeuf_oui_legumineuse_sexe[,-3]
+effectif_oeuf_oui_legumineuse_sexe
+
+#Tableau du nombre de personnes sur le nombre de personne du sexe correspondant mangeant de la viande
+frequence_oeuf_oui_legumineuse_sexe <- matrix(nrow = 2, ncol = 2)
+for (k in 1:2)
+  {frequence_oeuf_oui_legumineuse_sexe[,k] <- effectif_oeuf_oui_legumineuse_sexe[,k]*100/sum(effectif_oeuf_oui_legumineuse_sexe[,k])}
+colnames(frequence_oeuf_oui_legumineuse_sexe) <- c("Femme", "Homme")
+rownames(frequence_oeuf_oui_legumineuse_sexe) <- c("Pas de Légumineuses", "Légumineuses")
+frequence_oeuf_oui_legumineuse_sexe
+
+barplot(frequence_oeuf_oui_legumineuse_sexe, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Sexe", legend=c("Pas de Légumineuse", "Légumineuse"), ylim = c(0,100), main = "Consommation de légumineuse chez les gens consommant de l'oeuf en f° du sexe")
+```
+Chez ceux qui ont pris des oeufs, ne prennent pas forcément de légumineuses.
+
+```{r}
+# On regarde combien de desserts pernnent les gens qui mangent de la viande
+
+effectif_viande_dessert <- table(tableau_viande$GM1_Nbr_dessert)
+effectif_viande_dessert
+
+frequence_viande_dessert <- effectif_viande_dessert*100/sum(effectif_viande_dessert)
+frequence_viande_dessert
+
+barplot(frequence_viande_dessert, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Nombre de desserts", ylim = c(0,100), main = "Consommation de dessert chez les gens consommant de la viande")
+```
+
+
+```{r}
+# On regarde combien de desserts pernnent les gens qui ne mangent pas de viande
+
+effectif_viande_non_dessert <- table(tableau_viandenon$GM1_Nbr_dessert)
+effectif_viande_non_dessert
+
+frequence_viande_non_dessert <- effectif_viande_non_dessert*100/sum(effectif_viande_non_dessert)
+frequence_viande_non_dessert
+
+barplot(frequence_viande_non_dessert, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Nombre de desserts", ylim = c(0,100), main = "Consommation de dessert chez les gens ne consommant pas de viande")
+```
+Même nombre de desserts que les gens mangent de la viande ou ne mangent pas de viande. 
+
+```{r}
+# On regarde quel type d'entrée prennent les gens (étude de l'effectif total)
+
+effectif_entree_viande <- table(tableau$G1_entrée,tableau$GM1_Prot_viande != 0)
+colnames(effectif_entree_viande) <- c("Pas de viande", "1 fois et plus")
+effectif_entree_viande
+
+frequence_entree_viande <- matrix(data = 0, nrow = 5, ncol = 2)
+for (k in 1:2)
+   {frequence_entree_viande[,k] <- effectif_entree_viande[,k]*100/sum(effectif_entree_viande[,k])}
+colnames(frequence_entree_viande) <- c("Pas viande", "Viande")
+rownames(frequence_entree_viande) <- c("Gourmand", "Pas d'entrée", "Protéines", "Salade composée","Salade léger")
+frequence_entree_viande
+
+barplot(frequence_entree_viande, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Consommation de viande", ylim = c(0,100), legend=c("Gourmand", "Pas d'entrée", "Protéines", "Salade composée","Salade léger"), main = "Quelle entrée est consommée en fonction de la consommation de viande")
+```
+Ceux qui prennent de la viande ont moins tendance à prendre une entrée gourmande, mais faible tendance...
+
+```{r}
+# On regarde quel type de boissons prennent les gens (étude de l'effectif total)
+
+effectif_boisson_viande <- table(tableau$GM1_boisson_sup,tableau$GM1_Prot_viande != 0)
+colnames(effectif_boisson_viande) <- c("Pas de viande", "1 fois et plus")
+effectif_boisson_viande
+
+frequence_boisson_viande <- matrix(data = 0, nrow = 3, ncol = 2)
+for (k in 1:2)
+   {frequence_boisson_viande[,k] <- effectif_boisson_viande[,k]*100/sum(effectif_boisson_viande[,k])}
+colnames(frequence_boisson_viande) <- c("Pas viande", "Viande")
+rownames(frequence_boisson_viande) <- c("Alcool", "Eau", "Sucré")
+frequence_boisson_viande
+
+barplot(frequence_boisson_viande, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Consommation de viande", ylim = c(0,100), legend=c("Alcool", "Eau", "Sucré"), main = "Quelle boisson est consommée en fonction de la consommation de viande")
+```
+Les gens qui consomment de la viande prennent plus d'alcool.
+
+```{r}
+# On regarde si les gens prennent du fromage (étude de l'effectif total)
+
+effectif_fromage_viande <- table(tableau$GM1_fromage,tableau$GM1_Prot_viande != 0)
+colnames(effectif_fromage_viande) <- c("Pas de viande", "1 fois et plus")
+effectif_fromage_viande
+
+frequence_fromage_viande <- matrix(data = 0, nrow = 2, ncol = 2)
+for (k in 1:2)
+   {frequence_fromage_viande[,k] <- effectif_fromage_viande[,k]*100/sum(effectif_fromage_viande[,k])}
+colnames(frequence_fromage_viande) <- c("Pas viande", "Viande")
+rownames(frequence_fromage_viande) <- c("Non", "Oui")
+frequence_fromage_viande
+
+barplot(frequence_fromage_viande, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Consommation de viande", ylim = c(0,100), legend=c("Non", "Oui"), main = "Consommation de fromage en fonction de la consommation de viande")
+```
+Les gens ont tendance à ne pas prendre de fromage. On Voit que les personnes qui ne prennent pas de viande prennent un peu plus de fromage. (Différence de 5%)
+
+```{r}
+# Etude des végétariens : Mangent-ils des oeufs ? Des légumineuses (Il me reste 59 personnes, 57 femmes donc on étudie les 2 sexes ensemble)
+
+tableau_vege <- subset(tableau, tableau$Fréquence.viande == "Jamais")
+# summary(tableau_vege)
+
+effectif_vege_oeuf_legumineuse <- table(tableau_vege$GM1_Oeuf,tableau_vege$GM1_Légumneuse)
+rownames(effectif_vege_oeuf_legumineuse) <- c("Pas oeuf", "Oeuf")
+colnames(effectif_vege_oeuf_legumineuse) <- c("Pas légumineuse", "Légumineuses")
+effectif_vege_oeuf_legumineuse
+
+frequence_vege_oeuf_legumineuse <- matrix(data = 0, nrow = 2, ncol = 2)
+for (k in 1:2)
+   {frequence_vege_oeuf_legumineuse[,k] <- effectif_vege_oeuf_legumineuse[,k]*100/sum(effectif_vege_oeuf_legumineuse[,k])}
+colnames(frequence_vege_oeuf_legumineuse) <- c("Pas légumineuse", "Légumineuses")
+rownames(frequence_vege_oeuf_legumineuse) <- c("Pas oeuf", "Oeuf")
+frequence_vege_oeuf_legumineuse
+
+barplot(frequence_vege_oeuf_legumineuse, beside=TRUE, ylab = "Fréquence de personnes", xlab = "Consommation de légumineuses", ylim = c(0,100), legend=c("Pas d'oeuf", "Oeuf"), main = "Consommation d'oeuf en fonction de la consommation de légumineuses")
+
+```
+Les végé consomment indifférement des oeufs avec des légumineuses. Ils ne rééquilibrent pas naturellement leur repas... 
