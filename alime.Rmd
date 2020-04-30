@@ -1,0 +1,215 @@
+---
+title: "Alime"
+author: "CLAIRAC"
+date: "24/04/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+install.packages("FactoMineR")
+```
+
+```{r}
+install.packages("multcomp")
+`
+```
+
+Pour nettoyer l'environnement
+```{r}
+rm(list=ls())
+```
+
+```{r}
+library(knitr)
+library(FactoMineR)
+library(factoextra)
+library(corrplot)
+library(ggplot2)
+library(emmeans)
+library(multcomp)
+library(tinytex)
+library(tidyverse)
+```
+
+```{r}
+
+tableau <- read.csv("testGM6.csv", sep= ";", header=TRUE, na.strings="N.A.")
+tableaussna <- na.omit(tableau)
+summary(tableau)
+```
+
+```{r}
+table <- read.csv("donnees-modifs.csv", sep= ";", header=TRUE, na.strings="N.A.")
+#tablessna <- na.omit(tableau)
+#summary(tableau)
+```
+
+
+```{r}
+ggplot(table) + aes(x=GM10_entrée, y=GM10_steak_boeuf) + 
+```
+
+
+Différences de périphériques selon la prot ?
+```{r}
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_steak_boeuf), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_cordon_bleu), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_oeuf_coque), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_galette_cereales), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_haricots_blancs), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_entrée, y = GM10_lentilles_corail), stat = "identity")
+
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_steak_boeuf), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_cordon_bleu), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_oeuf_coque), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_galette_cereales), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_haricots_blancs), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_dessert1, y = GM10_lentilles_corail), stat = "identity")
+
+
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_steak_boeuf), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_cordon_bleu), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_oeuf_coque), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_galette_cereales), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_haricots_blancs), stat = "identity")
+ggplot(table)+geom_bar(mapping = aes(x=GM10_fromage, y = GM10_lentilles_corail), stat = "identity")
+
+```
+
+
+nombre d'aliments composant le plat selon la prot ?
+
+
+```{r}
+
+tablesum <-read.csv("donnees-modifs-sumalim.csv", sep= ";", header=TRUE, na.strings="N.A.")
+ggplot(tablesum)+geom_bar(mapping = aes(x=GM10_steak_boeuf, y = Nb_aliments_plat), stat = "identity")
+ggplot(tablesum)+geom_bar(mapping = aes(x=GM10_cordon_bleu, y = Nb_aliments_plat), stat = "identity")
+ggplot(tablesum)+geom_bar(mapping = aes(x=GM10_oeuf_coque, y = Nb_aliments_plat), stat = "identity")
+ggplot(tablesum)+geom_bar(mapping = aes(x=GM10_haricots_blancs, y = Nb_aliments_plat), stat = "identity")
+
+
+```
+
+
+
+
+
+
+
+nombre de périphériques selon la prot 
+
+```{r}
+tablesumperiph <-read.csv("tablesumperiph.csv", sep= ";", header=TRUE, na.strings="N.A.")
+ggplot(tablesumperiph)+geom_bar(mapping = aes(x=GM10_steak_boeuf, y = Nb_periph), stat = "identity")
+```
+
+
+
+
+Histo du Nb de periph
+```{r}
+
+ggplot(tablesumperiph)+  aes(x=Nb_periph)+geom_histogram()
+
+```
+
+
+
+
+
+
+Ceux qui ont faim, plus de périph, hommes aussi
+
+```{r}
+tablesumperiph <-mutate(tablesumperiph, Faim..=factor(Faim..))
+ggplot(tablesumperiph)+
+  aes(x = Faim.., y=Nb_periph)+
+  geom_violin()
+tablesumperiph <-mutate(tablesumperiph, sexe.homme=factor(sexe.homme))
+ggplot(tablesumperiph)+ aes(x = sexe.homme, y=Nb_periph)+
+  geom_violin()
+
+```
+
+
+```{r}
+ggplot(tablesumperiph)+ aes(x = sexe.homme)+
+  geom_histogram(stat = "count")
+```
+
+
+Rural et age influencent pas Nb de periph
+```{r}
+tablesumperiph <-mutate(tablesumperiph, Rural=factor(Rural))
+ggplot(tablesumperiph)+
+  aes(x=age, y=Nb_periph, color=Rural)+  geom_point()
+```
+
+
+Sexe, age et rural urbain influencent pas nb aliments plat princ
+```{r}
+tablesum <-mutate(tablesum, Nb_aliments_plat..=factor(Nb_aliments_plat))
+ggplot(tablesum)+ aes(x = Faim.., y=Nb_aliments_plat)+  geom_violin()
+ggplot(tablesum)+ aes(x = Sexe, y=Nb_aliments_plat)+  geom_violin()
+ggplot(tablesum)+ aes(x = Rural.Urbail, y=Nb_aliments_plat)+  geom_violin()
+ggplot(tablesum)+ aes(x=Age, y=Nb_aliments_plat)+  geom_point()
+```
+
+
+galette vege influence la quantité de legumineuse ? pas galette -> pas légumineuse
+```{r}
+legumineuse <- read.csv("legumineuse.csv", sep= ";", header=TRUE, na.strings="N.A.")
+
+```
+
+```{r}
+legumineuse <-mutate(legumineuse, GM10_galette_cereales=factor(GM10_galette_cereales))
+ggplot(legumineuse)+ aes(x = GM10_galette_cereales, y=GM10_legumineuse)+
+  geom_violin()
+```
+
+Quand galette, légumineuse dans la moitié des cas, quand pas galette, très rarement légumineuse
+
+```{r}
+
+effectif_galette <- table(legumineuse$GM10_legumineuse,legumineuse$GM10_galette_cereales==1)
+colnames(effectif_galette) <- c("pas galette","galette")
+
+barplot(effectif_galette, beside=TRUE, ylab = "Nb de personnes", xlab = "Consommation de galette", ylim = c(0,300), legend = c ("pas legumineuse","legumineuse"), main = "Consommation de legumineuse avec ou sans galette")
+```
+```{r}
+
+viande <- read.csv("viande.csv", sep= ";", header=TRUE, na.strings="N.A.")
+
+```
+
+
+
+La galette est beaucoup moins choisie quand la viande est choisie, que quand pas viande
+```{r}
+
+effectif_viandegal <- table(viande$GM10_galette_cereales,viande$GM10_viande !=0)
+colnames(effectif_viandegal) <- c("pas viande","viande")
+
+barplot(effectif_viandegal, beside=TRUE, ylab = "Nb de personnes", xlab = "Consommation de viande", ylim = c(0,300), legend = c ("pas galette","galette"), main = "Consommation de galette avec ou sans viande")
+```
+
+
+
+
+
+
+
+
+
+
+
+
