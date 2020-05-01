@@ -1,0 +1,97 @@
+---
+title: "GM 01-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+rm(list=ls())
+library(knitr)
+library(ggplot2)
+library(FactoMineR)
+library(factoextra)
+library(corrplot)
+library(ppcor)
+library(missMDA)
+library(emmeans)
+library(car)
+library(stringr)
+library(questionr) 
+library(dplyr)
+```
+
+On veut étudier l'influence des sources "explicites" de proteines (=viande, steak végé, oeuf) sur les accompagnements (cad au sein du plat seulement).  
+  
+  
+On peut faire deux tests du khi 2 :  
+1. test du Khi 2 d'ajustement à une loi  
+  --> l'absence de viande influe-t-elle conso légumes ?  
+  --> comparer conso légumes quand viande dispo à conso légumes quand viande pas dispo (9/9bis + 10/10bis)  
+2. test du Khi 2 d'indépendance  
+  --> la conso de viande est-elle indépendante de la conso de légumes ? (1 + 2)  
+
+```{r, echo=FALSE}
+tableau <- read.csv("GM_R_bis.csv", sep = ";", header=TRUE, na.strings = "N.A.")
+tableau <- tableau[,-c(1,2)]
+tableau <- tableau[,c(1:64,66,65,67:204)] # Pour avoir les colonnes des GM3 et 4 dans le même ordre
+
+tableau_omni <- subset(tableau, tableau$Freq_viande != "Jamais")
+tableau_vege <- subset(tableau, tableau$Freq_viande == "Jamais")
+```
+
+
+
+## 1. test du Khi 2 d'ajustement à une loi
+
+Les individus avaient : de la viande à disposition ou pas de viande à disposition (est-ce un pb si ce ne sont pas des individus differents ?).   
+On observe ensuite le nb de légumes choisis.  
+  
+Ainsi pour les GM 9/9bis :  
+  
+- viande à disposition = GM9  
+nb legumes choisis  0   1   2  tot  
+effectifs          128 207 97  432  
+
+```{r}
+nb_leg_9 <- table(tableau_omni$GM9_Legume)
+nb_leg_9
+```
+
+- pas de viande à disposition = GM9bis  
+nb legumes choisis  0   1   2  tot  
+effectifs          119 205 108 432  
+
+```{r}
+nb_leg_9bis <- table(tableau_omni$GM9bis_Legume)
+nb_leg_9bis
+```
+  
+
+H0 : Le fait que la viande ne soit pas à disposition n'a pas d'effet significatif sur le nb de légumes choisis.  
+H1 : Le fait que la viande ne soit pas à disposition a un effet significatif sur au moins 1 nb de légumes choisis.  
+On teste H0 au niveau 95%.   
+  
+Stat de test : X²=somme (selon i = 0, 1 ou 2 légumes choisis) de (effectif 9bis (i) - effectif 9 (i))² / effectif 9 (i)  
+  
+Sous H0, X² suit une loi du khi 2 à 3-1=2 ddl.   
+  
+x² = (119-128)²/128 + (205-207)²/207 + (108-97)²/97 = 1.899559  
+
+```{r}
+x <- (nb_leg_9bis[1]-nb_leg_9[1])^2/nb_leg_9[1] + (nb_leg_9bis[2]-nb_leg_9[2])^2/nb_leg_9[2] + (nb_leg_9bis[3]-nb_leg_9[3])^2/nb_leg_9[3]
+as.numeric(x)
+```
+
+Or le quantile de la loi du khi 2 à 2 ddl à 95% = 5,99  
+  
+Donc x² n'apparient pas à la zone de rejet car |x²|<quantile,  
+donc on ne rejette pas H0.   
+On n'a pas mis en évidence un effet significatif de l'absence de viande sur le nombre de légumes choisis.   
+
+
+
+
+## 2. test du Khi 2 d'indépendance
